@@ -1,0 +1,414 @@
+{"prompt": "2-4pm,Every 1st Friday of the month ,,Ongoing", "completion": "Wednesday,9:00,10:00,,,,,Last Wednesday of the month only,,4,Day of Month,,,"}
+{"prompt": "2-4pm,Every 2nd Friday of the month ,,Ongoing", "completion": "Friday,14:00,16:00,,,,,,,2,Day of Month,,,"}
+{"prompt": "11AM-3PM,Every 2nd or 3rd Sunday,Nov-22,Ongoing", "completion": "Sunday,11:00,15:00,,,,,,,2,Day of Month,,,"}
+{"prompt": "3-5pm,2nd Monday of the month ,Nov-22,Ongoing", "completion": "Monday,15:00,17:00,,,,,,,2,Day of Month,,,"}
+{"prompt": ",2nd & 4th Wednesday,Apr-23,", "completion": "Wednesday,,,,,,,,,2,Day of Month,,,,Wednesday,,,,,,,,,4,Day of Month,,,"}
+{"prompt": ",1st & 3rd Tuesday ,Apr-23,", "completion": "Tuesday,,,,,,,,,1,Day of Month,,,,Tuesday,,,,,,,,,3,Day of Month,,,"}
+{"prompt": "3-4pm,4th Friday,1-Oct-22,May-22", "completion": "Friday,15:00,16:00,,,,,October through May Only,,4,Day of Month,,,"}
+{"prompt": "3-4pm,3rd Thursday,1-Oct-22,May-22", "completion": "Thursday,15:00,16:00,,,,,October through May Only,,3,Day of Month,,,"}
+{"prompt": "2:50-3:50pm,2nd Wednesday,1-Oct-22,May-22", "completion": "Wednesday,14:50,15:50,,,,,October through May Only,,2,Day of Month,,,"}
+{"prompt": "2-3pm,4th Friday,1-Oct-22,May-22", "completion": "Friday,16:00,17:00,,,,,October through May Only,,4,Day of Month,,,"}
+{"prompt": "3:45-4:45pm,2nd Wednesday,1-Oct-22,May-22", "completion": "Wednesday,15:45,16:45,,,,,October through May Only,,2,Day of Month,,,"}
+{"prompt": "3:45-4:45pm,3rd Thursday,1-Oct-22,May-22", "completion": "Thursday,15:45,16:45,,,,,October through May Only,,3,Day of Month,,,"}
+{"prompt": "3:45-4:45pm,3rd Wednesday,1-Oct-22,May-22", "completion": "Wednesday,15:45,16:45,,,,,October through May Only,,3,Day of Month,,,;Wednesday,15:45,16:45,,,,,October through May Only,,3,Day of Month,,,"}
+{"prompt": "3:30-4:30pm,3rd Wednesday,1-Oct-22,May-22", "completion": "Saturday,8:30,10:30,,,,,October through May Only,2,,Week of Month,,,"}
+{"prompt": "3:30-4:30pm,2nd Tuesday,1-Oct-22,May-22", "completion": "Tuesday,15:30,16:30,,,,,October through May Only,,2,Day of Month,,,"}
+{"prompt": "3:30-4:30pm,3rd Tuesday,1-Oct-22,May-22", "completion": "Tuesday,15:30,16:30,,,,,October through May Only,,3,Day of Month,,,"}
+{"prompt": "4-5pm ,3rd Friday,1-Oct-22,May-22", "completion": "Friday,16:00,17:00,,,,,October through May Only,,3,Day of Month,,,"}
+{"prompt": "10:00-11:00 am,1st Wednesday of the month ,N/A,Ongoing", "completion": "Wednesday,10:00,11:00,,,,,,,1,Day of Month,,,"}
+{"prompt": "9:00-10:00 am,1st and 3rd Thursday,N/A,Ongoing", "completion": "Thursday,9:00,10:00,,,,,,,1,Day of Month,,,;Thursday,9:00,10:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "9:00-10:00 am,1st and 3rd Monday,N/A,Ongoing", "completion": "Monday,9:00,10:00,,,,,,,1,Day of Month,,,;Monday,9:00,10:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "9:00am-10:00am,2nd Friday of the month ,N/A,Ongoing", "completion": "Friday,9:00,10:00,,,,,,,2,Day of Month,,,"}
+{"prompt": "9:00am-9:30am,Last Friday of the month ,N/A,Ongoing", "completion": "Friday,9:00,9:30,,,,,,,2,Day of Month,,,;Friday,9:00,9:30,,,,,,,4,Day of Month,,,"}
+{"prompt": "1:30-2:30pm,1st and 3rd friday,43739,Ongoing", "completion": "Friday,13:30,14:30,,,,,,,1,Day of Month,,,;Friday,13:30,14:30,,,,,,,3,Day of Month,,,"}
+{"prompt": "9am-10am,1st and 3rd Tuesday,,Ongoing", "completion": "Tuesday,9:00,10:00,,,,,,,1,Day of Month,,,;Tuesday,9:00,10:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "11:30am-12:30pm,2nd Friday of the month ,,Ongoing", "completion": "Friday,11:30,12:30,,,,,,,2,Day of Month,,,"}
+{"prompt": "2-230pm,3rd Monday of the month ,,Ongoing", "completion": "Monday,14:00,14:30,,,,,,,3,Day of Month,,,"}
+{"prompt": "9:00am-10:00am,1st and 3rd Wednesday,N/A,Ongoing", "completion": "Wednesday,9:00,10:00,,,,,,,1,Day of Month,,,;Wednesday,9:00,10:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "8:00-9:00 am,1st Monday of the month ,N/A,Ongoing", "completion": "Monday,8:00,9:00,,,,,,,1,Day of Month,,,"}
+{"prompt": "1:45pm-2:45pm,2nd and 4thWednesday ,,Ongoing", "completion": "Wednesday,13:45,14:45,,,,,,,2,Day of Month,,,;Wednesday,13:45,14:45,,,,,,,4,Day of Month,,,"}
+{"prompt": "10-11AM,2nd Wednesday,8-Mar-23,Ongoing", "completion": "Wednesday,10:00,11:00,,,,,,,2,Day of Month,,,"}
+{"prompt": "2-3PM,1st & 3rd Friday,3-Mar-23,Ongoing", "completion": "Friday,14:00,15:00,,,,,,,1,Day of Month,,,;Friday,14:00,15:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "4-530pm,Fridays,10/14/2022,12/9/2022", "completion": "Friday,16:00,17:30,,,,,,,,Weekly,,,"}
+{"prompt": "3:30-5:30pm,Wednesdays,10/13/2022,12/7/2022", "completion": "Wednesday,15:30,17:30,,,,,,,,Weekly,,,"}
+{"prompt": "3-430pm ,Thursdays,1/26/2023,3/26/2023", "completion": "Thursday,15:00,16:30,,,,,,,,Weekly,,,"}
+{"prompt": "Saturday,1:30:00 PM,4:00:00 PM,,,,,,,,,", "completion": "Saturday,13:30,16:00,,,,,,,,Weekly,,,"}
+{"prompt": "Saturday,10:00:00 AM,12:00:00 PM,,,,,,,,,", "completion": "Saturday,10:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "Mondays,1:00:00 PM,3:00:00 PM,,,,,,,,,", "completion": "Monday,13:00,15:00,,,,,,,,Weekly,,,"}
+{"prompt": "Saturdays,3:00:00 PM,5:00:00 PM,,,,,,,,,", "completion": "Saturday,15:00,17:00,,,,,,,,Weekly,,,"}
+{"prompt": "3RD SAT,9:00:00 AM,11:30:00 AM,,,,,,,,,", "completion": "Saturday,9:00,11:30,,,,,,,3,Day of Month,,,"}
+{"prompt": "Tue, Thu,9:30:00 AM,11:30:00 AM,,,,,,,,,", "completion": "Tuesday,9:30,11:30,,,,,,,,Weekly,,,;Thursday,9:30,11:30,,,,,,,,Weekly,,,"}
+{"prompt": "Monday,10:00:00 AM,1:00:00 PM,,,,,,,,,", "completion": "Monday,10:00,13:00,,,,,,,,Weekly,,,"}
+{"prompt": "Saturday,10:00:00 AM,12:00:00 PM,,,,,,,,,", "completion": "Saturday,10:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "by appointment only, no hours of operation,,,,,,,,,,,", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "1ST & 3RD TUES,1:00:00 PM,3:00:00 PM,,,,,,,,,", "completion": "Tuesday,13:00,15:00,,,,,,,1,Day of Month,,,;Tuesday,13:00,15:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "Thursday,8:30:00 AM,10:30:00 AM,,,,,,,,,", "completion": "Thursday,8:30,10:30,,,,,,,,Weekly,,,"}
+{"prompt": "Saturday,8:30:00 AM,12:00:00 PM,,,,,,,,,", "completion": "Saturday,8:30,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "Monday,1:00:00 PM,3:00:00 PM,,,,,,,,,", "completion": "Monday,13:00,15:00,,,,,,,,Weekly,,,"}
+{"prompt": "2ND SAT,8:00:00 AM,12:00:00 PM,,,,,,,,,", "completion": "Saturday,8:00,12:00,,,,,,,2,Day of Month,,,"}
+{"prompt": "by appointment only,,,,,,,,,,,", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "Saturday,11:30:00 AM,1:00:00 PM,,,,,,,,,", "completion": "Saturday,11:30,13:00,,,,,,,,Weekly,,,"}
+{"prompt": "Last SAT,11:00:00 AM,12:30:00 PM,,,,,,,,,", "completion": "Saturday,11:00,12:30,,,,,Last of month (may be 5th),,4,Day of Month,,,"}
+{"prompt": "1ST THU,9:00:00 AM,11:00:00 AM,,,,,,,,,", "completion": "Thursday,9:00,11:00,,,,,,,1,Day of Month,,,"}
+{"prompt": "Thursday,10:00:00 AM,12:00:00 PM,,,,,,,,,", "completion": "Thursday,10:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "Saturday,11:00:00 AM,1:00:00 PM,,,,,,,,,", "completion": "Saturday,11:00,13:00,,,,,,,,Weekly,,,"}
+{"prompt": "Tuesday,11:00:00 AM,4:00:00 PM,,,,,,,,,", "completion": "Tuesday,11:00,16:00,,,,,,,,Weekly,,,"}
+{"prompt": "2nd Saturday,by appointment,,,,,,,,,,", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "Tues, Thu,1:00:00 PM,4:00:00 PM,,,,,,,,,", "completion": "Tuesday,13:00,16:00,,,,,,,,Weekly,,,;Thursday,13:00,16:00,,,,,,,,Weekly,,,"}
+{"prompt": "Friday,10:00:00 AM,12:00:00 PM,,,,,,,,,", "completion": "Friday,10:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "Last SAT,10:00:00 AM,12:00:00 PM,,,,,,,,,", "completion": "Saturday,10:00,12:00,,,,,Last of month (may be 5th),,4,Day of Month,,,"}
+{"prompt": "1ST FRIDAY,8:00:00 AM,10:00:00 AM,,,,,,,,,", "completion": "Friday,8:00,10:00,,,,,,,1,Day of Month,,,"}
+{"prompt": "Thursday,9:45:00 AM,11:45:00 AM,,,,,,,,,", "completion": "Thursday,9:45,11:45,,,,,,,,Weekly,,,"}
+{"prompt": "Fridays,1:00:00 PM,3:00:00 PM,,,,,,,,,", "completion": "Friday,13:00,15:00,,,,,,,,Weekly,,,"}
+{"prompt": "Tuesday,11:00:00 AM,1:00:00 PM,,,,,,,,,", "completion": "Tuesday,11:00,13:00,,,,,,,,Weekly,,,"}
+{"prompt": "4TH TUE,5:00:00 PM,7:00:00 PM,,,,,,,,,", "completion": "Tuesday,17:00,19:00,,,,,,,4,Day of Month,,,"}
+{"prompt": "serves meals to a group home on Sundays,not a public pantry,,,,,,,,,,,", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "Tue, Fri,10:00:00 AM,12:00:00 PM,,,,,,,,,", "completion": "Tuesday,10:00,12:00,,,,,,,,Weekly,,,;Friday,10:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "1ST TUE,9:00:00 AM,11:00:00 AM,,,,,,,,,", "completion": "Tuesday,9:00,11:00,,,,,,,1,Day of Month,,,"}
+{"prompt": "Wednesdays,1:00:00 PM,1:00:00 PM,,,,,,,,,", "completion": "Wednesday,13:00,15:00,,,,,,,,Weekly,,,"}
+{"prompt": "Saturdays,11:00:00 AM,1:00:00 PM,,,,,,,,,", "completion": "Saturday,11:00,13:00,,,,,,,,Weekly,,,"}
+{"prompt": "3RD WED,5:30:00 PM,7:30:00 PM,,,,,,,,,", "completion": "Wednesday,17:30,19:30,,,,,,,3,Day of Month,,,"}
+{"prompt": "Wednesday,9:00:00 AM,11:00:00 AM,,,,,,,,,", "completion": "Wednesday,9:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "Monday,9:00:00 AM,11:00:00 AM,,,,,,,,,", "completion": "Monday,9:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "4TH FRI,1:00:00 PM,3:00:00 PM,,,,,,,,,", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "4TH FRI,1:00:00 PM,3:00:00 PM,,,,,,,,,", "completion": "Friday,13:00,15:00,,,,,,,4,Day of Month,,,"}
+{"prompt": "Tuesday,3:00:00 PM,5:00:00 PM,,,,,,,,,", "completion": "Tuesday,15:00,17:00,,,,,,,,Weekly,,,"}
+{"prompt": "Thursday,by appointment,,,,,,,,,,", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "1ST & 3RD THU,5:00:00 PM,6:00:00 PM,,,,,,,,,", "completion": "Thursday,17:00,18:00,,,,,,,1,Day of Month,,,;Thursday,17:00,18:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "Mon, Wed, Fri,1:00:00 PM,3:00:00 PM,9:00:00 AM,11:00:00 AM,,,,,,,", "completion": "Monday,9:00,11:00,13:00,15:00,,,,,,Weekly,,,;Wednesday,9:00,11:00,13:00,15:00,,,,,,Weekly,,,;Friday,9:00,11:00,13:00,15:00,,,,,,Weekly,,,"}
+{"prompt": "Donna delivers food directly to residence in a group home.  Not a public pantry.,,,,,,,,,,,", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "Thursday,9:00:00 AM,12:00:00 PM,,,,,,,,,", "completion": "Thursday,9:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "Wed, Fri,9:00:00 AM,12:00:00 PM,,,,,,,,,", "completion": "Wednesday,9:00,12:00,,,,,,,,Weekly,,,;Friday,9:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "Pantry: M, T, Th,9:00:00 AM,11:30:00 AM,1:00:00 PM,4:00:00 PM,,Soup Kitchen: Mon-Fri,,,11:30:00 AM,1:00:00 PM,", "completion": "Monday,9:00,11:30,13:00,16:00,,,,,,Weekly,,,;Tuesday,9:00,11:30,13:00,16:00,,,,,,Weekly,,,;Thursday,9:00,11:30,13:00,16:00,,,,,,Weekly,,,;Monday,11:30,13:00,,,,,,,,Weekly,,,;Tuesday,11:30,13:00,,,,,,,,Weekly,,,;Wednesday,11:30,13:00,,,,,,,,Weekly,,,;Thursday,11:30,13:00,,,,,,,,Weekly,,,;Friday,11:30,13:00,,,,,,,,Weekly,,,"}
+{"prompt": "Mon-Fri,9:00:00 AM,3:00:00 PM,,,,,,,,,", "completion": "Monday,9:00,15:00,,,,,,,,Weekly,,,;Tuesday,9:00,15:00,,,,,,,,Weekly,,,;Wednesday,9:00,15:00,,,,,,,,Weekly,,,;Thursday,9:00,15:00,,,,,,,,Weekly,,,;Friday,9:00,15:00,,,,,,,,Weekly,,,"}
+{"prompt": "No hours of operation. Just call when need food. They have a big Christmas give away at the end of the year.,,,,,,,,,,,", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "3RD THU,5:00:00 PM,7:00:00 PM,,,,,,,,,", "completion": "Thursday,17:00,19:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "3rd & 4th Thu,12:00:00 PM,2:00:00 PM,,,,,,,,,", "completion": "Thursday,12:00,14:00,,,,,,,3,Day of Month,,,;Thursday,12:00,14:00,,,,,,,4,Day of Month,,,"}
+{"prompt": "Mon-Fri,10:00:00 AM,4:00:00 PM,,,,,,,,,", "completion": "Monday,10:00,16:00,,,,,,,,Weekly,,,;Tuesday,10:00,16:00,,,,,,,,Weekly,,,;Wednesday,10:00,16:00,,,,,,,,Weekly,,,;Thursday,10:00,16:00,,,,,,,,Weekly,,,;Friday,10:00,16:00,,,,,,,,Weekly,,,"}
+{"prompt": "Mon, Thu,9:00:00 AM,11:00:00 AM,,,,,,,,,", "completion": "Monday,9:00,11:00,,,,,,,,Weekly,,,;Thursday,9:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "Mon, Wed, Fri,9:00:00 AM,11:30:00 AM,,,,,,,,,", "completion": "Monday,9:00,11:30,,,,,,,,Weekly,,,;Wednesday,9:00,11:30,,,,,,,,Weekly,,,;Friday,9:00,11:30,,,,,,,,Weekly,,,"}
+{"prompt": "Monday,9:00:00 AM,1:00:00 PM,,,,,,,,,", "completion": "Monday,9:00,13:00,,,,,,,,Weekly,,,"}
+{"prompt": "Mondays,9:00:00 AM,11:00:00 AM,,,,,,,,,", "completion": "Monday,9:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "2ND & 4TH SAT,4:00:00 PM,5:00:00 PM,,,,,,,,,", "completion": "Saturday,16:00,17:00,,,,,,,2,Day of Month,,,;Saturday,16:00,17:00,,,,,,,4,Day of Month,,,"}
+{"prompt": "M T W TH F,M-TH 8-5, F 8-4", "completion": "Monday,8:00,17:00,,,,,,,,Weekly,,,;Tuesday,8:00,17:00,,,,,,,,Weekly,,,;Wednesday,8:00,17:00,,,,,,,,Weekly,,,;Thursday,8:00,17:00,,,,,,,,Weekly,,,;Friday,8:00,16:00,,,,,,,,Weekly,,,"}
+{"prompt": "3rd Mon,6-8", "completion": "Monday,18:00,20:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "W,6:00-8:00pm", "completion": "Wednesday, 18:00, 20:00,,,,,,,,Weekly,,,"}
+{"prompt": "2ND TUES,1:00-3:00 pm", "completion": "Tuesday,13:00,15:00,,,,,,,2,Day of Month,,,"}
+{"prompt": "3rd Sat,11-2", "completion": "Saturday,11:00,14:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "T TH,9-12", "completion": "Tuesday,9:00,12:00,,,,,,,,Weekly,,,;Thursday,9:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "TH,4-6", "completion": "Thursday,16:00,18:00,,,,,,,,Weekly,,,"}
+{"prompt": "T,9:00-11:00 or  by appt-Warrick Co. only-offers emergency", "completion": "Tuesday,9:00,11:00,,,,,By Appointment,,,Weekly,,,"}
+{"prompt": "T W TH F S,FP 8:30-12 (Ofc 8 - 4) added Sat 8:30-12", "completion": "Tuesday,8:30,12:00,,,,,,,,Weekly,,,;Wednesday,8:30,12:00,,,,,,,,Weekly,,,;Thursday,8:30,12:00,,,,,,,,Weekly,,,;Friday,8:30,12:00,,,,,,,,Weekly,,,;Saturday,8:30,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "T TH,9-11:30, 1:15-3", "completion": "Tuesday,9:00,11:30,13:15,15:00,,,,,,Weekly,,,;Thursday,9:00,11:30,13:15,15:00,,,,,,Weekly,,,"}
+{"prompt": "M W F,9-11:30 (call for appt due to COVID)(closed holidays)", "completion": "Monday,9:00, 11:30,,,,,Call for Appointment,,,Weekly,,,;Wednesday,9:00, 11:30,,,,,Call for Appointment,,,Weekly,,,;Friday,9:00, 11:30,,,,,Call for Appointment,,,Weekly,,,"}
+{"prompt": "3rd Tues (Changes to 3rd W eff. 5/21),11-2,For emergency-call for appointment", "completion": "Wednesday,11:00,14:00,,,,,For Emergency - Call,,3,Day of Month,,,"}
+{"prompt": "M W S,M 1-3, W 5:30-7, S 10-12", "completion": "Monday,13:00,15:00,,,,,,,,Weekly,,,;Wednesday,17:30,19:00,,,,,,,,Weekly,,,;Saturday,10:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "W,9-12", "completion": "Wednesday,9:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "ALL DAYS,SOUP 6:30,12,5:30", "completion": "Monday,6:30,7:30,12:00,13:00,17:30,18:30,,,,Weekly,,,;Tuesday,6:30,7:30,12:00,13:00,17:30,18:30,,,,Weekly,,,;Wednesday,6:30,7:30,12:00,13:00,17:30,18:30,,,,Weekly,,,;Thursday,6:30,7:30,12:00,13:00,17:30,18:30,,,,Weekly,,,;Friday,6:30,7:30,12:00,13:00,17:30,18:30,,,,Weekly,,,;Saturday,6:30,7:30,12:00,13:00,17:30,18:30,,,,Weekly,,,;Sunday,6:30,7:30,12:00,13:00,17:30,18:30,,,,Weekly,,,"}
+{"prompt": "3rd Sat & following TH (M F 1-2:30 Walmart Produce Giveaway),3rd Sat 9-1 & the following TH 6-7 pm,2019 Dates: 1/18, ", "completion": "Saturday,9:00,13:00,,,,,,,3,Day of Month,,,;Thursday,18:00,19:00,,,,,,,4,Day of Month,,,"}
+{"prompt": "M W F,M 9-5 closed 12-1, WF 9-1", "completion": "Monday,9:00,12:00,13:00,17:00,,,,,,Weekly,,,;Wednesday,9:00,13:00,,,,,,,,Weekly,,,;Friday,9:00,13:00,,,,,,,,Weekly,,,"}
+{"prompt": "2nd & 4th W & Th,1-3,Pantry for seniors", "completion": "Wednesday,13:00,15:00,,,,,,,2,Day of Month,,,;Thursday,13:00,15:00,,,,,,,4,Day of Month,,,;Wednesday,13:00,15:00,,,,,,,2,Day of Month,,,;Thursday,13:00,15:00,,,,,,,4,Day of Month,,,"}
+{"prompt": "M TH ,8:30-10:00 (closed 3/25-3/29/19)", "completion": "Monday,8:30,10:00,,,,,Spanish Interpreter Available,,,Weekly,,,;Thursday,8:30,10:00,,,,,Spanish Interpreter Available,,,Weekly,,,"}
+{"prompt": "M W F ,12:00-2:00", "completion": "Monday,12:00,14:00,,,,,,,,Weekly,,,;Wednesday,12:00,14:00,,,,,,,,Weekly,,,;Friday,12:00,14:00,,,,,,,,Weekly,,,"}
+{"prompt": "W F,9-11", "completion": "Wednesday,9:00,11:00,,,,,,,,Weekly,,,;Friday,9:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "4TH TUES,8-10", "completion": "Tuesday,8:00,10:00,,,,,,,4,Day of Month,,,"}
+{"prompt": "M-F,8:30 - 4:30, not 9-11 (due to classes)", "completion": "Monday,8:30,9:00,11:00,16:30,,,,,,Weekly,,,;Tuesday,8:30,9:00,11:00,16:30,,,,,,Weekly,,,;Wednesday,8:30,9:00,11:00,16:30,,,,,,Weekly,,,;Thursday,8:30,9:00,11:00,16:30,,,,,,Weekly,,,;Friday,8:30,9:00,11:00,16:30,,,,,,Weekly,,,"}
+{"prompt": "W,9-12", "completion": "Wednesday,8:30,16:30,,,,,,,,Weekly,,,"}
+{"prompt": "2nd & 4th Tuesdays,9:15am-10:45 am", "completion": "Tuesday,9:15,10:45,,,,,,,2,Day of Month,,,;Tuesday,9:15,10:45,,,,,,,4,Day of Month,,,"}
+{"prompt": "T TH,12 pm-1 pm & 4pm-6pm", "completion": "Tuesday,12:00,13:00,16:00,18:00,,,,,,Weekly,,,;Thursday,12:00,13:00,16:00,18:00,,,,,,Weekly,,,"}
+{"prompt": "2ND & 4TH SAT,8:30-11", "completion": "Saturday,8:30,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "W TH,W & Th 9:30-11:30, W 5:30-7:30,Pantry requires referral-call 812-401-0606", "completion": "Wednesday,9:30,11:30,17:30,19:30,,,,,,Weekly,,,;Thursday,9:30,11:30,,,,,,,,Weekly,,,"}
+{"prompt": "3rd TH,4-6pm", "completion": "Thursday,16:00,18:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "M T W F 10-4,  TH 12-6  (closed 12-1 for lunch),(Typically T 1-3 WF 10-12 & 1-3 TH 10-12)", "completion": "Monday,10:00,12:00,13:00,18:00,,,,,,Weekly,,,;Tuesday,10:00,12:00,13:00,18:00,,,,,,Weekly,,,;Wednesday,10:00,12:00,13:00,18:00,,,,,,Weekly,,,;Friday,10:00,12:00,13:00,18:00,,,,,,Weekly,,,;Thursday,12:00,18:00,,,,,,,,Weekly,,,"}
+{"prompt": "2ND & 3RD SAT,10:00-12:00", "completion": "Saturday,10:00,12:00,,,,,,,2,Day of Month,,,;Saturday,10:00,12:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "1st Sat 8:30-11, T 9-11, also ER pantry, SK W 5:30-7 pm-starts 6/1/22-10 weeks-summer only,1st Sat SK Brkfst 7:30-8:30; FP 8:30-11 and T 9-11, ER pantry also; SK W 5:30p-6:30p (summer SK geared to feed kids, all ages welcome-W SK starts 6/23/21-is summer only) ", "completion": "nan"}
+{"prompt": "T TH,8-12 & 1-4", "completion": "Tuesday,8:00,12:00,13:00,16:00,,,,,,Weekly,,,;Thursday,8:00,12:00,13:00,16:00,,,,,,Weekly,,,"}
+{"prompt": "M T W TH F,SHELTER 9 AM - 8 PM", "completion": "Monday,9:00,16:00,,,,,,,,Weekly,,,;Tuesday,9:00,16:00,,,,,,,,Weekly,,,;Wednesday,9:00,16:00,,,,,,,,Weekly,,,;Thursday,9:00,16:00,,,,,,,,Weekly,,,;Friday,9:00,16:00,,,,,,,,Weekly,,,"}
+{"prompt": "M T W TH,9:30-11:45,Pantry requires referral-call 812-401-0606", "completion": "Monday,9:30,11:45,,,,,Referral Required,,,Weekly,,,;Tuesday,9:30,11:45,,,,,Referral Required,,,Weekly,,,;Wednesday,9:30,11:45,,,,,Referral Required,,,Weekly,,,;Thursday,9:30,11:45,,,,,Referral Required,,,Weekly,,,"}
+{"prompt": "T TH,8-2 (typically 8am-12pm & 1pm-3pm)", "completion": "Tuesday,8:00,12:00,13:00,15:00,,,,,,Weekly,,,;Thursday,8:00,12:00,13:00,15:00,,,,,,Weekly,,,"}
+{"prompt": "T S ,T 11-1  S 9-11", "completion": "Tuesday,11:00,13:00,,,,,,,,Weekly,,,;Saturday,9:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "1st & 3rd M,1st M 10-2, 3rd M 6-8 (offers emergency FP),delivers to Fares and others ", "completion": "Monday,10:00,14:00,,,,,,,1,Day of Month,,,;Monday,18:00,20:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "M W F ,9-12 ,harolddillworth@yahoo.com", "completion": "Monday,9:00,12:00,,,,,,,,Weekly,,,;Wednesday,9:00,12:00,,,,,,,,Weekly,,,;Friday,9:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "LAST TUES,4:00-6:00,Serves Posey Co only/per funding", "completion": "Tuesday,16:00,18:00,,,,,Last Tuesday of Month,,4,Day of Month,,,"}
+{"prompt": "M W TH ,1-3. SOUP M-F 11:30-1  ", "completion": "nan"}
+{"prompt": "M W  ,9-11:30  1-3", "completion": "Monday,9:00,11:30,13:00,15:00,,,,,,Weekly,,,;Wednesday,9:00,11:30,13:00,15:00,,,,,,Weekly,,,"}
+{"prompt": "T,9-12", "completion": "Tuesday,9:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "T TH,T 1-3, Th 6-7:30,Patrons-recv food every 2 wks, uses Charity Tracker", "completion": "Tuesday,13:00,15:00,,,,,,,,Weekly,,,;Thursday,18:00,19:30,,,,,,,,Weekly,,,"}
+{"prompt": "T TH,T 9-3  TH 1-5", "completion": "Tuesday,9:00,15:00,,,,,,,,Weekly,,,;Thursday,13:00,17:00,,,,,,,,Weekly,,,"}
+{"prompt": "W,10:30-12:20", "completion": "Wednesday,10:30,12:20,,,,,,,,Weekly,,,"}
+{"prompt": "M,4:30-6", "completion": "Monday,16:30,18:00,,,,,,,,Weekly,,,"}
+{"prompt": "M T TH,9:30-11:30, 12-2,Pantry requires referral-call 812-401-0606", "completion": "Monday,9:30,11:30,12:00,14:00,,,Referral Required,,,Weekly,,,;Tuesday,9:30,11:30,12:00,14:00,,,Referral Required,,,Weekly,,,;Thursday,9:30,11:30,12:00,14:00,,,Referral Required,,,Weekly,,,"}
+{"prompt": "T TH ,T 9-11 Th 1-3, SK Sat 11:30-12:30,Has SK, does not want to partner", "completion": "Tuesday,9:00,11:00,,,,,,,,Weekly,,,;Thursday,13:00,15:00,,,,,,,,Weekly,,,"}
+{"prompt": "2nd M,9-11am & 4-6pm", "completion": "Monday,9:00,11:00,16:00,18:00,,,,,2,Day of Month,,,"}
+{"prompt": "T W TH F,8:15-11:15, 1:15-3:15 (& TH 5-7 at least until 10/31/22) must be in the door by the end time ,Pantry requires referral-call 812-401-0606", "completion": "Tuesday,8:15,11:15,13:15,15:15,,,Referral Required,,,Weekly,,,;Wednesday,8:15,11:15,13:15,15:15,,,Referral Required,,,Weekly,,,;Thursday,8:15,11:15,13:15,15:15,,,Referral Required,,,Weekly,,,;Friday,8:15,11:15,13:15,15:15,,,Referral Required,,,Weekly,,,"}
+{"prompt": "M T W TH,9:00-12:00, 1:00-3:00, W 9-12 only,Serves limited area 47713", "completion": "Monday,9:00,12:00,13:00,15:00,,,,,,Weekly,,,;Tuesday,9:00,12:00,13:00,15:00,,,,,,Weekly,,,;Thursday,9:00,12:00,13:00,15:00,,,,,,Weekly,,,;Wednesday,9:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "Last W ,6-8-offers emergency (may do 5-8 TBD 3/9/21)", "completion": "Wednesday,18:00,20:00,,,,,Last of Month,,4,Day of Month,,,"}
+{"prompt": "FP 4th M 10-4, SK Sun 9:30-10:30-just show up (emergency FP offered if call)(was FP and SK 4TH M CEDAR HALL 5:30-7:30)", "completion": "nan"}
+{"prompt": "Sun,2-4,interested in TEFAP 8/2022; formerly Metropolitan, SDA", "completion": "Sunday,14:00,16:00,,,,,,,,Weekly,,,"}
+{"prompt": "S M T W TH F S,8-6. SOUP 9,12,5", "completion": "Monday,9:00,10:00,12:00,1:00,17:00,18:00,,,,Weekly,,,;Tuesday,9:00,10:00,12:00,1:00,17:00,18:00,,,,Weekly,,,;Wednesday,9:00,10:00,12:00,1:00,17:00,18:00,,,,Weekly,,,;Thursday,9:00,10:00,12:00,1:00,17:00,18:00,,,,Weekly,,,;Friday,9:00,10:00,12:00,1:00,17:00,18:00,,,,Weekly,,,;Saturday,9:00,10:00,12:00,1:00,17:00,18:00,,,,Weekly,,,;Sunday,9:00,10:00,12:00,1:00,17:00,18:00,,,,Weekly,,,"}
+{"prompt": "M T W F ,M W F 1:30-3:30 T 6-8,Pantry requires referral-call 812-401-0606", "completion": "Monday,13:30,15:30,,,,,Requires Referral,,,Weekly,,,;Tuesday,13:30,15:30,,,,,Requires Referral,,,Weekly,,,;Wednesday,13:30,15:30,,,,,Requires Referral,,,Weekly,,,;Friday,13:30,15:30,,,,,Requires Referral,,,Weekly,,,;Tuesday,18:00,20:00,,,,,Requires Referral,,,Weekly,,,"}
+{"prompt": "T W  ,T 9-2. W 12-5", "completion": "Tuesday,9:00,14:00,,,,,,,,Weekly,,,;Wednesday,12:00,17:00,,,,,,,,Weekly,,,"}
+{"prompt": "M TH,9-12,Pantry requires referral-call 812-401-0606", "completion": "Monday,9:00,12:00,,,,,Referral Required,,,Weekly,,,;Thursday,9:00,12:00,,,,,Referral Required,,,Weekly,,,"}
+{"prompt": "S-S (Office M-F 8:30-4),6:30 B 12:00 L 5:30 D", "completion": "Monday,6:30,7:30,12:00,13:00,17:30,18:30,,,,Weekly,,,;Tuesday,6:30,7:30,12:00,13:00,17:30,18:30,,,,Weekly,,,;Wednesday,6:30,7:30,12:00,13:00,17:30,18:30,,,,Weekly,,,;Thursday,6:30,7:30,12:00,13:00,17:30,18:30,,,,Weekly,,,;Friday,6:30,7:30,12:00,13:00,17:30,18:30,,,,Weekly,,,;Saturday,6:30,7:30,12:00,13:00,17:30,18:30,,,,Weekly,,,;Sunday,6:30,7:30,12:00,13:00,17:30,18:30,,,,Weekly,,,"}
+{"prompt": "M W F,9-3", "completion": "Monday,9:00,15:00,,,,,,,,Weekly,,,;Wednesday,9:00,15:00,,,,,,,,Weekly,,,;Friday,9:00,15:00,,,,,,,,Weekly,,,"}
+{"prompt": "3rd TH [typically FP 3rd Th (4th Sun by appt only), SK 3rd W],3rd TH 12-3 (4th Sun by appt only, SK 3rd W 5:30-7:30)", "completion": "nan"}
+{"prompt": "T,10:30-2:30, Closed 1st Tues", "completion": "Tuesday,10:30,14:30,,,,,,,2,Day of Month,,,;Tuesday,10:30,14:30,,,,,,,3,Day of Month,,,;Tuesday,10:30,14:30,,,,,,,4,Day of Month,,,;Tuesday,10:30,14:30,,,,,,,5,Day of Month,,,"}
+{"prompt": "4th Friday,8-12", "completion": "Friday,8:00,12:00,,,,,,,4,Day of Month,,,"}
+{"prompt": "T W TH,TW 10-4 TH 4-6", "completion": "Tuesday,10:00,16:00,,,,,,,,Weekly,,,;Wednesday,10:00,16:00,,,,,,,,Weekly,,,;Thursday,16:00,18:00,,,,,,,,Weekly,,,"}
+{"prompt": "M-S,Su,L S-S 11-11:30 BD shelter only", "completion": "nan"}
+{"prompt": "3rd W (added M-Th 10-2 to help tornado vicitms),5-7", "completion": "Wednesday,17:00,19:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "M TH (only first 3 FULL wks),9-12", "completion": "Monday,9:00,12:00,,,,,,1,,Week of Month,,,;Monday,9:00,12:00,,,,,,2,,Week of Month,,,;Monday,9:00,12:00,,,,,,3,,Week of Month,,,;Thursday,9:00,12:00,,,,,,1,,Week of Month,,,;Thursday,9:00,12:00,,,,,,2,,Week of Month,,,;Thursday,9:00,12:00,,,,,,3,,Week of Month,,,"}
+{"prompt": "M T TH F,9-12 by appt only", "completion": "Monday,9:00,12:00,,,,,By appointment only,,,Weekly,,,;Tuesday,9:00,12:00,,,,,By appointment only,,,Weekly,,,;Thursday,9:00,12:00,,,,,By appointment only,,,Weekly,,,;Friday,9:00,12:00,,,,,By appointment only,,,Weekly,,,"}
+{"prompt": "M T TH F 1st Th 3rd Sat,9-11, 1st Th 4-6p, 3rd Sat 9-11", "completion": "Monday,9:00,11:00,,,,,,,,Weekly,,,;Tuesday,9:00,11:00,,,,,,,,Weekly,,,;Thursday,9:00,11:00,,,,,,,,Weekly,,,;Friday,9:00,11:00,,,,,,,,Weekly,,,;Thursday,16:00,18:00,,,,,,,1,Day of Month,,,;Saturday,9:00,11:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "T,10:00-2:00", "completion": "Tuesday,10:00,14:00,,,,,,,,Weekly,,,"}
+{"prompt": "T-F ,9-3", "completion": "Tuesday,9:00,15:00,,,,,,,,Weekly,,,;Wednesday,9:00,15:00,,,,,,,,Weekly,,,;Thursday,9:00,15:00,,,,,,,,Weekly,,,;Friday,9:00,15:00,,,,,,,,Weekly,,,"}
+{"prompt": "T W F,8-12", "completion": "Tuesday,8:00,12:00,,,,,,,,Weekly,,,;Wednesday,8:00,12:00,,,,,,,,Weekly,,,;Friday,8:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "M-F,9-3", "completion": "Monday,9:00,15:00,,,,,,,,Weekly,,,;Tuesday,9:00,15:00,,,,,,,,Weekly,,,;Wednesday,9:00,15:00,,,,,,,,Weekly,,,;Thursday,9:00,15:00,,,,,,,,Weekly,,,;Friday,9:00,15:00,,,,,,,,Weekly,,,"}
+{"prompt": "M TH 3rd Sat (typically M W F) ,9-12", "completion": "Monday,9:00,12:00,,,,,,,,Weekly,,,;Thursday,9:00,12:00,,,,,,,,Weekly,,,;Saturday,9:00,12:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "3rd Thurs (food box), every Th perishable & hygiene,10-12,Clothing and garden for pantry", "completion": "nan"}
+{"prompt": "Th S,Th 9-11, Sat 12-2 by appt (and emergency)", "completion": "Thursday,9:00,11:00,,,,,,,,Weekly,,,;Saturday,12:00,14:00,,,,,By Appointment,,,Weekly,,,"}
+{"prompt": "T TH S,T 9-12,6-8, TH 3-6, S 9-12", "completion": "Tuesday,9:00,12:00,,,,,,,,Weekly,,,;Saturday,9:00,12:00,,,,,,,,Weekly,,,;Tuesday,18:00,20:00,,,,,,,,Weekly,,,;Thursday,15:00,18:00,,,,,,,,Weekly,,,"}
+{"prompt": "M,9-11", "completion": "Monday,9:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "SK-M thru Sat, FP-T  TH  ,SK11-12:30  FP 12-4 ", "completion": "nan"}
+{"prompt": "SK   M-Th ,SK  11-12:30", "completion": "Monday,11:00,12:30,,,,,,,,Weekly,,,;Tuesday,11:00,12:30,,,,,,,,Weekly,,,;Wednesday,11:00,12:30,,,,,,,,Weekly,,,;Thursday,11:00,12:30,,,,,,,,Weekly,,,"}
+{"prompt": "T & TH (Ofc hrs M-F),8:30 -4", "completion": "Tuesday,8:30,16:00,,,,,,,,Weekly,,,;Thursday,8:30,16:00,,,,,,,,Weekly,,,"}
+{"prompt": "nan", "completion": "nan"}
+{"prompt": "4TH TH,2-4", "completion": "Thursday,14:00,16:00,,,,,,,4,Day of Month,,,"}
+{"prompt": "3rd Sat,8:30-10:30", "completion": "Saturday,8:30,10:30,,,,,,,3,Day of Month,,,"}
+{"prompt": "1st TH ,5-7", "completion": "Thursday,17:00,19:00,,,,,,,1,Day of Month,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "M T W TH F,8:30-4:30 (does not close for lunch) and emergency FP", "completion": "Monday,8:30,16:30,,,,,,,,Weekly,,,;Tuesday,8:30,16:30,,,,,,,,Weekly,,,;Wednesday,8:30,16:30,,,,,,,,Weekly,,,;Thursday,8:30,16:30,,,,,,,,Weekly,,,;Friday,8:30,16:30,,,,,,,,Weekly,,,"}
+{"prompt": "T W TH,8:30-4:30 (does not close for lunch) and emergency FP", "completion": "Tuesday,8:30,16:30,,,,,,,,Weekly,,,;Wednesday,8:30,16:30,,,,,,,,Weekly,,,;Thursday,8:30,16:30,,,,,,,,Weekly,,,"}
+{"prompt": "T W TH,9-12, 1-4", "completion": "Tuesday,9:00,12:00,13:00,16:00,,,,,,Weekly,,,;Wednesday,9:00,12:00,13:00,16:00,,,,,,Weekly,,,;Thursday,9:00,12:00,13:00,16:00,,,,,,Weekly,,,"}
+{"prompt": "2nd or 3rd Sat. Call first (usually Sat after 2nd Th),10-2", "completion": "Saturday,10:00,14:00,,,,,Call first,,2,Day of Month,,,"}
+{"prompt": "2nd Sat,10-2", "completion": "Saturday,10:00,14:00,,,,,,,2,Day of Month,,,"}
+{"prompt": "1st & 3RD TH,9-11", "completion": "Thursday,9:00,11:00,,,,,,,1,Day of Month,,,;Thursday,9:00,11:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "eff. 4/1/20 M W F 10-1 (Typically FP 1st M only 10-6 from Jun-Aug 2019/ normal days M W F),M W F 10-1 (Typically FP 10-6 Jun-Aug 2019/ normal hrs 10:00-1:00)", "completion": "Monday,10:00,13:00,,,,,,,,Weekly,,,;Wednesday,10:00,13:00,,,,,,,,Weekly,,,;Friday,10:00,13:00,,,,,,,,Weekly,,,"}
+{"prompt": "TH,5-7", "completion": "Thursday,17:00,19:00,,,,,,,,Weekly,,,"}
+{"prompt": "nan", "completion": "nan"}
+{"prompt": "M T TH F,9:30-1", "completion": "Monday,9:30,13:00,,,,,,,,Weekly,,,;Tuesday,9:30,13:00,,,,,,,,Weekly,,,;Thursday,9:30,13:00,,,,,,,,Weekly,,,;Friday,9:30,13:00,,,,,,,,Weekly,,,"}
+{"prompt": "Distributing in June 2022-on hold for July, Aug, Sept. To notify when resumes.   3rd Sat,8-10 am", "completion": "Saturday,8:00,10:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "T,10-11", "completion": "Tuesday,10:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "1ST & 3RD WED,2:00-4:00", "completion": "Wednesday,14:00,16:00,,,,,,,1,Day of Month,,,;Wednesday,14:00,16:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "W,9:00-11:00", "completion": "Wednesday,9:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "T,9:30-12, 1-2:30 EXCEPT 5TH TUES", "completion": "Tuesday,9:30,12:00,13:00,14:30,,,,,1,Day of Month,,,;Tuesday,9:30,12:00,13:00,14:30,,,,,2,Day of Month,,,;Tuesday,9:30,12:00,13:00,14:30,,,,,3,Day of Month,,,;Tuesday,9:30,12:00,13:00,14:30,,,,,4,Day of Month,,,"}
+{"prompt": "3rd Fri,10-2", "completion": "Friday,10:00,14:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "W F,9:00-11:00", "completion": "Monday,9:00,11:00,,,,,,,,Weekly,,,;Wednesday,9:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "W,10-1 (addt'l avail. For emergencies)", "completion": "Wednesday,10:00,13:00,,,,,,,,Weekly,,,"}
+{"prompt": "M T W ,4:00-5:30", "completion": "Monday,16:00,17:30,,,,,,,,Weekly,,,;Tuesday,16:00,17:30,,,,,,,,Weekly,,,;Wednesday,16:00,17:30,,,,,,,,Weekly,,,"}
+{"prompt": "nan", "completion": "nan"}
+{"prompt": "T,4-6:30", "completion": "Tuesday,16:30,18:30,,,,,,,,Weekly,,,"}
+{"prompt": "3RD SAT (Will also hold FP 5/1/21 9-11),9:00-11:00", "completion": "Saturday,9:00,11:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "SK M-Sat,SK 11:00-1:00", "completion": "Monday,11:00,13:00,,,,,,,,Weekly,,,;Tuesday,11:00,13:00,,,,,,,,Weekly,,,;Wednesday,11:00,13:00,,,,,,,,Weekly,,,;Thursday,11:00,13:00,,,,,,,,Weekly,,,;Friday,11:00,13:00,,,,,,,,Weekly,,,;Saturday,11:00,13:00,,,,,,,,Weekly,,,"}
+{"prompt": "2ND & 4TH SAT,10:00-1:00", "completion": "Saturday,10:00,13:00,,,,,,,2,Day of Month,,,;Saturday,10:00,13:00,,,,,,,4,Day of Month,,,"}
+{"prompt": "2nd & 4TH TUES,6:00-7:30", "completion": "Tuesday,18:00,19:30,,,,,,,2,Day of Month,,,;Tuesday,18:00,19:30,,,,,,,4,Day of Month,,,"}
+{"prompt": "2nd T (may move to 3rd T),10:00-3:00", "completion": "Tuesday,10:00,15:00,,,,,,,2,Day of Month,,,"}
+{"prompt": "1ST & 3RD F & Sat,9:00-12:00", "completion": "Friday,9:00,12:00,,,,,,,1,Day of Month,,,;Friday,9:00,12:00,,,,,,,3,Day of Month,,,;Saturday,9:00,12:00,,,,,,,1,Day of Month,,,;Saturday,9:00,12:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "nan", "completion": "nan"}
+{"prompt": "W,9:00-11:00, 1:00-3:00", "completion": "Wednesday,9:00,11:00,13:00,15:00,,,,,,Weekly,,,"}
+{"prompt": "W,9:30-11:30, 12:30-2:30", "completion": "Wednesday,9:30,11:30,12:30,14:30,,,,,,Weekly,,,"}
+{"prompt": "T  (CSFP Tues after 2nd Wed),9:30-12:30", "completion": "Tuesday,9:30,12:30,,,,,,,,Weekly,,,"}
+{"prompt": "T TH,9:00-11:30, 12:30-3:00", "completion": "Tuesday,9:00,11:30,12:30,15:00,,,,,,Weekly,,,;Thursday,9:00,11:30,12:30,15:00,,,,,,Weekly,,,"}
+{"prompt": "F,8:30-11:00", "completion": "Friday,8:30,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "1st & 3rd Wed,4:00-5:00,Has Spansih Interpreter", "completion": "Wednesday,16:00,17:00,,,,,,,1,Day of Month,,,;Wednesday,16:00,17:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "1st & 3rd Sat,10:00-12:00", "completion": "Saturday,10:00,12:00,,,,,,,1,Day of Month,,,;Saturday,10:00,12:00,,,,,,,3,Day of Month,,,"}
+{"prompt": "T W TH F,SOUP 11:30-12:30", "completion": "Tuesday,11:30,12:30,,,,,,,,Weekly,,,;Wednesday,11:30,12:30,,,,,,,,Weekly,,,;Thursday,11:30,12:30,,,,,,,,Weekly,,,;Friday,11:30,12:30,,,,,,,,Weekly,,,"}
+{"prompt": "T F and 3rd Sat,TF 9-11:30, 1-4 (by appt); 3rd Sat 9-12:30 (3rd Sat for HH working during week & by appt)/walk-ins accepted case by case only", "completion": "Tuesday,9:00,11:30,,,,,,,,Weekly,,,;Friday,9:00,11:30,,,,,,,,Weekly,,,;Tuesday,13:00,16:00,,,,,By Appointment,,,Weekly,,,;Friday,13:00,16:00,,,,,By Appointment,,,Weekly,,,;Saturday,9:00,12:30,,,,,,,3,Day of Month,,,"}
+{"prompt": "2nd & 4th Sat (changed to 3rd Sat?),10-12", "completion": "Saturday,10:00,12:00,,,,,,,2,Day of Month,,,;Saturday,10:00,12:00,,,,,,,4,Day of Month,,,"}
+{"prompt": "3RD SAT,9:00-11:00", "completion": "Saturday,9:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "W,8:30-10, 3:30-4:30 (CLOSED FRI)", "completion": "Wednesday,8:30,10:00,15:30,16:30,,,,,,Weekly,,,"}
+{"prompt": "T,9:30-12:00", "completion": "Tuesday,9:30,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "Thurs,9-11", "completion": "Thursday,9:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "T,8-11:30, 1:30-4:30 (CLOSED FRI)", "completion": "Tuesday,8:00,11:30,13:30,16:30,,,,,,Weekly,,,"}
+{"prompt": "Thur 4:30pm-6pm", "completion": "Thursday,16:30,18:00,,,,,,,,Weekly,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "Wednesday 10 am - 12 pm", "completion": "Wednesday,10:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "Fridays 8am-11am", "completion": "Friday,8:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "Na", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "3rd Sat 9-10:30 am, Mon after 6-7pm", "completion": "Saturday,9:00,10:30,,,,,,,3.0,Day of Month,,,;Monday,18:00,19:00,,,,,,,,Weekly,,,"}
+{"prompt": "Na", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "Monday 12:30 - 2:30pm", "completion": "Monday,12:30,14:30,,,,,,,,Weekly,,,"}
+{"prompt": "Every Friday during school year", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "Tue 4:30pm-7pm (4:30-6:30pm in winter), Fri 8:30am-12pm", "completion": "Tuesday,16:30,19:00,,,,,,,,Weekly,,,;Friday,8:30,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "Monday - Friday 10am - 1pm", "completion": "Monday,10:00,13:00,,,,,,,,Weekly,,,;Tuesday,10:00,13:00,,,,,,,,Weekly,,,;Wednesday,10:00,13:00,,,,,,,,Weekly,,,;Thursday,10:00,13:00,,,,,,,,Weekly,,,;Friday,10:00,13:00,,,,,,,,Weekly,,,"}
+{"prompt": "Sun 1pm-3pm", "completion": "Sunday,13:00,15:00,,,,,,,,Weekly,,,"}
+{"prompt": "Sat. 8:00am-10:10am", "completion": "Saturday,8:00,10:10,,,,,,,,Weekly,,,"}
+{"prompt": "Mon. & Thurs. 2pm-4pm", "completion": "Monday,14:00,16:00,,,,,,,,Weekly,,,;Thursday,14:00,16:00,,,,,,,,Weekly,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "Thurs 9-11am, 3rd Tues 6-7pm", "completion": "Thursday,9:00,11:00,,,,,,,,Weekly,,,;Tuesday,18:00,19:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "3rd Friday 1:30pm-4:30PM", "completion": "Friday,13:30,16:30,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "Tues, 9am-12 pm & 1pm-4pm", "completion": "Tuesday,9:00,12:00,13:00,16:00,,,,,,Weekly,,,"}
+{"prompt": "Mon - Thurs 10am-3pm (food to be cooked), Mon and Thurs 4-5:30pm (meals served)", "completion": "Monday,16:00,17:30,,,,,,,,Weekly,,,;Thursday,16:00,17:30,,,,,,,,Weekly,,,"}
+{"prompt": "Tues & Thurs. 9-11am, Wed 2-4pm, 3rd Thurs 5-6pm", "completion": "Tuesday,9:00,11:00,,,,,,,,Weekly,,,;Thursday,9:00,11:00,,,,,,,,Weekly,,,;Wednesday,14:00,16:00,,,,,,,,Weekly,,,;Thursday,17:00,18:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "4th Mon 8:30am-4:30pm, Tue after 4th Mon 11am-12pm", "completion": "Monday,8:30,16:30,,,,,,,4.0,Day of Month,,,;Tuesday,11:00,12:00,,,,,After the 4th Monday Only,,,Weekly,,,"}
+{"prompt": "M-F 9-11am, except Thursdays", "completion": "Monday,9:00,11:00,,,,,,,,Weekly,,,;Tuesday,9:00,11:00,,,,,,,,Weekly,,,;Wednesday,9:00,11:00,,,,,,,,Weekly,,,;Friday,9:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "M,W, F, 9am-11:30am & 12:30pm-4pm", "completion": "Monday,9:00,11:30,12:30,16:00,,,,,,Weekly,,,;Wednesday,9:00,11:30,12:30,16:00,,,,,,Weekly,,,;Friday,9:00,11:30,12:30,16:00,,,,,,Weekly,,,"}
+{"prompt": "Mon 2-3:30pm, Wed. 9-11:30am; Fri 2-3:30pm", "completion": "Monday,14:00,15:30,,,,,,,,Weekly,,,;Wednesday,9:00,11:30,,,,,,,,Weekly,,,;Friday,14:00,15:30,,,,,,,,Weekly,,,"}
+{"prompt": "Wed 9am-12pm and 1pm to 4pm", "completion": "Wednesday,9:00,12:00,13:00,16:00,,,,,,Weekly,,,"}
+{"prompt": "No distribution hours; Hours of operation M - F 5 am - 1 pm", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "Tues & Sat 9-2pm; Thursday 12-6pm.", "completion": "Tuesday,9:00,14:00,,,,,,,,Weekly,,,;Thursday,12:00,18:00,,,,,,,,Weekly,,,;Saturday,9:00,14:00,,,,,,,,Weekly,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "Fri. 8am-3pm", "completion": "Friday,8:00,15:00,,,,,,,,Weekly,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "Monday - Friday 8 am - 5 pm", "completion": "Monday,8:00,17:00,,,,,,,,Weekly,,,;Tuesday,8:00,17:00,,,,,,,,Weekly,,,;Wednesday,8:00,17:00,,,,,,,,Weekly,,,;Thursday,8:00,17:00,,,,,,,,Weekly,,,;Friday,8:00,17:00,,,,,,,,Weekly,,,"}
+{"prompt": "Every 3rd Saturday", "completion": "Saturday,,,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "Mon 5-7pm (5-6:30pm in the winter)", "completion": "Monday,17:00,19:00,,,,,5-6:30pm in the winter,,,Weekly,,,"}
+{"prompt": "Sat 9:30am-11am", "completion": "Saturday,9:30,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "T 4pm-6pm, W 12pm-2pm, last Sat 8:30am-12pm (perishable items available TWTh 10am-12pm, if available)", "completion": "Tuesday,10:00,12:00,16:00,18:00,,,Perishable items available 10am-12pm, if available,,,Weekly,,,;Wednesday,10:00,12:00,12:00,14:00,,,Perishable items available 10am-12pm, if available,,,,,,;Thursday,10:00,12:00,,,,,Perishable items available 10am-12pm, if available,,,,,,;Saturday,8:30,12:00,,,,,Last Saturday Of Month Only,,,Weekly,,,"}
+{"prompt": "Last Saturday 12pm-1pm", "completion": "Saturday,12:00,13:00,,,,,Last Saturday Of Month Only,,,Weekly,,,"}
+{"prompt": "nan", "completion": "Thursday,,,,,,,,,,,,,"}
+{"prompt": "Thurs 1pm-4pm; Fri 9am-12pm", "completion": "Thursday,13:00,16:00,,,,,,,,Weekly,,,;Friday,9:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "Wednesday 11-1 pm", "completion": "Wednesday,11:00,13:00,,,,,,,,Weekly,,,"}
+{"prompt": "Wednesdays 6-6:45pm", "completion": "Wednesday,18:00,18:45,,,,,,,,Weekly,,,"}
+{"prompt": "M-Thur 9AM-3PM", "completion": "Monday,9:00,15:00,,,,,,,,Weekly,,,;Tuesday,9:00,15:00,,,,,,,,Weekly,,,;Wednesday,9:00,15:00,,,,,,,,Weekly,,,;Thursday,9:00,15:00,,,,,,,,Weekly,,,"}
+{"prompt": "Every other Tues 6-7:30PM", "completion": "Tuesday,18:00,19:30,,,,,,,,Every Other Week,,,"}
+{"prompt": "3rd Sat 10-11:30AM", "completion": "Saturday,10:00,11:30,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "Tues & Thurs 9am - 11:45am", "completion": "Tuesday,9:00,11:45,,,,,,,,Weekly,,,;Thursday,9:00,11:45,,,,,,,,Weekly,,,"}
+{"prompt": "Every Sat. 9am-10am", "completion": "Saturday,9:00,10:00,,,,,,,,Weekly,,,"}
+{"prompt": "M-F 8am - 11am, 1:30 -3 pm", "completion": "Monday,8:00,11:00,13:30,15:00,,,,,,Weekly,,,;Tuesday,8:00,11:00,13:30,15:00,,,,,,Weekly,,,;Wednesday,8:00,11:00,13:30,15:00,,,,,,Weekly,,,;Thursday,8:00,11:00,13:30,15:00,,,,,,Weekly,,,;Friday,8:00,11:00,13:30,15:00,,,,,,Weekly,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "M-T-Thur 11AM-1PM", "completion": "Monday,11:00,13:00,,,,,,,,Weekly,,,;Tuesday,11:00,13:00,,,,,,,,Weekly,,,;Thursday,11:00,13:00,,,,,,,,Weekly,,,"}
+{"prompt": "3rd and 4th Sat. in Nov and Dec 9:30- 11:30am", "completion": "Saturday,9:30,11:30,,,,,Only open in November,,4.0,Day of Month,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "2nd Tue 10AM-12PM 4th Mon 10AM-11AM", "completion": "Monday,10:00,11:00,,,,,,,2.0,Day of Month,,,;Tuesday,10:00,12:00,,,,,,,4.0,Day of Month,,,"}
+{"prompt": "2nd & 4th Sat 10am-12pm 3rd Thursday 6:30pm-8:30pm", "completion": "Thursday,6:30,8:30,,,,,,,3.0,Day of Month,,,;Saturday,10:00,12:00,,,,,,,2.0,Day of Month,,,;Saturday,10:00,12:00,,,,,,,4.0,Day of Month,,,"}
+{"prompt": "Every Saturday 8am-10am", "completion": "Saturday,8:00,10:00,,,,,,,,Weekly,,,"}
+{"prompt": "Monday - Friday 8 am - 4 pm", "completion": "Monday,8:00,16:00,,,,,,,,Weekly,,,;Tuesday,8:00,16:00,,,,,,,,Weekly,,,;Wednesday,8:00,16:00,,,,,,,,Weekly,,,;Thursday,8:00,16:00,,,,,,,,Weekly,,,;Friday,8:00,16:00,,,,,,,,Weekly,,,"}
+{"prompt": "Sun 10am-1pm on drill weekends, 1st Thur 12pm-1pm for community veterans", "completion": "Thursday,12:00,13:00,,,,,Community Veterans Only,,1.0,Day of Month,,,"}
+{"prompt": "1st Thursday 6-8, 3rd Saturday 8-10", "completion": "Thursday,18:00,20:00,,,,,,,1.0,Day of Month,,,;Saturday,20:00,22:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "Mon, Wed, Fri, 9-12pm & usually the 3rd Wed 2:30-5pm", "completion": "Monday,9:00,12:00,,,,,,,,Weekly,,,;Wednesday,9:00,12:00,,,,,,,,Weekly,,,;Friday,9:00,12:00,,,,,,,,Weekly,,,;Wednesday,14:30,17:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "First or second Saturday of the month 10:30 am - 12 pm", "completion": "Saturday,10:30,12:00,,,,,,,1.0,Day of Month,,,"}
+{"prompt": "Monday and Thursday 2pm-4pm + Sunday 10:30am-12:30pm ", "completion": "Monday,10:30,12:30,,,,,,,,Weekly,,,;Thursday,10:30,12:30,,,,,,,,Weekly,,,;Sunday,14:00,16:00,,,,,,,,Weekly,,,"}
+{"prompt": "M-F 9-11:30 am", "completion": "Monday,9:00,11:30,,,,,,,,Weekly,,,;Tuesday,9:00,11:30,,,,,,,,Weekly,,,;Wednesday,9:00,11:30,,,,,,,,Weekly,,,;Thursday,9:00,11:30,,,,,,,,Weekly,,,;Friday,9:00,11:30,,,,,,,,Weekly,,,"}
+{"prompt": "3rd Saturday - 9am-11am", "completion": "Saturday,9:00,11:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "2nd Sat 8-10AM", "completion": "Saturday,8:00,10:00,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "Mon-Fri 9-12pm Third Thurs 5:30-6:30pm", "completion": "Monday,9:00,12:00,,,,,,,,Weekly,,,;Tuesday,9:00,12:00,,,,,,,,Weekly,,,;Wednesday,9:00,12:00,,,,,,,,Weekly,,,;Thursday,9:00,12:00,,,,,,,,Weekly,,,;Thursday,17:30,18:30,,,,,,,3.0,Day of Month,,,;Friday,9:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "Tues 9-11am, Thur 2-4pm", "completion": "Tuesday,9:00,11:00,,,,,,,,Weekly,,,;Thursday,14:00,16:00,,,,,,,,Weekly,,,"}
+{"prompt": "Tues-Fri 10-2  Wed 8:30p-9p Sun 1p-3p", "completion": "Tuesday,10:00,14:00,,,,,,,,Weekly,,,;Wednesday,10:00,14:00,20:30,21:00,,,,,,Weekly,,,;Thursday,10:00,14:00,,,,,,,,Weekly,,,;Friday,10:00,14:00,,,,,,,,Weekly,,,;Sunday,13:00,15:00,,,,,,,,Weekly,,,"}
+{"prompt": "Every Wednesday 5-7pm", "completion": "Wednesday,17:00,19:00,,,,,,,,Weekly,,,"}
+{"prompt": "Every Tuesday 9 am - 11 am", "completion": "Tuesday,9:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "Th 10am-2pm", "completion": "Thursday,10:00,14:00,,,,,,,,Weekly,,,"}
+{"prompt": "NA - Womens Shelter", "completion": ",,,,,,,Womens Shelter,,,,,,"}
+{"prompt": "Tues. 4:30-6:30pm ", "completion": "Tuesday,16:30,18:30,,,,,,,,Weekly,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "2nd and 4th Wednesdays 1-3pm", "completion": "Wednesday,13:00,15:00,,,,,,,2.0,Day of Month,,,;Wednesday,13:00,15:00,,,,,,,4.0,Day of Month,,,"}
+{"prompt": "2nd & 4th Wed. 9am to 11am", "completion": "Wednesday,9:00,11:00,,,,,,,2.0,Day of Month,,,;Wednesday,9:00,11:00,,,,,,,4.0,Day of Month,,,"}
+{"prompt": "Every Wednesday 1-2:30 pm", "completion": "Wednesday,13:00,14:30,,,,,,,,Weekly,,,"}
+{"prompt": "7 days a week 8 am - dusk", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "Wed & Thurs 9-11 am and 1-3pm, Fri 9-11am", "completion": "Wednesday,9:00,11:00,13:00,15:00,,,,,,Weekly,,,;Thursday,9:00,11:00,13:00,15:00,,,,,,Weekly,,,;Friday,9:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "Mon & Wed 10am-11:30am", "completion": "Monday,10:00,11:30,,,,,,,,Weekly,,,;Wednesday,10:00,11:30,,,,,,,,Weekly,,,"}
+{"prompt": "Second Saturday 9am-11:30am", "completion": "Saturday,9:00,11:30,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "Monday and Thursday 5pm -7pm", "completion": "Monday,17:00,19:00,,,,,,,,Weekly,,,;Thursday,17:00,19:00,,,,,,,,Weekly,,,"}
+{"prompt": "1st Tuesday 3:30-5pm ", "completion": "Thursday,15:30,17:00,,,,,,,1.0,Day of Month,,,"}
+{"prompt": "3rd Mon 6pm-8pm", "completion": "Monday,18:00,20:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "4th Wed. 12-3pm", "completion": "Wednesday,12:00,15:00,,,,,,,4.0,Day of Month,,,"}
+{"prompt": "1st 4 Tues 8:30-10:30AM 1st Sat 9-10AM", "completion": "Tuesday,8:30,10:30,,,,,,,1.0,Day of Month,,,;Tuesday,8:30,10:30,,,,,,,4.0,Day of Month,,,;Saturday,9:00,10:00,,,,,,,1.0,Day of Month,,,"}
+{"prompt": "M, T, TH & F 9-11, 12-2:30", "completion": "Monday,9:00,11:00,12:00,14:30,,,,,,Weekly,,,;Tuesday,9:00,11:00,12:00,14:30,,,,,,Weekly,,,;Thursday,9:00,11:00,12:00,14:30,,,,,,Weekly,,,;Friday,9:00,11:00,12:00,14:30,,,,,,Weekly,,,"}
+{"prompt": "2nd Sat. 7am-9am", "completion": "Saturday,7:00,9:00,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "2nd Thursday 10-11:30am", "completion": "Thursday,10:00,11:30,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "M, W, F 11:30 am - 12:30 pm", "completion": "Monday,11:30,12:30,,,,,,,,Weekly,,,;Wednesday,11:30,12:30,,,,,,,,Weekly,,,;Friday,11:30,12:30,,,,,,,,Weekly,,,"}
+{"prompt": "3rd Thursday 2-4pm", "completion": "Thursday,14:00,16:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "Last Saturday 10am-12pm", "completion": "Saturday,10:00,12:00,,,,,Last Saturday of Month Only,,,Weekly,,,"}
+{"prompt": "Sat 8:30AM-10:30AM", "completion": "Saturday,8:30,10:30,,,,,,,,Weekly,,,"}
+{"prompt": "M,W,F 1pm-3pm", "completion": "Monday,13:00,15:00,,,,,,,,Weekly,,,;Wednesday,13:00,15:00,,,,,,,,Weekly,,,;Friday,13:00,15:00,,,,,,,,Weekly,,,"}
+{"prompt": "2nd Monday of the month", "completion": "Monday,,,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "M, W, F 9-3", "completion": "Monday,9:00,15:00,,,,,,,,Weekly,,,;Wednesday,9:00,15:00,,,,,,,,Weekly,,,;Friday,9:00,15:00,,,,,,,,Weekly,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "Not open to public", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "Tuesdays 4-6pm", "completion": "Tuesday,16:00,18:00,,,,,,,,Weekly,,,"}
+{"prompt": "Saturdays 11am-2pm", "completion": "Saturday,11:00,14:00,,,,,,,,Weekly,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "1st and 3rd Thuraday of the month 8am-10am", "completion": "Thursday,8:00,10:00,,,,,,,1.0,Day of Month,,,;Thursday,8:00,10:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "Tues,Thurs, 9-1;30 Mon,Wed 9-2", "completion": "Monday,9:00,14:00,,,,,,,,Weekly,,,;Tuesday,9:00,13:30,,,,,,,,Weekly,,,;Wednesday,9:00,14:00,,,,,,,,Weekly,,,;Thursday,9:00,13:30,,,,,,,,Weekly,,,"}
+{"prompt": "Tuesday-Thursday 5-7pm & Saturday 8-10am", "completion": "Tuesday,17:00,19:00,,,,,,,,Weekly,,,;Wednesday,17:00,19:00,,,,,,,,Weekly,,,;Thursday,17:00,19:00,,,,,,,,Weekly,,,;Saturday,8:00,10:00,,,,,,,,Weekly,,,"}
+{"prompt": "Pantry: Mon-Fri 9am-11am & 1pm-3pm; Kitchen: Mon-Fri 11:45am-12:30 pm", "completion": "Monday,9:00,11:00,13:00,15:00,,,,,,Weekly,,,;Tuesday,9:00,11:00,13:00,15:00,,,,,,Weekly,,,;Wednesday,9:00,11:00,13:00,15:00,,,,,,Weekly,,,;Thursday,9:00,11:00,13:00,15:00,,,,,,Weekly,,,;Friday,9:00,11:00,13:00,15:00,,,,,,Weekly,,,"}
+{"prompt": "Monday, Wednesday, Friday 9am - 3pm", "completion": "Monday,9:00,15:00,,,,,,,,Weekly,,,;Wednesday,9:00,15:00,,,,,,,,Weekly,,,;Friday,9:00,15:00,,,,,,,,Weekly,,,"}
+{"prompt": "24/7 (Shelter), M-F 9am-12pm ", "completion": "Monday,9:00,12:00,,,,,,,,Weekly,,,;Tuesday,9:00,12:00,,,,,,,,Weekly,,,;Wednesday,9:00,12:00,,,,,,,,Weekly,,,;Thursday,9:00,12:00,,,,,,,,Weekly,,,;Friday,9:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "M-F 10AM-12PM", "completion": "Monday,10:00,12:00,,,,,,,,Weekly,,,;Tuesday,10:00,12:00,,,,,,,,Weekly,,,;Wednesday,10:00,12:00,,,,,,,,Weekly,,,;Thursday,10:00,12:00,,,,,,,,Weekly,,,;Friday,10:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "2nd Wednesday Foodbank delivery, distribution is the following Saturday 7:30am to 9:30am", "completion": "Saturday,7:30,9:30,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "4th Thursday 8am-10:30am except Nov & Dec.", "completion": "Thursday,8:00,10:30,,,,,Except in November and December,,4.0,Day of Month,,,"}
+{"prompt": "Meals on Wheels M - F beginning at 10:30 am; M - F 7:30 am - 4 pm (open hours)", "completion": "Monday,7:30,16:00,,,,,,,,Weekly,,,;Tuesday,7:30,16:00,,,,,,,,Weekly,,,;Wednesday,7:30,16:00,,,,,,,,Weekly,,,;Thursday,7:30,16:00,,,,,,,,Weekly,,,"}
+{"prompt": "Mon & Thur 10am - 12pm", "completion": "Monday,10:00,12:00,,,,,,,,Weekly,,,;Thursday,10:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "NA - Must be a patient ", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "24 hour shelter", "completion": ",,,,,,,Open 24 hours, please call for assistance,,,Call for Information,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "Mon 10am-12pm; Wed 6am-2pm; Th 10:30am-12:30pm", "completion": "Monday,10:00,12:00,,,,,,,,Weekly,,,;Wednesday,6:00,14:00,,,,,,,,Weekly,,,;Thursday,10:30,12:30,,,,,,,,Weekly,,,"}
+{"prompt": "Monday 10-11 am, 5:30-6:30 pm", "completion": "Monday,10:00,11:00,17:30,18:30,,,,,,Weekly,,,"}
+{"prompt": "Mon-Fri 8am-9am, 10:30am-1:30pm, Sat-Sun 10:30-1:30pm", "completion": "Monday,8:00,9:00,10:30,13:30,,,,,,Weekly,,,;Tuesday,8:00,9:00,10:30,13:30,,,,,,Weekly,,,;Wednesday,8:00,9:00,10:30,13:30,,,,,,Weekly,,,;Thursday,8:00,9:00,10:30,13:30,,,,,,Weekly,,,;Friday,8:00,9:00,10:30,13:30,,,,,,Weekly,,,;Saturday,10:30,13:30,,,,,,,,Weekly,,,;Sunday,10:30,13:30,,,,,,,,Weekly,,,"}
+{"prompt": "Wed, Thurs, Sat 7:30-10:30 am", "completion": "Wednesday,7:30,10:30,,,,,,,,Weekly,,,;Thursday,7:30,10:30,,,,,,,,Weekly,,,;Saturday,7:30,10:30,,,,,,,,Weekly,,,"}
+{"prompt": "Tues 9:30-11:30am, Wed 5-7:pm", "completion": "Tuesday,9:30,11:30,,,,,,,,Weekly,,,;Wednesday,17:00,19:00,,,,,,,,Weekly,,,"}
+{"prompt": "Thursday 5-6 pm; Sunday 1-2:15 pm", "completion": "Thursday,17:00,18:00,,,,,,,,Weekly,,,;Sunday,13:00,14:15,,,,,,,,Weekly,,,"}
+{"prompt": "Open 9 am - 11am every Saturday", "completion": "Saturday,9:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "Tues 8:30-10a, Thur 5:30-7p, Sat 8:30-9:30a", "completion": "Tuesday,8:30,10:00,,,,,,,,Weekly,,,;Thursday,17:30,19:00,,,,,,,,Weekly,,,;Saturday,8:30,9:30,,,,,,,,Weekly,,,"}
+{"prompt": "NA - Family program", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "Wed 10am-12pm + 1st Wednesday 6pm-7pm", "completion": "Wednesday,10:00,12:00,,,,,,,,Weekly,,,;Wednesday,18:00,19:00,,,,,,,1.0,Day of Month,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "2nd Sat 10am-12pm", "completion": "Saturday,10:00,12:00,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "2nd Tuesday 12pm-2pm", "completion": "Tuesday,12:00,14:00,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "nan", "completion": ",,,,,,,,,,,,,"}
+{"prompt": "Mon-Thurs 10am-5pm (or Mon-Fri in summer)", "completion": "Monday,10:00,17:00,,,,,,,,Weekly,,,;Tuesday,10:00,17:00,,,,,,,,Weekly,,,;Wednesday,10:00,17:00,,,,,,,,Weekly,,,;Thursday,10:00,17:00,,,,,,,,Weekly,,,;Friday,10:00,17:00,,,,,Summer's only,,,Weekly,,,"}
+{"prompt": "3rd Sunday 1:00 p.m. - 2:30 p.m. ", "completion": "Program,Sunday,13:00,14:30,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "3rd Wednesday 10:00 a.m. - 11:30 a.m. ", "completion": "Program,Wednesday,10:00,11:30,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "Monday - Friday 8:00-4:00 p.m. ", "completion": "Program,Monday,8:00,16:00,,,,,,,,Weekly,,,;Program,Tuesday,8:00,16:00,,,,,,,,Weekly,,,;Program,Wednesday,8:00,16:00,,,,,,,,Weekly,,,;Program,Thursday,8:00,16:00,,,,,,,,Weekly,,,;Program,Friday,8:00,16:00,,,,,,,,Weekly,,,"}
+{"prompt": "2nd & 4th Wednesday 9:00 a.m. -11:00 a.m.", "completion": "Program,Wednesday,9:00,11:00,,,,,,,2.0,Day of Month,,,;Program,Wednesday,9:00,11:00,,,,,,,4.0,Day of Month,,,"}
+{"prompt": "Every Tues, Wed, & Thurs. 10:00 a.m. - 12:30 p.m.", "completion": "Program,Tuesday,10:00,12:30,,,,,,,,Weekly,,,;Program,Wednesday,10:00,12:30,,,,,,,,Weekly,,,;Program,Thursday,10:00,12:30,,,,,,,,Weekly,,,"}
+{"prompt": "2nd Friday/ 2nd Saturday of month, 8:00 a.m. - 11:00 a.m.", "completion": "Program,Saturday,8:00,11:00,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "3rd Saturday 8:00-10:00 a.m. ", "completion": "Program,Saturday,8:00,10:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "3rd Saturday 9:00 a.m. - 12:00 p.m. ", "completion": "Program,Saturday,9:00,12:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "1st and 3rd Monday 7:30 a.m. - 9:00 a.m.", "completion": "Program,Monday,7:30,9:00,,,,,,,1.0,Day of Month,,,;Program,Monday,7:30,9:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "3rd Wednesday 9:00 a.m. - 2:00 p.m.", "completion": "Program,Wednesday,9:00,14:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "1st Saturday 8:00-12:00 p.m. ", "completion": "Program,Saturday,8:00,12:00,,,,,,,1.0,Day of Month,,,"}
+{"prompt": "Monday - Friday 8:00 a.m. - 4:00 p.m. Pantry closed 3rd Wed - Fri.", "completion": "Program,Monday,8:00,16:00,,,,,,,,Weekly,,,;Program,Tuesday,8:00,16:00,,,,,,,,Weekly,,,;Program,Wednesday,8:00,16:00,,,,,Pantry closed 3rd Wednesday of the month.,,,Weekly,,,;Program,Thursday,8:00,16:00,,,,,Pantry closed 3rd Thursday of the month.,,,Weekly,,,;Program,Friday,8:00,16:00,,,,,Pantry closed 3rd Friday of the month.,,,Weekly,,,"}
+{"prompt": "Tues., Wed., & Thurs. 9:00 a.m. - 4:00 p.m.  ", "completion": "Program,Tuesday,9:00,16:00,,,,,,,,Weekly,,,;Program,Wednesday,9:00,16:00,,,,,,,,Weekly,,,;Program,Thursday,9:00,16:00,,,,,,,,Weekly,,,"}
+{"prompt": "Monday - Thursday 8:00 a.m. - 3:00 p.m. & Friday 8:00 a.m. - 12 p.m. ", "completion": "Program,Monday,8:00,15:00,,,,,,,,Weekly,,,;Program,Tuesday,8:00,15:00,,,,,,,,Weekly,,,;Program,Wednesday,8:00,15:00,,,,,,,,Weekly,,,;Program,Thursday,8:00,15:00,,,,,,,,Weekly,,,;Program,Friday,8:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "7 Days a week ", "completion": "Program,,,,,,,,24/7 Emergency Assistance,,,Call for Information,,,"}
+{"prompt": "2nd Friday 8:00 a.m. - 10:00 a.m.", "completion": "Program,Friday,8:00,10:00,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "Distribution 1st, 2nd, & 3rd Tuesday - Friday of the month 9:30 a.m. -11:30 a.m. & 1:30-3:30pm. Distributes perishable goods to patrons of the Senior Center 60 and older. ", "completion": "Program,Tuesday,9:30,11:30,13:30,15:30,,,Distributes perishable goods to patrons of the Senior Center 60 and older. ,,1.0,Day of Month,,,;Program,Tuesday,9:30,11:30,13:30,15:30,,,Distributes perishable goods to patrons of the Senior Center 60 and older. ,,2.0,Day of Month,,,;Program,Tuesday,9:30,11:30,13:30,15:30,,,Distributes perishable goods to patrons of the Senior Center 60 and older. ,,3.0,Day of Month,,,;Program,Friday,9:30,11:30,13:30,15:30,,,Distributes perishable goods to patrons of the Senior Center 60 and older. ,,1.0,Day of Month,,,;Program,Friday,9:30,11:30,13:30,15:30,,,Distributes perishable goods to patrons of the Senior Center 60 and older. ,,2.0,Day of Month,,,;Program,Friday,9:30,11:30,13:30,15:30,,,Distributes perishable goods to patrons of the Senior Center 60 and older. ,,3.0,Day of Month,,,"}
+{"prompt": "3rd Wednesday 8:00 a.m. - 12:00 p.m.", "completion": "Program,Wednesday,8:00,12:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "Monday - Thursday 9:00 a.m. -1:30 p.m. / Friday 9:30 a.m. - 11:30 a.m. ", "completion": "Program,Monday,9:00,13:30,,,,,,,,Weekly,,,;Program,Tuesday,9:00,13:30,,,,,,,,Weekly,,,;Program,Wednesday,9:00,13:30,,,,,,,,Weekly,,,;Program,Thursday,9:00,13:30,,,,,,,,Weekly,,,;Program,Friday,9:30,11:30,,,,,,,,Weekly,,,"}
+{"prompt": "Monday & Wednesday every week 11:00 a.m. - 12:00 p.m. ", "completion": "Program,Monday,11:00,12:00,,,,,,,,Weekly,,,;Program,Wednesday,11:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "Every Thursday 8:00 a.m. - 4:00 p.m.", "completion": "Program,Thursday,8:00,16:00,,,,,,,,Weekly,,,"}
+{"prompt": "2nd Tuesday 8:00 a.m. - 9:00 a.m.", "completion": "Program,Tuesday,8:00,9:00,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "2nd and 4th Monday 11:00 a.m. - 12:00 p.m.", "completion": "Program,Monday,11:00,12:00,,,,,,,2.0,Day of Month,,,;Program,Monday,11:00,12:00,,,,,,,4.0,Day of Month,,,"}
+{"prompt": "2nd and 4th Wednesday 8:00 a.m. - 10:30 a.m.", "completion": "Program,Wednesday,8:00,10:30,,,,,,,2.0,Day of Month,,,;Program,Wednesday,8:00,10:30,,,,,,,4.0,Day of Month,,,"}
+{"prompt": "Monday and Friday 10:00 a.m. -12:00 p.m. ", "completion": "Program,Monday,10:00,12:00,,,,,,,,Weekly,,,;Program,Friday,10:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "1st Wednesday 9:00 a.m. - 12:00 p.m. ", "completion": "Program,Wednesday,9:00,12:00,,,,,,,1.0,Day of Month,,,"}
+{"prompt": "Every 1st Saturday of month 7:30 a.m. - 9:30 a.m.", "completion": "Program,Saturday,7:30,9:30,,,,,,,1.0,Day of Month,,,"}
+{"prompt": "3rd Saturday 10:00 a.m. - 12:00 p.m.", "completion": "Program,Saturday,10:00,12:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "2nd Saturday 9:00 a.m. - 10:30 a.m. ", "completion": "Program,Saturday,9:00,10:30,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "2nd Tuesday 9:00 a.m. - 11:00 a.m.", "completion": "Program,Tuesday,9:00,11:00,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "1st & last Sunday each month", "completion": "Program,Sunday,,,,,,,,,1.0,Day of Month,,,;Program,Sunday,,,,,,,,,5.0,Day of Month,,,"}
+{"prompt": "Monday - Friday 12:00 p.m. - 1:00 p.m.", "completion": "Program,Monday,12:00,13:00,,,,,,,,Weekly,,,;Program,Tuesday,12:00,13:00,,,,,,,,Weekly,,,;Program,Wednesday,12:00,13:00,,,,,,,,Weekly,,,;Program,Thursday,12:00,13:00,,,,,,,,Weekly,,,;Program,Friday,12:00,13:00,,,,,,,,Weekly,,,"}
+{"prompt": "Monday - Friday 9:00 a.m. - 11:00 a.m.", "completion": "Program,Monday,9:00,11:00,,,,,,,,Weekly,,,;Program,Tuesday,9:00,11:00,,,,,,,,Weekly,,,;Program,Wednesday,9:00,11:00,,,,,,,,Weekly,,,;Program,Thursday,9:00,11:00,,,,,,,,Weekly,,,;Program,Friday,9:00,11:00,,,,,,,,Weekly,,,;Program,Monday,9:00,11:00,,,,,,,,Weekly,,,;Program,Tuesday,9:00,11:00,,,,,,,,Weekly,,,;Program,Wednesday,9:00,11:00,,,,,,,,Weekly,,,;Program,Thursday,9:00,11:00,,,,,,,,Weekly,,,;Program,Friday,9:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "Monday & Wednesday 8:00 a.m. - 10:30 a.m. (Friday only serve 60 and physically disabled 8:00 a.m. - 10:30 a.m.)", "completion": "Program,Monday,8:00,10:30,,,,,,,,Weekly,,,;Program,Wednesday,8:00,10:30,,,,,,,,Weekly,,,;Program,Friday,8:00,10:30,,,,,Only serve 60 and physically disabled,,,Weekly,,,"}
+{"prompt": "3rd Wednesday 8:30 a.m. - 12:30 p.m.", "completion": "Program,Wednesday,8:30,12:30,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "4th Friday 10:00 - 12:00 p.m.", "completion": "Program,Friday,10:00,12:00,,,,,,,4.0,Day of Month,,,;Program,Friday,10:00,12:00,,,,,,,4.0,Day of Month,,,"}
+{"prompt": "1st and 3rd Tuesday 8:00 a.m - 11:00 a.m. ", "completion": "Program,Tuesday,8:00,11:00,,,,,,,1.0,Day of Month,,,;Program,Tuesday,8:00,11:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "3rd Saturday 8:00-10:00 a.m. ", "completion": "Program,Saturday,8:00,10:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "1st and 3rd Tuesday 10:00 a.m. - 12:00 p.m.", "completion": "Program,Tuesday,10:00,12:00,,,,,,,1.0,Day of Month,,,;Program,Tuesday,10:00,12:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "2nd Monday and Tuesday 8:00 a.m. - 9:30 a.m. ", "completion": "Program,Monday,8:00,9:30,,,,,,,2.0,Day of Month,,,;Program,Tuesday,8:00,9:30,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "1st Thursday/Friday A-F, 2nd Thursday/Friday G-M, 3rd Thursday/Friday N-S, & 4th Thursday/Friday T-Z    10:00 a.m. - 1 p.m. ", "completion": "Program,Thursday,10:00,13:00,,,,,Last names A-F,,1.0,Day of Month,,,;Program,Friday,10:00,13:00,,,,,Last names A-F,,1.0,Day of Month,,,;Program,Thursday,10:00,13:00,,,,,Last names G-M,,2.0,Day of Month,,,;Program,Friday,10:00,13:00,,,,,Last names G-M,,2.0,Day of Month,,,;Program,Thursday,10:00,13:00,,,,,Last names N-S,,3.0,Day of Month,,,;Program,Friday,10:00,13:00,,,,,Last names N-S,,3.0,Day of Month,,,;Program,Thursday,10:00,13:00,,,,,Last names T-Z,,4.0,Day of Month,,,;Program,Friday,10:00,13:00,,,,,Last names T-Z,,4.0,Day of Month,,,"}
+{"prompt": "3rd Thursday 3:00 p.m. - 5:00 p.m.", "completion": "Program,Thursday,15:00,17:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "Last Saturday of the month/ 9:00 a.m. - 10:00 a.m.", "completion": "Program,Saturday,9:00,10:00,,,,,,,5.0,Day of Month,,,"}
+{"prompt": "2nd Wednesday 8:00 a.m. - 9:30 a.m.", "completion": "Program,Wednesday,8:00,9:30,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "Monday - Thursday 7:30 a.m. - 4:30 p.m.  Friday 7:30 a.m. - 2:00 p.m.", "completion": "Program,Monday,7:30,16:30,,,,,,,,Weekly,,,;Program,Tuesday,7:30,16:30,,,,,,,,Weekly,,,;Program,Wednesday,7:30,16:30,,,,,,,,Weekly,,,;Program,Thursday,7:30,16:30,,,,,,,,Weekly,,,;Program,Friday,7:30,14:30,,,,,,,,Weekly,,,"}
+{"prompt": "2nd Thursday  A-L  3rd Wednesday  M-Z    8:00 a.m. - 4:00 p.m.", "completion": "Program,Thursday,8:00,16:00,,,,,Last names A-L,,2.0,Day of Month,,,;Program,Wednesday,8:00,16:00,,,,,Last names M-Z,,3.0,Day of Month,,,"}
+{"prompt": "Monday - Thursday 11:00 a.m. - 6:00 p.m.&  Friday 11:00 a.m. - 4:30 p.m. (Semester Hours) / M/W/F 11:00 a.m. - 2:00 p.m. & T/Th 11:00 a.m. - 4:30 p.m. (Summer Hours) ", "completion": "Program,Monday,11:00,18:00,,,,,Semester Hours,,,Weekly,,,;Program,Tuesday,11:00,18:00,,,,,Semester Hours,,,Weekly,,,;Program,Wednesday,11:00,18:00,,,,,Semester Hours,,,Weekly,,,;Program,Thursday,11:00,18:00,,,,,Semester Hours,,,Weekly,,,;Program,Friday,11:00,16:30,,,,,Semester Hours,,,Weekly,,,;Program,Monday,11:00,14:00,,,,,Summer Hours,,,Weekly,,,;Program,Tuesday,11:00,16:30,,,,,Summer Hours,,,Weekly,,,;Program,Wednesday,11:00,14:00,,,,,Summer Hours,,,Weekly,,,;Program,Thursday,11:00,16:30,,,,,Summer Hours,,,Weekly,,,;Program,Friday,11:00,14:00,,,,,Summer Hours,,,Weekly,,,"}
+{"prompt": "2nd Wednesday  9:00 a.m. - 11:00 a.m. ", "completion": "Program,Wednesday,9:00,11:00,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "Tuesday and Thursday 10:00 a.m. - 1:00 p.m.", "completion": "Program,Tuesday,10:00,13:00,,,,,,,,Weekly,,,;Program,Thursday,10:00,13:00,,,,,,,,Weekly,,,"}
+{"prompt": "24 hour residential facility with in house clients", "completion": "Program,,,,,,,,24/7 residential facility with in house clients,,,Call for Information,,,"}
+{"prompt": "4th Friday 9:00 a.m. - 11:00 a.m. / Farm Fresh 2nd Thursday 10:30 - 12:00 pm", "completion": "Program,Thursday,9:00,11:00,,,,,,,2.0,Day of Month,,,;Program,Friday,10:30,12:00,,,,,,,4.0,Day of Month,,,"}
+{"prompt": "Every Thursday 9:00 a.m. - 11:00 a.m.", "completion": "Program,Thursday,9:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "2nd Tuesday 10:00 a.m. - 12:00 p.m.", "completion": "Program,Tuesday,10:00,12:00,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "2nd Friday 1:00 p.m. - 4:00 p.m.  ", "completion": "Program,Friday,13:00,16:00,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "2nd Monday 10:00 a.m. - 1:00 p.m.", "completion": "Program,Monday,10:00,13:00,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "4th Friday 8:00-9:30 a.m. ", "completion": "Program,Friday,8:00,9:30,,,,,,,4.0,Day of Month,,,"}

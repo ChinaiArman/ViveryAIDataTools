@@ -1,0 +1,100 @@
+{"prompt": "Second,Saturday,8:30am,10:30am,,,Walk Up", "completion": "Saturday,8:30,10:30,,,,,Walk Up,2,,Week of Month"}
+{"prompt": "First,Saturday,8am,10:30am,,,Drive Thru and Walk up", "completion": "Saturday,8:00,10:30,,,,,Drive Thru and Walk up,1,,Week of Month"}
+{"prompt": "Third,Saturday,8am,10:30am,,,Drive Thru and Walk up", "completion": "Saturday,8:00,10:30,,,,,Drive Thru and Walk up,3,,Week of Month"}
+{"prompt": "Fourth,Wednesday,,,3pm,4:30pm,Walk Up", "completion": "Wednesday,15:00,16:30,,,,,Walk Up,4,,Week of Month"}
+{"prompt": "First,Monday,,,3pm,5pm,Walk Up", "completion": "Monday,15:00,17:00,,,,,Walk Up,1,,Week of Month"}
+{"prompt": "Last,Wednesday,9am,10am,,,Walk Up", "completion": "Wednesday,9:00,10:00,,,,,Last of Month (4th or 5th),4,,Week of Month"}
+{"prompt": "Third,Saturday,8:30am,10:30am,,,Drive Thru and Walk up", "completion": "Saturday,8:30,10:30,,,,,Drive Thru and Walk up,3,,Week of Month"}
+{"prompt": "Second,Saturday,8:30am,10:30am,,,Drive Thru and Walk up", "completion": "Saturday,8:30,10:30,,,,,Drive Thru and Walk up,2,,Week of Month"}
+{"prompt": "3:30-5:30 pm,1st Thursday,N/A,Ongoing", "completion": "Thursday,15:30,17:30,,,,,,,1,Day of Month,,,"}
+{"prompt": "4-6pm ,3rd or 4th Thursday,Ongoing", "completion": "Thursday,16:00,18:00,,,,,,,,Weekly,,,"}
+{"prompt": "4-6pm ,4th Tuesday,Ongoing", "completion": "Tuesday,16:00,18:00,,,,,,,4,Day of Month,,,"}
+{"prompt": "830-1030am,Last Saturday ,Ongoing", "completion": "Saturday,8:30,10:30,,,,,,,4,Day of Month,,,"}
+{"prompt": "3:30-5:30PM ,3rd Tuesday,Ongoing", "completion": "Tuesday,15:30,17:30,,,,,,,3,Day of Month,,,"}
+{"prompt": "3:30pm,2nd or 3rd Monday,Ongoing", "completion": "Monday,15:30,17:30,,,,,,,2,Day of Month,,,"}
+{"prompt": "3:30pm,3rd Wednesday,,Ongoing", "completion": "Wednesday,15:30,17:30,,,,,,,3,Day of Month,,,"}
+{"prompt": "2pm,2nd Monday,,Ongoing", "completion": "Monday,14:00,16:00,,,,,,,2,Day of Month,,,"}
+{"prompt": "8:30-11:30 am,1st and 3rd Wednesday of the Month ,N/A,Ongoing", "completion": "Wednesday,8:30,11:30,,,,,,,1,Day of Month,,,;Wednesday,8:30,11:30,,,,,,,3,Day of Month,,,"}
+{"prompt": "9:00-10:00 am,2nd and 4th Thursday,N/A,Ongoing", "completion": "Thursday,9:00,10:00,,,,,,,2,Day of Month,,,;Thursday,9:00,10:00,,,,,,,4,Day of Month,,,"}
+{"prompt": "10AM-11AM,4th Wednesday,Ongoing", "completion": "Wednesday,10:00,11:00,,,,,,,4,Day of Month,,,"}
+{"prompt": "9:00-10:00 am,2nd and 4th Wednesday,N/A,Ongoing", "completion": "Wednesday,9:00,10:00,,,,,,,2,Day of Month,,,;Wednesday,9:00,10:00,,,,,,,4,Day of Month,,,"}
+{"prompt": "11am-12pm,2nd & 4th Tuesday,", "completion": "Tuesday,11:00,12:00,,,,,,,2,Day of Month,,,;Tuesday,11:00,12:00,,,,,,,4,Day of Month,,,"}
+{"prompt": "3:45-4:45pm,3rd Friday (Lesson- 3rd Thursday 3:45-4:45pm),", "completion": "Thursday,15:45,16:45,,,,,Lesson,,3,Day of Month,,,;Friday,15:45,16:45,,,,,,,3,Day of Month,,,"}
+{"prompt": "3rd Thursday 3:15-4:15pm ,3rd Friday -  3:15-4:30pm ", "completion": "Monday,15:00,17:00,,,,,Walk Up,1,,Week of Month,,,"}
+{"prompt": "3:30-4:30PM,2nd Wednesday", "completion": "Wednesday,15:30,16:30,,,,,,,2,Day of Month,,,"}
+{"prompt": "3-4pm,2nd Wednesday,", "completion": "Wednesday,15:00,16:00,,,,,,,2,Day of Month,,,"}
+{"prompt": "3:30-4:30PM,2nd Wednesday,Oct-22,May-23", "completion": "Wednesday,15:30,16:30,,,,,October through May Only,,2,Day of Month,,,"}
+{"prompt": "3:30-4:30PM,2nd Wednesday,Oct-22,May-23", "completion": "Wednesday,15:30,16:30,,,,,October through May Only,,2,Day of Month,,,"}
+{"prompt": "3:30-4:30PM,2nd Wednesday,Oct-22,May-23", "completion": "Saturday,8:30,10:30,,,,,October through May Only,3,,Week of Month,,,;Wednesday,15:30,16:30,,,,,October through May Only,,2,Day of Month,,,"}
+{"prompt": "5:30-6:30pm,2nd Tuesday ,Oct-22,May-23", "completion": "Tuesday,17:30,18:30,,,,,October through May Only,,2,Day of Month,,,"}
+{"prompt": "5-6pm,2nd Tuesday ,Oct-22,May-23", "completion": "Tuesday,17:00,18:00,,,,,October through May Only,,2,Day of Month,,,"}
+{"prompt": "4:15-5:15pm,1st Thursday ,Oct-22,May-23", "completion": "Thursday,16:15,17:15,,,,,October through May Only,,1,Day of Month,,,"}
+{"prompt": "3:30-4:30PM,1st Thurs,Oct-22,May-23", "completion": "Thursday,15:30,16:30,,,,,October through May Only,,1,Day of Month,,,"}
+{"prompt": "2:30-3:30pm,1st Thurs,Oct-22,May-23", "completion": "Thursday,14:30,15:30,,,,,October through May Only,,1,Day of Month,,,"}
+{"prompt": "3:30-4:30pm,1st Thurs,Oct-22,May-23", "completion": "Thursday,15:30,16:30,,,,,October through May Only,,1,Day of Month,,,"}
+{"prompt": "2:30-3:30pm,1st Thurs,Oct-22,May-23", "completion": "Thursday,14:30,15:30,,,,,October through May Only,,1,Day of Month,,,"}
+{"prompt": "10-11am ,3rd Friday,Oct-22,May-23", "completion": "Friday,10:00,11:00,,,,,October through May Only,,3,Day of Month,,,"}
+{"prompt": "10AM-11AM,3rd Wednesday,Oct-22,May-23", "completion": "Wednesday,10:00,11:00,,,,,October through May Only,,3,Day of Month,,,"}
+{"prompt": "3rd Thursday 10AM-11AM,3rd Wednesday,Oct-22,May-23", "completion": "Wednesday,10:00,11:00,,,,,October through May Only,,3,Day of Month,,,;Thursday,10:00,11:00,,,,,October through May Only,,3,Day of Month,,,"}
+{"prompt": "10:30AM-11:30AM ,2nd Wednesday,Oct-22,May-23", "completion": "Wednesday,10:30,11:30,,,,,October through May Only,,2,Day of Month,,,"}
+{"prompt": "2nd Thursday 9:30am-10:30am,2nd Thursday,Oct-22,May-23", "completion": "Thursday,9:30,10:30,,,,,October through May Only,,2,Day of Month,,,"}
+{"prompt": "330-5pm,Every Thursday,Oct-22,Dec-22", "completion": "Thursday,15:30,17:30,,,,,October through December Only,,,Weekly,,,"}
+{"prompt": "415-645pm,Every Thursday,Jun-22,Jul-22", "completion": "Thursday,16:15,18:45,,,,,June through July Only,,,Weekly,,,"}
+{"prompt": "2-4pm,Wednesdays,Ocotber 2022,Dec-22", "completion": "Wednesday,14:00,16:00,,,,,October through December only,,,Weekly,,,"}
+{"prompt": "2-4pm,Wednesdays,Jan-23,Mar-23", "completion": "Wednesday,14:00,16:00,,,,,January through March Only,,,Weekly,,,"}
+{"prompt": "2-4PM,Every Thursday,Jan-23,Mar-23", "completion": "Thursday,14:00,16:00,,,,,January through March Only,,,Weekly,,,"}
+{"prompt": "3-5pm,Last Monday of the month ,Octobeer 2022,Ongoing", "completion": "Saturday,15:00,17:00,,,,,Last Saturday of the Month only,,4,Day of Month,,,"}
+{"prompt": "8:00AM-10:30AM,Last Saturday of the Month,,Ongoing", "completion": "Saturday,8:00,10:30,,,,,,,1,Day of Month,,,,Saturday,8:00,10:30,,,,,,,3,Day of Month,,,"}
+{"prompt": "9-1130am,3rd Wednesday of motnh, 3/23/22,Ongoing", "completion": "Wednesday,9:00,11:30,,,,,,,3,Day of Month,,,"}
+{"prompt": "2-4pm,Every  3rd Friday of month,,Ongoing", "completion": "Friday,14:00,16:00,,,,,,,1,Day of Month,,,"}
+{"prompt": "2-4pm,Every  4th Friday of the month,,Ongoing", "completion": "Friday,14:00,16:00,,,,,,,2,Day of Month,,,"}
+{"prompt": "LAST FRIDAY OF THE MONTH (5TH Fri)  4:00 - 7:00 pm ALL IN ALL OUT", "completion": "Program,Friday,16:00,19:00,,,,,,,5.0,Day of Month,,,"}
+{"prompt": "8:00am-10:00pm 24hours /7 days a week", "completion": "Program,Monday,8:00,10:00,,,,,,,,Weekly,,,;Program,Tuesday,8:00,10:00,,,,,,,,Weekly,,,;Program,Wednesday,8:00,10:00,,,,,,,,Weekly,,,;Program,Thursday,8:00,10:00,,,,,,,,Weekly,,,;Program,Friday,8:00,10:00,,,,,,,,Weekly,,,;Program,Saturday,8:00,10:00,,,,,,,,Weekly,,,;Program,Sunday,8:00,10:00,,,,,,,,Weekly,,,"}
+{"prompt": "Tuesdays & Thursdays 8:00 a.m. - 10:00 a.m. ", "completion": "Program,Tuesday,8:00,10:00,,,,,,,,Weekly,,,;Program,Thursday,8:00,10:00,,,,,,,,Weekly,,,"}
+{"prompt": "3rd Thursday 7:00-12:00 p.m.", "completion": "Program,Thursday,19:00,23:59,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "Monday 9:00am-10:30am", "completion": "Program,Monday,9:00,10:30,,,,,,,,Weekly,,,"}
+{"prompt": "1st and 3rd Saturday 9:00 a.m. - 11:00 a.m.", "completion": "Program,Saturday,9:00,11:00,,,,,,,1.0,Day of Month,,,;Program,Saturday,9:00,11:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "2nd and 4th Thursday 9:00 a.m. - 11:00 a.m.", "completion": "Program,Thursday,9:00,11:00,,,,,,,2.0,Day of Month,,,;Program,Thursday,9:00,11:00,,,,,,,4.0,Day of Month,,,"}
+{"prompt": "1st and 3rd Saturday 10:00 a.m. - 1:30 p.m.", "completion": "Program,Saturday,10:00,13:30,,,,,,,1.0,Day of Month,,,;Program,Saturday,10:00,13:30,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "2nd and 4th Tuesdays 8:00 a.m. to 10 a.m.", "completion": "Program,Tuesday,8:00,10:00,,,,,,,2.0,Day of Month,,,;Program,Tuesday,8:00,10:00,,,,,,,4.0,Day of Month,,,"}
+{"prompt": "3rd Saturday 8:00 a.m. - 11:00 a.m.", "completion": "Program,Saturday,8:00,11:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "Monday - Thursday 10:00 a.m. - 12:00 p.m.", "completion": "Program,Monday,10:00,12:00,,,,,,,,Weekly,,,;Program,Tuesday,10:00,12:00,,,,,,,,Weekly,,,;Program,Wednesday,10:00,12:00,,,,,,,,Weekly,,,;Program,Thursday,10:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "Monday - Thursday 11:00 a.m. - 7:00 p.m.", "completion": "Program,Monday,11:00,19:00,,,,,,,,Weekly,,,;Program,Tuesday,11:00,19:00,,,,,,,,Weekly,,,;Program,Wednesday,11:00,19:00,,,,,,,,Weekly,,,;Program,Thursday,11:00,19:00,,,,,,,,Weekly,,,"}
+{"prompt": "1st Thursday 10:00 a.m. - 12:00 p.m.", "completion": "Program,Thursday,10:00,12:00,,,,,,,1.0,Day of Month,,,"}
+{"prompt": "Wednesdays 9:00 a.m. - 11:00 a.m.", "completion": "Program,Wednesday,9:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "1st and 3rd Saturday from 8:30 a.m. - 10:30 a.m.", "completion": "Program,Saturday,8:30,10:30,,,,,,,1.0,Day of Month,,,;Program,Saturday,8:30,10:30,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "1st Thurs and sometimes 3rd Thursday 9:30 a.m. - 12:00 p.m.", "completion": "Program,Thursday,9:30,12:00,,,,,,,1.0,Day of Month,,,"}
+{"prompt": "3rd Wednesday 7:00. a.m- 9:00 a.m. [Emergency boxes in Livonia at office of St. Frances Catholic Church, 3523 Hwy 78, Tuesday - Thursday 8:30 - 3:00 pm and Friday 8:30 - 12:00 pm.]", "completion": "Program,Wednesday,7:00,9:00,,,,,,,3.0,Day of Month,,,;Program,Tuesday,8:30,15:00,,,,,Emergency boxes in Livonia at office of St. Frances Catholic Church, 3523 Hwy 78,,,Weekly,,,;Program,Wednesday,8:30,15:00,,,,,Emergency boxes in Livonia at office of St. Frances Catholic Church, 3523 Hwy 78,,,Weekly,,,;Program,Thursday,8:30,15:00,,,,,Emergency boxes in Livonia at office of St. Frances Catholic Church, 3523 Hwy 78,,,Weekly,,,;Program,Friday,8:30,12:00,,,,,Emergency boxes in Livonia at office of St. Frances Catholic Church, 3523 Hwy 78,,,Weekly,,,"}
+{"prompt": "2nd Thursday 8:00-3:00 p.m.", "completion": "Program,Thursday,8:00,15:00,,,,,Seniors 65+,,2.0,Day of Month,,,"}
+{"prompt": "2nd Thursday 4:00-6:00 p.m. ", "completion": "Program,Thursday,16:00,18:00,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "2nd Thursday 4:00-6:00 p.m. ", "completion": "Program,Thursday,16:00,18:00,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "2nd & 3rd Wednesday 8:30 a.m. - 10:30 a.m.", "completion": "Program,Wednesday,8:30,10:30,,,,,,,2.0,Day of Month,,,;Program,Wednesday,8:30,10:30,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "Last Sunday of each month. 8:00 - 9:00 a.m.  Hot prepared breakfast and food box", "completion": "Program,Sunday,8:00,9:00,,,,,Hot prepared breakfast and food box,,5.0,Day of Month,,,"}
+{"prompt": "Monday-Thursday 9:00 a.m. - 3:30 p.m. ", "completion": "Program,Monday,9:00,15:30,,,,,,,,Weekly,,,;Program,Tuesday,9:00,15:30,,,,,,,,Weekly,,,;Program,Wednesday,9:00,15:30,,,,,,,,Weekly,,,;Program,Thursday,9:00,15:30,,,,,,,,Weekly,,,"}
+{"prompt": "Mon-Thurs 9:30 am- 11:30 am", "completion": "Program,Monday,9:30,11:30,,,,,,,,Weekly,,,;Program,Tuesday,9:30,11:30,,,,,,,,Weekly,,,;Program,Thursday,9:30,11:30,,,,,,,,Weekly,,,;Program,Friday,9:30,11:30,,,,,,,,Weekly,,,"}
+{"prompt": "2nd Monday of each Month 8:30 a.m. -10:30 a.m.", "completion": "Program,Monday,8:30,10:30,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "3rd Friday 9:00am-11:00am and on call", "completion": "Program,Friday,9:00,11:00,,,,,Available on call aswell,,3.0,Day of Month,,,"}
+{"prompt": "4th Thursday 6:30 - 8:00 a.m. ", "completion": "Program,Thursday,6:30,8:00,,,,,,,4.0,Day of Month,,,"}
+{"prompt": "3rd Saturday  10:00 a.m. - 12:00 p.m.", "completion": "Program,Saturday,10:00,12:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "1st and 3rd Thursdays, 8:30am-11:00am", "completion": "Program,Thursday,8:30,11:00,,,,,,,1.0,Day of Month,,,;Program,Thursday,8:30,11:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "Applications Only Monday and Tuesday 1 p.m.-4 p.m. / Distribution Wednesday 1:00 p.m. - 4:00 p.m.", "completion": "Program,Monday,13:00,16:00,,,,,Applicants Only,,,Weekly,,,;Program,Tuesday,13:00,16:00,,,,,Applicants Only,,,Weekly,,,;Program,Wednesday,13:00,16:00,,,,,Distribution,,,Weekly,,,"}
+{"prompt": "Tuesdays 9:00 a.m.-12:00 p.m.", "completion": "Program,Tuesday,9:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "Tuesday, Wednesday 10:00-3:00 Friday 10:00-1:00", "completion": "Program,Tuesday,10:00,15:00,,,,,,,,Weekly,,,;Program,Wednesday,10:00,15:00,,,,,,,,Weekly,,,;Program,Friday,10:00,13:00,,,,,,,,Weekly,,,"}
+{"prompt": "1st & 3rd Thursday 1:00-4:00 p.m. ", "completion": "Program,Thursday,13:00,16:00,,,,,,,1.0,Day of Month,,,;Program,Thursday,13:00,16:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "Tuesdays & Thursdays 12:00 - 2:00 p.m.", "completion": "Program,Tuesday,12:00,14:00,,,,,,,,Weekly,,,;Program,Thursday,12:00,14:00,,,,,,,,Weekly,,,"}
+{"prompt": "4th Saturday  9:00 a.m. - 11:00 a.m.", "completion": "Program,Saturday,9:00,11:00,,,,,,,4.0,Day of Month,,,"}
+{"prompt": "3rd Thursday  3:00-5:00 p.m.", "completion": "Program,Thursday,15:00,17:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "4th Saturday 9:00 a.m. - 11:00 a.m.", "completion": "Program,Saturday,9:00,11:00,,,,,,,4.0,Day of Month,,,"}
+{"prompt": "2nd Tuesday 8:00 a.m. - 2:00 p.m.", "completion": "Program,Tuesday,8:00,14:00,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "Monday - Friday 7:30 a.m. - 3:30 p.m. ", "completion": "Program,Monday,7:30,15:30,,,,,,,,Weekly,,,;Program,Tuesday,7:30,15:30,,,,,,,,Weekly,,,;Program,Wednesday,7:30,15:30,,,,,,,,Weekly,,,;Program,Thursday,7:30,15:30,,,,,,,,Weekly,,,;Program,Friday,7:30,15:30,,,,,,,,Weekly,,,"}
+{"prompt": "Friday 8:00 a.m. - 12:00 p.m.", "completion": "Program,Friday,8:00,12:00,,,,,,,,Weekly,,,"}
+{"prompt": "1st and 3rd Thursday 9:30 a.m. - 2:00 p.m. ", "completion": "Program,Thursday,9:30,14:00,,,,,,,1.0,Day of Month,,,;Program,Thursday,9:30,14:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "2nd and 3rd Saturday 8:00 a.m. - 12:00 p.m.", "completion": "Program,Saturday,8:00,12:00,,,,,,,2.0,Day of Month,,,;Program,Saturday,8:00,12:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "1st and 3rd Friday 7:00 a.m. - 11:00 a.m.", "completion": "Program,Friday,7:00,11:00,,,,,,,1.0,Day of Month,,,;Program,Friday,7:00,11:00,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "2nd Friday 10:00 a.m. - 12:00 p.m. ", "completion": "Program,Friday,10:00,12:00,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "Tuesday 8:00 a.m. - 11:00 a.m.", "completion": "Program,Tuesday,8:00,11:00,,,,,,,,Weekly,,,"}
+{"prompt": "2nd Friday 8:00-9:30 a.m. ", "completion": "Program,Friday,8:00,9:30,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "2nd Wednesday 8:00-9:30 a.m. ", "completion": "Program,Wednesday,8:00,9:30,,,,,,,2.0,Day of Month,,,"}
+{"prompt": "3rd Monday 8:00-9:00 a.m. ", "completion": "Program,Monday,8:00,9:30,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "3rd Wednesday 8:00-9:30 a.m. ", "completion": "Program,Wednesday,8:00,9:30,,,,,,,3.0,Day of Month,,,"}
+{"prompt": "4th Wednesday 10:00-11:00 a.m. ", "completion": "Program,Wednesday,10:00,11:00,,,,,,,4.0,Day of Month,,,"}
