@@ -45,7 +45,7 @@
 ,"2-4pm,Wednesdays,Jan-23,Mar-23","Wednesday,14:00,16:00,,,,,January through March Only,,,Weekly,,,",Food Bank of Santa Barbara County
 ,"2-4PM,Every Thursday,Jan-23,Mar-23","Thursday,14:00,16:00,,,,,January through March Only,,,Weekly,,,",Food Bank of Santa Barbara County
 ,"3-5pm,Last Monday of the month ,Octobeer 2022,Ongoing","Saturday,15:00,17:00,,,,,Last Saturday of the Month only,,4,Day of Month,,,",Food Bank of Santa Barbara County
-,"8:00AM-10:30AM,Last Saturday of the Month,,Ongoing","Saturday,8:00,10:30,,,,,,,1,Day of Month,,,,Saturday,8:00,10:30,,,,,,,3,Day of Month,,,",Food Bank of Santa Barbara County
+,"8:00AM-10:30AM,Last Saturday of the Month,,Ongoing","Saturday,8:00,10:30,,,,,,,1,Day of Month,,,;Saturday,8:00,10:30,,,,,,,3,Day of Month,,,",Food Bank of Santa Barbara County
 ,"9-1130am,3rd Wednesday of motnh, 3/23/22,Ongoing","Wednesday,9:00,11:30,,,,,,,3,Day of Month,,,",Food Bank of Santa Barbara County
 ,"2-4pm,Every  3rd Friday of month,,Ongoing","Friday,14:00,16:00,,,,,,,1,Day of Month,,,",Food Bank of Santa Barbara County
 ,"2-4pm,Every  4th Friday of the month,,Ongoing","Friday,14:00,16:00,,,,,,,2,Day of Month,,,",Food Bank of Santa Barbara County
@@ -53,8 +53,8 @@
 ,"2-4pm,Every 2nd Friday of the month ,,Ongoing","Friday,14:00,16:00,,,,,,,2,Day of Month,,,",Food Bank of Santa Barbara County
 ,"11AM-3PM,Every 2nd or 3rd Sunday,Nov-22,Ongoing","Sunday,11:00,15:00,,,,,,,2,Day of Month,,,",Food Bank of Santa Barbara County
 ,"3-5pm,2nd Monday of the month ,Nov-22,Ongoing","Monday,15:00,17:00,,,,,,,2,Day of Month,,,",Food Bank of Santa Barbara County
-,",2nd & 4th Wednesday,Apr-23,","Wednesday,,,,,,,,,2,Day of Month,,,,Wednesday,,,,,,,,,4,Day of Month,,,",Food Bank of Santa Barbara County
-,",1st & 3rd Tuesday ,Apr-23,","Tuesday,,,,,,,,,1,Day of Month,,,,Tuesday,,,,,,,,,3,Day of Month,,,",Food Bank of Santa Barbara County
+,",2nd & 4th Wednesday,Apr-23,","Wednesday,,,,,,,,2,Day of Month,,,;Wednesday,,,,,,,,4,Day of Month,,,",Food Bank of Santa Barbara County
+,",1st & 3rd Tuesday ,Apr-23,","Tuesday,,,,,,,,1,Day of Month,,,;Tuesday,,,,,,,,3,Day of Month,,,",Food Bank of Santa Barbara County
 ,"3-4pm,4th Friday,1-Oct-22,May-22","Friday,15:00,16:00,,,,,October through May Only,,4,Day of Month,,,",Food Bank of Santa Barbara County
 ,"3-4pm,3rd Thursday,1-Oct-22,May-22","Thursday,15:00,16:00,,,,,October through May Only,,3,Day of Month,,,",Food Bank of Santa Barbara County
 ,"2:50-3:50pm,2nd Wednesday,1-Oct-22,May-22","Wednesday,14:50,15:50,,,,,October through May Only,,2,Day of Month,,,",Food Bank of Santa Barbara County
@@ -276,7 +276,7 @@ A0001,NA,",,,,,,,,,,,,,",Central Illinois
 A0003,Wednesday 10 am - 12 pm,"Wednesday,10:00,12:00,,,,,,,,Weekly,,,",Central Illinois
 A0005,Fridays 8am-11am,"Friday,8:00,11:00,,,,,,,,Weekly,,,",Central Illinois
 A0006,Na,",,,,,,,,,,,,,",Central Illinois
-A0007,"3rd Sat 9-10:30 am, Mon after 6-7pm","Saturday,9:00,10:30,,,,,,,3.0,Day of Month,,,;Monday,18:00,19:00,,,,,,,,Weekly,,,",Central Illinois
+A0007,"3rd Sat 9-10:30 am, Mon after 6-7pm","Saturday,9:00,10:30,,,,,,,3,Day of Month,,,;Monday,18:00,19:00,,,,,,,,Weekly,,,",Central Illinois
 A0008,Na,",,,,,,,,,,,,,",Central Illinois
 A0009,Monday 12:30 - 2:30pm,"Monday,12:30,14:30,,,,,,,,Weekly,,,",Central Illinois
 A0010,Every Friday during school year,",,,,,,,,,,,,,",Central Illinois
@@ -286,12 +286,12 @@ A0265,Sun 1pm-3pm,"Sunday,13:00,15:00,,,,,,,,Weekly,,,",Central Illinois
 A0015,Sat. 8:00am-10:10am,"Saturday,8:00,10:10,,,,,,,,Weekly,,,",Central Illinois
 A0016,Mon. & Thurs. 2pm-4pm,"Monday,14:00,16:00,,,,,,,,Weekly,,,;Thursday,14:00,16:00,,,,,,,,Weekly,,,",Central Illinois
 A0018,NA,",,,,,,,,,,,,,",Central Illinois
-A0019,"Thurs 9-11am, 3rd Tues 6-7pm","Thursday,9:00,11:00,,,,,,,,Weekly,,,;Tuesday,18:00,19:00,,,,,,,3.0,Day of Month,,,",Central Illinois
-A0021,3rd Friday 1:30pm-4:30PM,"Friday,13:30,16:30,,,,,,,3.0,Day of Month,,,",Central Illinois
+A0019,"Thurs 9-11am, 3rd Tues 6-7pm","Thursday,9:00,11:00,,,,,,,,Weekly,,,;Tuesday,18:00,19:00,,,,,,,3,Day of Month,,,",Central Illinois
+A0021,3rd Friday 1:30pm-4:30PM,"Friday,13:30,16:30,,,,,,,3,Day of Month,,,",Central Illinois
 A0022,"Tues, 9am-12 pm & 1pm-4pm","Tuesday,9:00,12:00,13:00,16:00,,,,,,Weekly,,,",Central Illinois
 A0023,"Mon - Thurs 10am-3pm (food to be cooked), Mon and Thurs 4-5:30pm (meals served)","Monday,16:00,17:30,,,,,,,,Weekly,,,;Thursday,16:00,17:30,,,,,,,,Weekly,,,",Central Illinois
-A0025,"Tues & Thurs. 9-11am, Wed 2-4pm, 3rd Thurs 5-6pm","Tuesday,9:00,11:00,,,,,,,,Weekly,,,;Thursday,9:00,11:00,,,,,,,,Weekly,,,;Wednesday,14:00,16:00,,,,,,,,Weekly,,,;Thursday,17:00,18:00,,,,,,,3.0,Day of Month,,,",Central Illinois
-A0026,"4th Mon 8:30am-4:30pm, Tue after 4th Mon 11am-12pm","Monday,8:30,16:30,,,,,,,4.0,Day of Month,,,;Tuesday,11:00,12:00,,,,,After the 4th Monday Only,,,Weekly,,,",Central Illinois
+A0025,"Tues & Thurs. 9-11am, Wed 2-4pm, 3rd Thurs 5-6pm","Tuesday,9:00,11:00,,,,,,,,Weekly,,,;Thursday,9:00,11:00,,,,,,,,Weekly,,,;Wednesday,14:00,16:00,,,,,,,,Weekly,,,;Thursday,17:00,18:00,,,,,,,3,Day of Month,,,",Central Illinois
+A0026,"4th Mon 8:30am-4:30pm, Tue after 4th Mon 11am-12pm","Monday,8:30,16:30,,,,,,,4,Day of Month,,,;Tuesday,11:00,12:00,,,,,After the 4th Monday Only,,,Weekly,,,",Central Illinois
 A0027,"M-F 9-11am, except Thursdays","Monday,9:00,11:00,,,,,,,,Weekly,,,;Tuesday,9:00,11:00,,,,,,,,Weekly,,,;Wednesday,9:00,11:00,,,,,,,,Weekly,,,;Friday,9:00,11:00,,,,,,,,Weekly,,,",Central Illinois
 A0028,"M,W, F, 9am-11:30am & 12:30pm-4pm","Monday,9:00,11:30,12:30,16:00,,,,,,Weekly,,,;Wednesday,9:00,11:30,12:30,16:00,,,,,,Weekly,,,;Friday,9:00,11:30,12:30,16:00,,,,,,Weekly,,,",Central Illinois
 A0029,"Mon 2-3:30pm, Wed. 9-11:30am; Fri 2-3:30pm","Monday,14:00,15:30,,,,,,,,Weekly,,,;Wednesday,9:00,11:30,,,,,,,,Weekly,,,;Friday,14:00,15:30,,,,,,,,Weekly,,,",Central Illinois
@@ -304,7 +304,7 @@ A0037,NA,",,,,,,,,,,,,,",Central Illinois
 A0038,Fri. 8am-3pm,"Friday,8:00,15:00,,,,,,,,Weekly,,,",Central Illinois
 A0039,NA,",,,,,,,,,,,,,",Central Illinois
 A0040,Monday - Friday 8 am - 5 pm,"Monday,8:00,17:00,,,,,,,,Weekly,,,;Tuesday,8:00,17:00,,,,,,,,Weekly,,,;Wednesday,8:00,17:00,,,,,,,,Weekly,,,;Thursday,8:00,17:00,,,,,,,,Weekly,,,;Friday,8:00,17:00,,,,,,,,Weekly,,,",Central Illinois
-A0041,Every 3rd Saturday,"Saturday,,,,,,,,,3.0,Day of Month,,,",Central Illinois
+A0041,Every 3rd Saturday,"Saturday,,,,,,,,3,Day of Month,,,",Central Illinois
 A0042,Mon 5-7pm (5-6:30pm in the winter),"Monday,17:00,19:00,,,,,5-6:30pm in the winter,,,Weekly,,,",Central Illinois
 A0171,Sat 9:30am-11am,"Saturday,9:30,11:00,,,,,,,,Weekly,,,",Central Illinois
 A0044,"T 4pm-6pm, W 12pm-2pm, last Sat 8:30am-12pm (perishable items available TWTh 10am-12pm, if available)","Tuesday,10:00,12:00,16:00,18:00,,,Perishable items available 10am-12pm, if available,,,Weekly,,,;Wednesday,10:00,12:00,12:00,14:00,,,Perishable items available 10am-12pm, if available,,,,,,;Thursday,10:00,12:00,,,,,Perishable items available 10am-12pm, if available,,,,,,;Saturday,8:30,12:00,,,,,Last Saturday Of Month Only,,,Weekly,,,",Central Illinois
@@ -315,29 +315,29 @@ A0048,Wednesday 11-1 pm,"Wednesday,11:00,13:00,,,,,,,,Weekly,,,",Central Illinoi
 A0049,Wednesdays 6-6:45pm,"Wednesday,18:00,18:45,,,,,,,,Weekly,,,",Central Illinois
 A0182,M-Thur 9AM-3PM,"Monday,9:00,15:00,,,,,,,,Weekly,,,;Tuesday,9:00,15:00,,,,,,,,Weekly,,,;Wednesday,9:00,15:00,,,,,,,,Weekly,,,;Thursday,9:00,15:00,,,,,,,,Weekly,,,",Central Illinois
 A0052,Every other Tues 6-7:30PM,"Tuesday,18:00,19:30,,,,,,,,Every Other Week,,,",Central Illinois
-A0053,3rd Sat 10-11:30AM,"Saturday,10:00,11:30,,,,,,,3.0,Day of Month,,,",Central Illinois
+A0053,3rd Sat 10-11:30AM,"Saturday,10:00,11:30,,,,,,,3,Day of Month,,,",Central Illinois
 A0055,Tues & Thurs 9am - 11:45am,"Tuesday,9:00,11:45,,,,,,,,Weekly,,,;Thursday,9:00,11:45,,,,,,,,Weekly,,,",Central Illinois
 A0266,Every Sat. 9am-10am,"Saturday,9:00,10:00,,,,,,,,Weekly,,,",Central Illinois
 A0056,"M-F 8am - 11am, 1:30 -3 pm","Monday,8:00,11:00,13:30,15:00,,,,,,Weekly,,,;Tuesday,8:00,11:00,13:30,15:00,,,,,,Weekly,,,;Wednesday,8:00,11:00,13:30,15:00,,,,,,Weekly,,,;Thursday,8:00,11:00,13:30,15:00,,,,,,Weekly,,,;Friday,8:00,11:00,13:30,15:00,,,,,,Weekly,,,",Central Illinois
 A0057,NA,",,,,,,,,,,,,,",Central Illinois
 A0061,NA,",,,,,,,,,,,,,",Central Illinois
 A0058,M-T-Thur 11AM-1PM,"Monday,11:00,13:00,,,,,,,,Weekly,,,;Tuesday,11:00,13:00,,,,,,,,Weekly,,,;Thursday,11:00,13:00,,,,,,,,Weekly,,,",Central Illinois
-A0059,3rd and 4th Sat. in Nov and Dec 9:30- 11:30am,"Saturday,9:30,11:30,,,,,Only open in November,,4.0,Day of Month,,,",Central Illinois
+A0059,3rd and 4th Sat. in Nov and Dec 9:30- 11:30am,"Saturday,9:30,11:30,,,,,Only open in November,,4,Day of Month,,,",Central Illinois
 A0256,NA,",,,,,,,,,,,,,",Central Illinois
-A0063,2nd Tue 10AM-12PM 4th Mon 10AM-11AM,"Monday,10:00,11:00,,,,,,,2.0,Day of Month,,,;Tuesday,10:00,12:00,,,,,,,4.0,Day of Month,,,",Central Illinois
-A0064,2nd & 4th Sat 10am-12pm 3rd Thursday 6:30pm-8:30pm,"Thursday,6:30,8:30,,,,,,,3.0,Day of Month,,,;Saturday,10:00,12:00,,,,,,,2.0,Day of Month,,,;Saturday,10:00,12:00,,,,,,,4.0,Day of Month,,,",Central Illinois
+A0063,2nd Tue 10AM-12PM 4th Mon 10AM-11AM,"Monday,10:00,11:00,,,,,,,2,Day of Month,,,;Tuesday,10:00,12:00,,,,,,,4,Day of Month,,,",Central Illinois
+A0064,2nd & 4th Sat 10am-12pm 3rd Thursday 6:30pm-8:30pm,"Thursday,6:30,8:30,,,,,,,3,Day of Month,,,;Saturday,10:00,12:00,,,,,,,2,Day of Month,,,;Saturday,10:00,12:00,,,,,,,4,Day of Month,,,",Central Illinois
 A0065,Every Saturday 8am-10am,"Saturday,8:00,10:00,,,,,,,,Weekly,,,",Central Illinois
 A0066,Monday - Friday 8 am - 4 pm,"Monday,8:00,16:00,,,,,,,,Weekly,,,;Tuesday,8:00,16:00,,,,,,,,Weekly,,,;Wednesday,8:00,16:00,,,,,,,,Weekly,,,;Thursday,8:00,16:00,,,,,,,,Weekly,,,;Friday,8:00,16:00,,,,,,,,Weekly,,,",Central Illinois
-A0069,"Sun 10am-1pm on drill weekends, 1st Thur 12pm-1pm for community veterans","Thursday,12:00,13:00,,,,,Community Veterans Only,,1.0,Day of Month,,,",Central Illinois
-A0070,"1st Thursday 6-8, 3rd Saturday 8-10","Thursday,18:00,20:00,,,,,,,1.0,Day of Month,,,;Saturday,20:00,22:00,,,,,,,3.0,Day of Month,,,",Central Illinois
-A0081,"Mon, Wed, Fri, 9-12pm & usually the 3rd Wed 2:30-5pm","Monday,9:00,12:00,,,,,,,,Weekly,,,;Wednesday,9:00,12:00,,,,,,,,Weekly,,,;Friday,9:00,12:00,,,,,,,,Weekly,,,;Wednesday,14:30,17:00,,,,,,,3.0,Day of Month,,,",Central Illinois
+A0069,"Sun 10am-1pm on drill weekends, 1st Thur 12pm-1pm for community veterans","Thursday,12:00,13:00,,,,,Community Veterans Only,,1,Day of Month,,,",Central Illinois
+A0070,"1st Thursday 6-8, 3rd Saturday 8-10","Thursday,18:00,20:00,,,,,,,1,Day of Month,,,;Saturday,20:00,22:00,,,,,,,3,Day of Month,,,",Central Illinois
+A0081,"Mon, Wed, Fri, 9-12pm & usually the 3rd Wed 2:30-5pm","Monday,9:00,12:00,,,,,,,,Weekly,,,;Wednesday,9:00,12:00,,,,,,,,Weekly,,,;Friday,9:00,12:00,,,,,,,,Weekly,,,;Wednesday,14:30,17:00,,,,,,,3,Day of Month,,,",Central Illinois
 A0082,NA,",,,,,,,,,,,,,",Central Illinois
-A0083,First or second Saturday of the month 10:30 am - 12 pm,"Saturday,10:30,12:00,,,,,,,1.0,Day of Month,,,",Central Illinois
+A0083,First or second Saturday of the month 10:30 am - 12 pm,"Saturday,10:30,12:00,,,,,,,1,Day of Month,,,",Central Illinois
 A0084,Monday and Thursday 2pm-4pm + Sunday 10:30am-12:30pm ,"Monday,10:30,12:30,,,,,,,,Weekly,,,;Thursday,10:30,12:30,,,,,,,,Weekly,,,;Sunday,14:00,16:00,,,,,,,,Weekly,,,",Central Illinois
 A0087,M-F 9-11:30 am,"Monday,9:00,11:30,,,,,,,,Weekly,,,;Tuesday,9:00,11:30,,,,,,,,Weekly,,,;Wednesday,9:00,11:30,,,,,,,,Weekly,,,;Thursday,9:00,11:30,,,,,,,,Weekly,,,;Friday,9:00,11:30,,,,,,,,Weekly,,,",Central Illinois
-A0264,3rd Saturday - 9am-11am,"Saturday,9:00,11:00,,,,,,,3.0,Day of Month,,,",Central Illinois
-A0089,2nd Sat 8-10AM,"Saturday,8:00,10:00,,,,,,,2.0,Day of Month,,,",Central Illinois
-A0090,Mon-Fri 9-12pm Third Thurs 5:30-6:30pm,"Monday,9:00,12:00,,,,,,,,Weekly,,,;Tuesday,9:00,12:00,,,,,,,,Weekly,,,;Wednesday,9:00,12:00,,,,,,,,Weekly,,,;Thursday,9:00,12:00,,,,,,,,Weekly,,,;Thursday,17:30,18:30,,,,,,,3.0,Day of Month,,,;Friday,9:00,12:00,,,,,,,,Weekly,,,",Central Illinois
+A0264,3rd Saturday - 9am-11am,"Saturday,9:00,11:00,,,,,,,3,Day of Month,,,",Central Illinois
+A0089,2nd Sat 8-10AM,"Saturday,8:00,10:00,,,,,,,2,Day of Month,,,",Central Illinois
+A0090,Mon-Fri 9-12pm Third Thurs 5:30-6:30pm,"Monday,9:00,12:00,,,,,,,,Weekly,,,;Tuesday,9:00,12:00,,,,,,,,Weekly,,,;Wednesday,9:00,12:00,,,,,,,,Weekly,,,;Thursday,9:00,12:00,,,,,,,,Weekly,,,;Thursday,17:30,18:30,,,,,,,3,Day of Month,,,;Friday,9:00,12:00,,,,,,,,Weekly,,,",Central Illinois
 A0214,NA,",,,,,,,,,,,,,",Central Illinois
 A0094,"Tues 9-11am, Thur 2-4pm","Tuesday,9:00,11:00,,,,,,,,Weekly,,,;Thursday,14:00,16:00,,,,,,,,Weekly,,,",Central Illinois
 A0257,Tues-Fri 10-2  Wed 8:30p-9p Sun 1p-3p,"Tuesday,10:00,14:00,,,,,,,,Weekly,,,;Wednesday,10:00,14:00,20:30,21:00,,,,,,Weekly,,,;Thursday,10:00,14:00,,,,,,,,Weekly,,,;Friday,10:00,14:00,,,,,,,,Weekly,,,;Sunday,13:00,15:00,,,,,,,,Weekly,,,",Central Illinois
@@ -347,28 +347,28 @@ A0099,Th 10am-2pm,"Thursday,10:00,14:00,,,,,,,,Weekly,,,",Central Illinois
 A0100,NA - Womens Shelter,",,,,,,,Womens Shelter,,,,,,",Central Illinois
 A0102,Tues. 4:30-6:30pm ,"Tuesday,16:30,18:30,,,,,,,,Weekly,,,",Central Illinois
 A0103,NA,",,,,,,,,,,,,,",Central Illinois
-A0104,2nd and 4th Wednesdays 1-3pm,"Wednesday,13:00,15:00,,,,,,,2.0,Day of Month,,,;Wednesday,13:00,15:00,,,,,,,4.0,Day of Month,,,",Central Illinois
-A0105,2nd & 4th Wed. 9am to 11am,"Wednesday,9:00,11:00,,,,,,,2.0,Day of Month,,,;Wednesday,9:00,11:00,,,,,,,4.0,Day of Month,,,",Central Illinois
+A0104,2nd and 4th Wednesdays 1-3pm,"Wednesday,13:00,15:00,,,,,,,2,Day of Month,,,;Wednesday,13:00,15:00,,,,,,,4,Day of Month,,,",Central Illinois
+A0105,2nd & 4th Wed. 9am to 11am,"Wednesday,9:00,11:00,,,,,,,2,Day of Month,,,;Wednesday,9:00,11:00,,,,,,,4,Day of Month,,,",Central Illinois
 A0106,Every Wednesday 1-2:30 pm,"Wednesday,13:00,14:30,,,,,,,,Weekly,,,",Central Illinois
 A0107,7 days a week 8 am - dusk,",,,,,,,,,,,,,",Central Illinois
 A0108,"Wed & Thurs 9-11 am and 1-3pm, Fri 9-11am","Wednesday,9:00,11:00,13:00,15:00,,,,,,Weekly,,,;Thursday,9:00,11:00,13:00,15:00,,,,,,Weekly,,,;Friday,9:00,11:00,,,,,,,,Weekly,,,",Central Illinois
 A0111,Mon & Wed 10am-11:30am,"Monday,10:00,11:30,,,,,,,,Weekly,,,;Wednesday,10:00,11:30,,,,,,,,Weekly,,,",Central Illinois
-A0112,Second Saturday 9am-11:30am,"Saturday,9:00,11:30,,,,,,,2.0,Day of Month,,,",Central Illinois
+A0112,Second Saturday 9am-11:30am,"Saturday,9:00,11:30,,,,,,,2,Day of Month,,,",Central Illinois
 A0114,Monday and Thursday 5pm -7pm,"Monday,17:00,19:00,,,,,,,,Weekly,,,;Thursday,17:00,19:00,,,,,,,,Weekly,,,",Central Illinois
-A0115,1st Tuesday 3:30-5pm ,"Thursday,15:30,17:00,,,,,,,1.0,Day of Month,,,",Central Illinois
-A0116,3rd Mon 6pm-8pm,"Monday,18:00,20:00,,,,,,,3.0,Day of Month,,,",Central Illinois
-A0117,4th Wed. 12-3pm,"Wednesday,12:00,15:00,,,,,,,4.0,Day of Month,,,",Central Illinois
-A0118,1st 4 Tues 8:30-10:30AM 1st Sat 9-10AM,"Tuesday,8:30,10:30,,,,,,,1.0,Day of Month,,,;Tuesday,8:30,10:30,,,,,,,4.0,Day of Month,,,;Saturday,9:00,10:00,,,,,,,1.0,Day of Month,,,",Central Illinois
+A0115,1st Tuesday 3:30-5pm ,"Thursday,15:30,17:00,,,,,,,1,Day of Month,,,",Central Illinois
+A0116,3rd Mon 6pm-8pm,"Monday,18:00,20:00,,,,,,,3,Day of Month,,,",Central Illinois
+A0117,4th Wed. 12-3pm,"Wednesday,12:00,15:00,,,,,,,4,Day of Month,,,",Central Illinois
+A0118,1st 4 Tues 8:30-10:30AM 1st Sat 9-10AM,"Tuesday,8:30,10:30,,,,,,,1,Day of Month,,,;Tuesday,8:30,10:30,,,,,,,4,Day of Month,,,;Saturday,9:00,10:00,,,,,,,1,Day of Month,,,",Central Illinois
 A0119,"M, T, TH & F 9-11, 12-2:30","Monday,9:00,11:00,12:00,14:30,,,,,,Weekly,,,;Tuesday,9:00,11:00,12:00,14:30,,,,,,Weekly,,,;Thursday,9:00,11:00,12:00,14:30,,,,,,Weekly,,,;Friday,9:00,11:00,12:00,14:30,,,,,,Weekly,,,",Central Illinois
-A0120,2nd Sat. 7am-9am,"Saturday,7:00,9:00,,,,,,,2.0,Day of Month,,,",Central Illinois
-A0258,2nd Thursday 10-11:30am,"Thursday,10:00,11:30,,,,,,,2.0,Day of Month,,,",Central Illinois
+A0120,2nd Sat. 7am-9am,"Saturday,7:00,9:00,,,,,,,2,Day of Month,,,",Central Illinois
+A0258,2nd Thursday 10-11:30am,"Thursday,10:00,11:30,,,,,,,2,Day of Month,,,",Central Illinois
 A0121,"M, W, F 11:30 am - 12:30 pm","Monday,11:30,12:30,,,,,,,,Weekly,,,;Wednesday,11:30,12:30,,,,,,,,Weekly,,,;Friday,11:30,12:30,,,,,,,,Weekly,,,",Central Illinois
-A0262,3rd Thursday 2-4pm,"Thursday,14:00,16:00,,,,,,,3.0,Day of Month,,,",Central Illinois
+A0262,3rd Thursday 2-4pm,"Thursday,14:00,16:00,,,,,,,3,Day of Month,,,",Central Illinois
 A0122,NA,",,,,,,,,,,,,,",Central Illinois
 A0123,Last Saturday 10am-12pm,"Saturday,10:00,12:00,,,,,Last Saturday of Month Only,,,Weekly,,,",Central Illinois
 A0124,Sat 8:30AM-10:30AM,"Saturday,8:30,10:30,,,,,,,,Weekly,,,",Central Illinois
 A0125,"M,W,F 1pm-3pm","Monday,13:00,15:00,,,,,,,,Weekly,,,;Wednesday,13:00,15:00,,,,,,,,Weekly,,,;Friday,13:00,15:00,,,,,,,,Weekly,,,",Central Illinois
-A0267,2nd Monday of the month,"Monday,,,,,,,,,2.0,Day of Month,,,",Central Illinois
+A0267,2nd Monday of the month,"Monday,,,,,,,,2,Day of Month,,,",Central Illinois
 A0126,"M, W, F 9-3","Monday,9:00,15:00,,,,,,,,Weekly,,,;Wednesday,9:00,15:00,,,,,,,,Weekly,,,;Friday,9:00,15:00,,,,,,,,Weekly,,,",Central Illinois
 A0127,NA,",,,,,,,,,,,,,",Central Illinois
 A0128,NA,",,,,,,,,,,,,,",Central Illinois
@@ -376,15 +376,15 @@ A0129,Not open to public,",,,,,,,,,,,,,",Central Illinois
 A0130,Tuesdays 4-6pm,"Tuesday,16:00,18:00,,,,,,,,Weekly,,,",Central Illinois
 A0246,Saturdays 11am-2pm,"Saturday,11:00,14:00,,,,,,,,Weekly,,,",Central Illinois
 A0132,NA,",,,,,,,,,,,,,",Central Illinois
-A0133,1st and 3rd Thuraday of the month 8am-10am,"Thursday,8:00,10:00,,,,,,,1.0,Day of Month,,,;Thursday,8:00,10:00,,,,,,,3.0,Day of Month,,,",Central Illinois
+A0133,1st and 3rd Thuraday of the month 8am-10am,"Thursday,8:00,10:00,,,,,,,1,Day of Month,,,;Thursday,8:00,10:00,,,,,,,3,Day of Month,,,",Central Illinois
 A0134,"Tues,Thurs, 9-1;30 Mon,Wed 9-2","Monday,9:00,14:00,,,,,,,,Weekly,,,;Tuesday,9:00,13:30,,,,,,,,Weekly,,,;Wednesday,9:00,14:00,,,,,,,,Weekly,,,;Thursday,9:00,13:30,,,,,,,,Weekly,,,",Central Illinois
 A0135,Tuesday-Thursday 5-7pm & Saturday 8-10am,"Tuesday,17:00,19:00,,,,,,,,Weekly,,,;Wednesday,17:00,19:00,,,,,,,,Weekly,,,;Thursday,17:00,19:00,,,,,,,,Weekly,,,;Saturday,8:00,10:00,,,,,,,,Weekly,,,",Central Illinois
 A0136,Pantry: Mon-Fri 9am-11am & 1pm-3pm; Kitchen: Mon-Fri 11:45am-12:30 pm,"Monday,9:00,11:00,13:00,15:00,,,,,,Weekly,,,;Tuesday,9:00,11:00,13:00,15:00,,,,,,Weekly,,,;Wednesday,9:00,11:00,13:00,15:00,,,,,,Weekly,,,;Thursday,9:00,11:00,13:00,15:00,,,,,,Weekly,,,;Friday,9:00,11:00,13:00,15:00,,,,,,Weekly,,,",Central Illinois
 A0137,"Monday, Wednesday, Friday 9am - 3pm","Monday,9:00,15:00,,,,,,,,Weekly,,,;Wednesday,9:00,15:00,,,,,,,,Weekly,,,;Friday,9:00,15:00,,,,,,,,Weekly,,,",Central Illinois
 A0138,"24/7 (Shelter), M-F 9am-12pm ","Monday,9:00,12:00,,,,,,,,Weekly,,,;Tuesday,9:00,12:00,,,,,,,,Weekly,,,;Wednesday,9:00,12:00,,,,,,,,Weekly,,,;Thursday,9:00,12:00,,,,,,,,Weekly,,,;Friday,9:00,12:00,,,,,,,,Weekly,,,",Central Illinois
 A0139,M-F 10AM-12PM,"Monday,10:00,12:00,,,,,,,,Weekly,,,;Tuesday,10:00,12:00,,,,,,,,Weekly,,,;Wednesday,10:00,12:00,,,,,,,,Weekly,,,;Thursday,10:00,12:00,,,,,,,,Weekly,,,;Friday,10:00,12:00,,,,,,,,Weekly,,,",Central Illinois
-A0141,"2nd Wednesday Foodbank delivery, distribution is the following Saturday 7:30am to 9:30am","Saturday,7:30,9:30,,,,,,,2.0,Day of Month,,,",Central Illinois
-A0142,4th Thursday 8am-10:30am except Nov & Dec.,"Thursday,8:00,10:30,,,,,Except in November and December,,4.0,Day of Month,,,",Central Illinois
+A0141,"2nd Wednesday Foodbank delivery, distribution is the following Saturday 7:30am to 9:30am","Saturday,7:30,9:30,,,,,,,2,Day of Month,,,",Central Illinois
+A0142,4th Thursday 8am-10:30am except Nov & Dec.,"Thursday,8:00,10:30,,,,,Except in November and December,,4,Day of Month,,,",Central Illinois
 A0143,Meals on Wheels M - F beginning at 10:30 am; M - F 7:30 am - 4 pm (open hours),"Monday,7:30,16:00,,,,,,,,Weekly,,,;Tuesday,7:30,16:00,,,,,,,,Weekly,,,;Wednesday,7:30,16:00,,,,,,,,Weekly,,,;Thursday,7:30,16:00,,,,,,,,Weekly,,,",Central Illinois
 A0145,Mon & Thur 10am - 12pm,"Monday,10:00,12:00,,,,,,,,Weekly,,,;Thursday,10:00,12:00,,,,,,,,Weekly,,,",Central Illinois
 A0261,NA - Must be a patient ,",,,,,,,,,,,,,",Central Illinois
@@ -399,117 +399,117 @@ A0154,Thursday 5-6 pm; Sunday 1-2:15 pm,"Thursday,17:00,18:00,,,,,,,,Weekly,,,;S
 A0155,Open 9 am - 11am every Saturday,"Saturday,9:00,11:00,,,,,,,,Weekly,,,",Central Illinois
 A0156,"Tues 8:30-10a, Thur 5:30-7p, Sat 8:30-9:30a","Tuesday,8:30,10:00,,,,,,,,Weekly,,,;Thursday,17:30,19:00,,,,,,,,Weekly,,,;Saturday,8:30,9:30,,,,,,,,Weekly,,,",Central Illinois
 A0159,NA - Family program,",,,,,,,,,,,,,",Central Illinois
-A0160,Wed 10am-12pm + 1st Wednesday 6pm-7pm,"Wednesday,10:00,12:00,,,,,,,,Weekly,,,;Wednesday,18:00,19:00,,,,,,,1.0,Day of Month,,,",Central Illinois
+A0160,Wed 10am-12pm + 1st Wednesday 6pm-7pm,"Wednesday,10:00,12:00,,,,,,,,Weekly,,,;Wednesday,18:00,19:00,,,,,,,1,Day of Month,,,",Central Illinois
 A0216,NA,",,,,,,,,,,,,,",Central Illinois
 A0163,NA,",,,,,,,,,,,,,",Central Illinois
 A0164,NA,",,,,,,,,,,,,,",Central Illinois
-A0165,2nd Sat 10am-12pm,"Saturday,10:00,12:00,,,,,,,2.0,Day of Month,,,",Central Illinois
-A0166,2nd Tuesday 12pm-2pm,"Tuesday,12:00,14:00,,,,,,,2.0,Day of Month,,,",Central Illinois
+A0165,2nd Sat 10am-12pm,"Saturday,10:00,12:00,,,,,,,2,Day of Month,,,",Central Illinois
+A0166,2nd Tuesday 12pm-2pm,"Tuesday,12:00,14:00,,,,,,,2,Day of Month,,,",Central Illinois
 A0168,NA,",,,,,,,,,,,,,",Central Illinois
 A0169,Mon-Thurs 10am-5pm (or Mon-Fri in summer),"Monday,10:00,17:00,,,,,,,,Weekly,,,;Tuesday,10:00,17:00,,,,,,,,Weekly,,,;Wednesday,10:00,17:00,,,,,,,,Weekly,,,;Thursday,10:00,17:00,,,,,,,,Weekly,,,;Friday,10:00,17:00,,,,,Summer's only,,,Weekly,,,",Central Illinois
-P001,3rd Sunday 1:00 p.m. - 2:30 p.m. ,"Program,Sunday,13:00,14:30,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P002,3rd Wednesday 10:00 a.m. - 11:30 a.m. ,"Program,Wednesday,10:00,11:30,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P003,Monday - Friday 8:00-4:00 p.m. ,"Program,Monday,8:00,16:00,,,,,,,,Weekly,,,;Program,Tuesday,8:00,16:00,,,,,,,,Weekly,,,;Program,Wednesday,8:00,16:00,,,,,,,,Weekly,,,;Program,Thursday,8:00,16:00,,,,,,,,Weekly,,,;Program,Friday,8:00,16:00,,,,,,,,Weekly,,,",Baton Rouge
-P004,2nd & 4th Wednesday 9:00 a.m. -11:00 a.m.,"Program,Wednesday,9:00,11:00,,,,,,,2.0,Day of Month,,,;Program,Wednesday,9:00,11:00,,,,,,,4.0,Day of Month,,,",Baton Rouge
-P005,"Every Tues, Wed, & Thurs. 10:00 a.m. - 12:30 p.m.","Program,Tuesday,10:00,12:30,,,,,,,,Weekly,,,;Program,Wednesday,10:00,12:30,,,,,,,,Weekly,,,;Program,Thursday,10:00,12:30,,,,,,,,Weekly,,,",Baton Rouge
-P006,"2nd Friday/ 2nd Saturday of month, 8:00 a.m. - 11:00 a.m.","Program,Saturday,8:00,11:00,,,,,,,2.0,Day of Month,,,",Baton Rouge
-P007,3rd Saturday 8:00-10:00 a.m. ,"Program,Saturday,8:00,10:00,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P008,3rd Saturday 9:00 a.m. - 12:00 p.m. ,"Program,Saturday,9:00,12:00,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P009,1st and 3rd Monday 7:30 a.m. - 9:00 a.m.,"Program,Monday,7:30,9:00,,,,,,,1.0,Day of Month,,,;Program,Monday,7:30,9:00,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P010,3rd Wednesday 9:00 a.m. - 2:00 p.m.,"Program,Wednesday,9:00,14:00,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P011,1st Saturday 8:00-12:00 p.m. ,"Program,Saturday,8:00,12:00,,,,,,,1.0,Day of Month,,,",Baton Rouge
-P012,Monday - Friday 8:00 a.m. - 4:00 p.m. Pantry closed 3rd Wed - Fri.,"Program,Monday,8:00,16:00,,,,,,,,Weekly,,,;Program,Tuesday,8:00,16:00,,,,,,,,Weekly,,,;Program,Wednesday,8:00,16:00,,,,,Pantry closed 3rd Wednesday of the month.,,,Weekly,,,;Program,Thursday,8:00,16:00,,,,,Pantry closed 3rd Thursday of the month.,,,Weekly,,,;Program,Friday,8:00,16:00,,,,,Pantry closed 3rd Friday of the month.,,,Weekly,,,",Baton Rouge
-P013,"Tues., Wed., & Thurs. 9:00 a.m. - 4:00 p.m.  ","Program,Tuesday,9:00,16:00,,,,,,,,Weekly,,,;Program,Wednesday,9:00,16:00,,,,,,,,Weekly,,,;Program,Thursday,9:00,16:00,,,,,,,,Weekly,,,",Baton Rouge
-P014,Monday - Thursday 8:00 a.m. - 3:00 p.m. & Friday 8:00 a.m. - 12 p.m. ,"Program,Monday,8:00,15:00,,,,,,,,Weekly,,,;Program,Tuesday,8:00,15:00,,,,,,,,Weekly,,,;Program,Wednesday,8:00,15:00,,,,,,,,Weekly,,,;Program,Thursday,8:00,15:00,,,,,,,,Weekly,,,;Program,Friday,8:00,12:00,,,,,,,,Weekly,,,",Baton Rouge
-P015,7 Days a week ,"Program,,,,,,,,24/7 Emergency Assistance,,,Call for Information,,,",Baton Rouge
-P016,2nd Friday 8:00 a.m. - 10:00 a.m.,"Program,Friday,8:00,10:00,,,,,,,2.0,Day of Month,,,",Baton Rouge
-P017,"Distribution 1st, 2nd, & 3rd Tuesday - Friday of the month 9:30 a.m. -11:30 a.m. & 1:30-3:30pm. Distributes perishable goods to patrons of the Senior Center 60 and older. ","Program,Tuesday,9:30,11:30,13:30,15:30,,,Distributes perishable goods to patrons of the Senior Center 60 and older. ,,1.0,Day of Month,,,;Program,Tuesday,9:30,11:30,13:30,15:30,,,Distributes perishable goods to patrons of the Senior Center 60 and older. ,,2.0,Day of Month,,,;Program,Tuesday,9:30,11:30,13:30,15:30,,,Distributes perishable goods to patrons of the Senior Center 60 and older. ,,3.0,Day of Month,,,;Program,Friday,9:30,11:30,13:30,15:30,,,Distributes perishable goods to patrons of the Senior Center 60 and older. ,,1.0,Day of Month,,,;Program,Friday,9:30,11:30,13:30,15:30,,,Distributes perishable goods to patrons of the Senior Center 60 and older. ,,2.0,Day of Month,,,;Program,Friday,9:30,11:30,13:30,15:30,,,Distributes perishable goods to patrons of the Senior Center 60 and older. ,,3.0,Day of Month,,,",Baton Rouge
-P018,3rd Wednesday 8:00 a.m. - 12:00 p.m.,"Program,Wednesday,8:00,12:00,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P019,Monday - Thursday 9:00 a.m. -1:30 p.m. / Friday 9:30 a.m. - 11:30 a.m. ,"Program,Monday,9:00,13:30,,,,,,,,Weekly,,,;Program,Tuesday,9:00,13:30,,,,,,,,Weekly,,,;Program,Wednesday,9:00,13:30,,,,,,,,Weekly,,,;Program,Thursday,9:00,13:30,,,,,,,,Weekly,,,;Program,Friday,9:30,11:30,,,,,,,,Weekly,,,",Baton Rouge
-P020,Monday & Wednesday every week 11:00 a.m. - 12:00 p.m. ,"Program,Monday,11:00,12:00,,,,,,,,Weekly,,,;Program,Wednesday,11:00,12:00,,,,,,,,Weekly,,,",Baton Rouge
-P021,Every Thursday 8:00 a.m. - 4:00 p.m.,"Program,Thursday,8:00,16:00,,,,,,,,Weekly,,,",Baton Rouge
-P022,2nd Tuesday 8:00 a.m. - 9:00 a.m.,"Program,Tuesday,8:00,9:00,,,,,,,2.0,Day of Month,,,",Baton Rouge
-P023,2nd and 4th Monday 11:00 a.m. - 12:00 p.m.,"Program,Monday,11:00,12:00,,,,,,,2.0,Day of Month,,,;Program,Monday,11:00,12:00,,,,,,,4.0,Day of Month,,,",Baton Rouge
-P024,2nd and 4th Wednesday 8:00 a.m. - 10:30 a.m.,"Program,Wednesday,8:00,10:30,,,,,,,2.0,Day of Month,,,;Program,Wednesday,8:00,10:30,,,,,,,4.0,Day of Month,,,",Baton Rouge
-P025,Monday and Friday 10:00 a.m. -12:00 p.m. ,"Program,Monday,10:00,12:00,,,,,,,,Weekly,,,;Program,Friday,10:00,12:00,,,,,,,,Weekly,,,",Baton Rouge
-P026,1st Wednesday 9:00 a.m. - 12:00 p.m. ,"Program,Wednesday,9:00,12:00,,,,,,,1.0,Day of Month,,,",Baton Rouge
-P027,Every 1st Saturday of month 7:30 a.m. - 9:30 a.m.,"Program,Saturday,7:30,9:30,,,,,,,1.0,Day of Month,,,",Baton Rouge
-P028,3rd Saturday 10:00 a.m. - 12:00 p.m.,"Program,Saturday,10:00,12:00,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P029,2nd Saturday 9:00 a.m. - 10:30 a.m. ,"Program,Saturday,9:00,10:30,,,,,,,2.0,Day of Month,,,",Baton Rouge
-P030,2nd Tuesday 9:00 a.m. - 11:00 a.m.,"Program,Tuesday,9:00,11:00,,,,,,,2.0,Day of Month,,,",Baton Rouge
-P031,1st & last Sunday each month,"Program,Sunday,,,,,,,,,1.0,Day of Month,,,;Program,Sunday,,,,,,,,,5.0,Day of Month,,,",Baton Rouge
-P032,Monday - Friday 12:00 p.m. - 1:00 p.m.,"Program,Monday,12:00,13:00,,,,,,,,Weekly,,,;Program,Tuesday,12:00,13:00,,,,,,,,Weekly,,,;Program,Wednesday,12:00,13:00,,,,,,,,Weekly,,,;Program,Thursday,12:00,13:00,,,,,,,,Weekly,,,;Program,Friday,12:00,13:00,,,,,,,,Weekly,,,",Baton Rouge
-P033,Monday - Friday 9:00 a.m. - 11:00 a.m.,"Program,Monday,9:00,11:00,,,,,,,,Weekly,,,;Program,Tuesday,9:00,11:00,,,,,,,,Weekly,,,;Program,Wednesday,9:00,11:00,,,,,,,,Weekly,,,;Program,Thursday,9:00,11:00,,,,,,,,Weekly,,,;Program,Friday,9:00,11:00,,,,,,,,Weekly,,,;Program,Monday,9:00,11:00,,,,,,,,Weekly,,,;Program,Tuesday,9:00,11:00,,,,,,,,Weekly,,,;Program,Wednesday,9:00,11:00,,,,,,,,Weekly,,,;Program,Thursday,9:00,11:00,,,,,,,,Weekly,,,;Program,Friday,9:00,11:00,,,,,,,,Weekly,,,",Baton Rouge
-P034,Monday & Wednesday 8:00 a.m. - 10:30 a.m. (Friday only serve 60 and physically disabled 8:00 a.m. - 10:30 a.m.),"Program,Monday,8:00,10:30,,,,,,,,Weekly,,,;Program,Wednesday,8:00,10:30,,,,,,,,Weekly,,,;Program,Friday,8:00,10:30,,,,,Only serve 60 and physically disabled,,,Weekly,,,",Baton Rouge
-P035,3rd Wednesday 8:30 a.m. - 12:30 p.m.,"Program,Wednesday,8:30,12:30,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P036,4th Friday 10:00 - 12:00 p.m.,"Program,Friday,10:00,12:00,,,,,,,4.0,Day of Month,,,;Program,Friday,10:00,12:00,,,,,,,4.0,Day of Month,,,",Baton Rouge
-P037,1st and 3rd Tuesday 8:00 a.m - 11:00 a.m. ,"Program,Tuesday,8:00,11:00,,,,,,,1.0,Day of Month,,,;Program,Tuesday,8:00,11:00,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P038,3rd Saturday 8:00-10:00 a.m. ,"Program,Saturday,8:00,10:00,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P039,1st and 3rd Tuesday 10:00 a.m. - 12:00 p.m.,"Program,Tuesday,10:00,12:00,,,,,,,1.0,Day of Month,,,;Program,Tuesday,10:00,12:00,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P040,2nd Monday and Tuesday 8:00 a.m. - 9:30 a.m. ,"Program,Monday,8:00,9:30,,,,,,,2.0,Day of Month,,,;Program,Tuesday,8:00,9:30,,,,,,,2.0,Day of Month,,,",Baton Rouge
-P041,"1st Thursday/Friday A-F, 2nd Thursday/Friday G-M, 3rd Thursday/Friday N-S, & 4th Thursday/Friday T-Z    10:00 a.m. - 1 p.m. ","Program,Thursday,10:00,13:00,,,,,Last names A-F,,1.0,Day of Month,,,;Program,Friday,10:00,13:00,,,,,Last names A-F,,1.0,Day of Month,,,;Program,Thursday,10:00,13:00,,,,,Last names G-M,,2.0,Day of Month,,,;Program,Friday,10:00,13:00,,,,,Last names G-M,,2.0,Day of Month,,,;Program,Thursday,10:00,13:00,,,,,Last names N-S,,3.0,Day of Month,,,;Program,Friday,10:00,13:00,,,,,Last names N-S,,3.0,Day of Month,,,;Program,Thursday,10:00,13:00,,,,,Last names T-Z,,4.0,Day of Month,,,;Program,Friday,10:00,13:00,,,,,Last names T-Z,,4.0,Day of Month,,,",Baton Rouge
-P042,3rd Thursday 3:00 p.m. - 5:00 p.m.,"Program,Thursday,15:00,17:00,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P043,Last Saturday of the month/ 9:00 a.m. - 10:00 a.m.,"Program,Saturday,9:00,10:00,,,,,,,5.0,Day of Month,,,",Baton Rouge
-P044,2nd Wednesday 8:00 a.m. - 9:30 a.m.,"Program,Wednesday,8:00,9:30,,,,,,,2.0,Day of Month,,,",Baton Rouge
-P045,Monday - Thursday 7:30 a.m. - 4:30 p.m.  Friday 7:30 a.m. - 2:00 p.m.,"Program,Monday,7:30,16:30,,,,,,,,Weekly,,,;Program,Tuesday,7:30,16:30,,,,,,,,Weekly,,,;Program,Wednesday,7:30,16:30,,,,,,,,Weekly,,,;Program,Thursday,7:30,16:30,,,,,,,,Weekly,,,;Program,Friday,7:30,14:30,,,,,,,,Weekly,,,",Baton Rouge
-P046,2nd Thursday  A-L  3rd Wednesday  M-Z    8:00 a.m. - 4:00 p.m.,"Program,Thursday,8:00,16:00,,,,,Last names A-L,,2.0,Day of Month,,,;Program,Wednesday,8:00,16:00,,,,,Last names M-Z,,3.0,Day of Month,,,",Baton Rouge
-P047,Monday - Thursday 11:00 a.m. - 6:00 p.m.&  Friday 11:00 a.m. - 4:30 p.m. (Semester Hours) / M/W/F 11:00 a.m. - 2:00 p.m. & T/Th 11:00 a.m. - 4:30 p.m. (Summer Hours) ,"Program,Monday,11:00,18:00,,,,,Semester Hours,,,Weekly,,,;Program,Tuesday,11:00,18:00,,,,,Semester Hours,,,Weekly,,,;Program,Wednesday,11:00,18:00,,,,,Semester Hours,,,Weekly,,,;Program,Thursday,11:00,18:00,,,,,Semester Hours,,,Weekly,,,;Program,Friday,11:00,16:30,,,,,Semester Hours,,,Weekly,,,;Program,Monday,11:00,14:00,,,,,Summer Hours,,,Weekly,,,;Program,Tuesday,11:00,16:30,,,,,Summer Hours,,,Weekly,,,;Program,Wednesday,11:00,14:00,,,,,Summer Hours,,,Weekly,,,;Program,Thursday,11:00,16:30,,,,,Summer Hours,,,Weekly,,,;Program,Friday,11:00,14:00,,,,,Summer Hours,,,Weekly,,,",Baton Rouge
-P048,2nd Wednesday  9:00 a.m. - 11:00 a.m. ,"Program,Wednesday,9:00,11:00,,,,,,,2.0,Day of Month,,,",Baton Rouge
-P049,Tuesday and Thursday 10:00 a.m. - 1:00 p.m.,"Program,Tuesday,10:00,13:00,,,,,,,,Weekly,,,;Program,Thursday,10:00,13:00,,,,,,,,Weekly,,,",Baton Rouge
-P050,24 hour residential facility with in house clients,"Program,,,,,,,,24/7 residential facility with in house clients,,,Call for Information,,,",Baton Rouge
-P051,4th Friday 9:00 a.m. - 11:00 a.m. / Farm Fresh 2nd Thursday 10:30 - 12:00 pm,"Program,Thursday,9:00,11:00,,,,,,,2.0,Day of Month,,,;Program,Friday,10:30,12:00,,,,,,,4.0,Day of Month,,,",Baton Rouge
-P052,Every Thursday 9:00 a.m. - 11:00 a.m.,"Program,Thursday,9:00,11:00,,,,,,,,Weekly,,,",Baton Rouge
-P053,2nd Tuesday 10:00 a.m. - 12:00 p.m.,"Program,Tuesday,10:00,12:00,,,,,,,2.0,Day of Month,,,",Baton Rouge
-P054,2nd Friday 1:00 p.m. - 4:00 p.m.  ,"Program,Friday,13:00,16:00,,,,,,,2.0,Day of Month,,,",Baton Rouge
-P055,2nd Monday 10:00 a.m. - 1:00 p.m.,"Program,Monday,10:00,13:00,,,,,,,2.0,Day of Month,,,",Baton Rouge
-P056,LAST FRIDAY OF THE MONTH (5TH Fri)  4:00 - 7:00 pm ALL IN ALL OUT,"Program,Friday,16:00,19:00,,,,,,,5.0,Day of Month,,,",Baton Rouge
-P057,8:00am-10:00pm 24hours /7 days a week,"Program,Monday,8:00,10:00,,,,,,,,Weekly,,,;Program,Tuesday,8:00,10:00,,,,,,,,Weekly,,,;Program,Wednesday,8:00,10:00,,,,,,,,Weekly,,,;Program,Thursday,8:00,10:00,,,,,,,,Weekly,,,;Program,Friday,8:00,10:00,,,,,,,,Weekly,,,;Program,Saturday,8:00,10:00,,,,,,,,Weekly,,,;Program,Sunday,8:00,10:00,,,,,,,,Weekly,,,",Baton Rouge
-P058,Tuesdays & Thursdays 8:00 a.m. - 10:00 a.m. ,"Program,Tuesday,8:00,10:00,,,,,,,,Weekly,,,;Program,Thursday,8:00,10:00,,,,,,,,Weekly,,,",Baton Rouge
-P059,3rd Thursday 7:00-12:00 p.m.,"Program,Thursday,19:00,23:59,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P060,Monday 9:00am-10:30am,"Program,Monday,9:00,10:30,,,,,,,,Weekly,,,",Baton Rouge
-P061,1st and 3rd Saturday 9:00 a.m. - 11:00 a.m.,"Program,Saturday,9:00,11:00,,,,,,,1.0,Day of Month,,,;Program,Saturday,9:00,11:00,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P062,2nd and 4th Thursday 9:00 a.m. - 11:00 a.m.,"Program,Thursday,9:00,11:00,,,,,,,2.0,Day of Month,,,;Program,Thursday,9:00,11:00,,,,,,,4.0,Day of Month,,,",Baton Rouge
-P063,1st and 3rd Saturday 10:00 a.m. - 1:30 p.m.,"Program,Saturday,10:00,13:30,,,,,,,1.0,Day of Month,,,;Program,Saturday,10:00,13:30,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P064,2nd and 4th Tuesdays 8:00 a.m. to 10 a.m.,"Program,Tuesday,8:00,10:00,,,,,,,2.0,Day of Month,,,;Program,Tuesday,8:00,10:00,,,,,,,4.0,Day of Month,,,",Baton Rouge
-P065,3rd Saturday 8:00 a.m. - 11:00 a.m.,"Program,Saturday,8:00,11:00,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P066,Monday - Thursday 10:00 a.m. - 12:00 p.m.,"Program,Monday,10:00,12:00,,,,,,,,Weekly,,,;Program,Tuesday,10:00,12:00,,,,,,,,Weekly,,,;Program,Wednesday,10:00,12:00,,,,,,,,Weekly,,,;Program,Thursday,10:00,12:00,,,,,,,,Weekly,,,",Baton Rouge
-P067,Monday - Thursday 11:00 a.m. - 7:00 p.m.,"Program,Monday,11:00,19:00,,,,,,,,Weekly,,,;Program,Tuesday,11:00,19:00,,,,,,,,Weekly,,,;Program,Wednesday,11:00,19:00,,,,,,,,Weekly,,,;Program,Thursday,11:00,19:00,,,,,,,,Weekly,,,",Baton Rouge
-P068,1st Thursday 10:00 a.m. - 12:00 p.m.,"Program,Thursday,10:00,12:00,,,,,,,1.0,Day of Month,,,",Baton Rouge
-P069,Wednesdays 9:00 a.m. - 11:00 a.m.,"Program,Wednesday,9:00,11:00,,,,,,,,Weekly,,,",Baton Rouge
-P070,1st and 3rd Saturday from 8:30 a.m. - 10:30 a.m.,"Program,Saturday,8:30,10:30,,,,,,,1.0,Day of Month,,,;Program,Saturday,8:30,10:30,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P071,1st Thurs and sometimes 3rd Thursday 9:30 a.m. - 12:00 p.m.,"Program,Thursday,9:30,12:00,,,,,,,1.0,Day of Month,,,",Baton Rouge
-P072,"3rd Wednesday 7:00. a.m- 9:00 a.m. [Emergency boxes in Livonia at office of St. Frances Catholic Church, 3523 Hwy 78, Tuesday - Thursday 8:30 - 3:00 pm and Friday 8:30 - 12:00 pm.]","Program,Wednesday,7:00,9:00,,,,,,,3.0,Day of Month,,,;Program,Tuesday,8:30,15:00,,,,,Emergency boxes in Livonia at office of St. Frances Catholic Church, 3523 Hwy 78,,,Weekly,,,;Program,Wednesday,8:30,15:00,,,,,Emergency boxes in Livonia at office of St. Frances Catholic Church, 3523 Hwy 78,,,Weekly,,,;Program,Thursday,8:30,15:00,,,,,Emergency boxes in Livonia at office of St. Frances Catholic Church, 3523 Hwy 78,,,Weekly,,,;Program,Friday,8:30,12:00,,,,,Emergency boxes in Livonia at office of St. Frances Catholic Church, 3523 Hwy 78,,,Weekly,,,",Baton Rouge
-P073,2nd Thursday 8:00-3:00 p.m.,"Program,Thursday,8:00,15:00,,,,,Seniors 65+,,2.0,Day of Month,,,",Baton Rouge
-P074,2nd Thursday 4:00-6:00 p.m. ,"Program,Thursday,16:00,18:00,,,,,,,2.0,Day of Month,,,",Baton Rouge
-P075,2nd Thursday 4:00-6:00 p.m. ,"Program,Thursday,16:00,18:00,,,,,,,2.0,Day of Month,,,",Baton Rouge
-P076,2nd & 3rd Wednesday 8:30 a.m. - 10:30 a.m.,"Program,Wednesday,8:30,10:30,,,,,,,2.0,Day of Month,,,;Program,Wednesday,8:30,10:30,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P077,Last Sunday of each month. 8:00 - 9:00 a.m.  Hot prepared breakfast and food box,"Program,Sunday,8:00,9:00,,,,,Hot prepared breakfast and food box,,5.0,Day of Month,,,",Baton Rouge
-P078,Monday-Thursday 9:00 a.m. - 3:30 p.m. ,"Program,Monday,9:00,15:30,,,,,,,,Weekly,,,;Program,Tuesday,9:00,15:30,,,,,,,,Weekly,,,;Program,Wednesday,9:00,15:30,,,,,,,,Weekly,,,;Program,Thursday,9:00,15:30,,,,,,,,Weekly,,,",Baton Rouge
-P079,Mon-Thurs 9:30 am- 11:30 am,"Program,Monday,9:30,11:30,,,,,,,,Weekly,,,;Program,Tuesday,9:30,11:30,,,,,,,,Weekly,,,;Program,Thursday,9:30,11:30,,,,,,,,Weekly,,,;Program,Friday,9:30,11:30,,,,,,,,Weekly,,,",Baton Rouge
-P080,2nd Monday of each Month 8:30 a.m. -10:30 a.m.,"Program,Monday,8:30,10:30,,,,,,,2.0,Day of Month,,,",Baton Rouge
-P081,3rd Friday 9:00am-11:00am and on call,"Program,Friday,9:00,11:00,,,,,Available on call aswell,,3.0,Day of Month,,,",Baton Rouge
-P082,4th Thursday 6:30 - 8:00 a.m. ,"Program,Thursday,6:30,8:00,,,,,,,4.0,Day of Month,,,",Baton Rouge
-P083,3rd Saturday  10:00 a.m. - 12:00 p.m.,"Program,Saturday,10:00,12:00,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P084,"1st and 3rd Thursdays, 8:30am-11:00am","Program,Thursday,8:30,11:00,,,,,,,1.0,Day of Month,,,;Program,Thursday,8:30,11:00,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P085,Applications Only Monday and Tuesday 1 p.m.-4 p.m. / Distribution Wednesday 1:00 p.m. - 4:00 p.m.,"Program,Monday,13:00,16:00,,,,,Applicants Only,,,Weekly,,,;Program,Tuesday,13:00,16:00,,,,,Applicants Only,,,Weekly,,,;Program,Wednesday,13:00,16:00,,,,,Distribution,,,Weekly,,,",Baton Rouge
-P086,Tuesdays 9:00 a.m.-12:00 p.m.,"Program,Tuesday,9:00,12:00,,,,,,,,Weekly,,,",Baton Rouge
-P087,"Tuesday, Wednesday 10:00-3:00 Friday 10:00-1:00","Program,Tuesday,10:00,15:00,,,,,,,,Weekly,,,;Program,Wednesday,10:00,15:00,,,,,,,,Weekly,,,;Program,Friday,10:00,13:00,,,,,,,,Weekly,,,",Baton Rouge
-P088,1st & 3rd Thursday 1:00-4:00 p.m. ,"Program,Thursday,13:00,16:00,,,,,,,1.0,Day of Month,,,;Program,Thursday,13:00,16:00,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P089,Tuesdays & Thursdays 12:00 - 2:00 p.m.,"Program,Tuesday,12:00,14:00,,,,,,,,Weekly,,,;Program,Thursday,12:00,14:00,,,,,,,,Weekly,,,",Baton Rouge
-P090,4th Saturday  9:00 a.m. - 11:00 a.m.,"Program,Saturday,9:00,11:00,,,,,,,4.0,Day of Month,,,",Baton Rouge
-P091,3rd Thursday  3:00-5:00 p.m.,"Program,Thursday,15:00,17:00,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P092,4th Saturday 9:00 a.m. - 11:00 a.m.,"Program,Saturday,9:00,11:00,,,,,,,4.0,Day of Month,,,",Baton Rouge
-P093,2nd Tuesday 8:00 a.m. - 2:00 p.m.,"Program,Tuesday,8:00,14:00,,,,,,,2.0,Day of Month,,,",Baton Rouge
-P094,Monday - Friday 7:30 a.m. - 3:30 p.m. ,"Program,Monday,7:30,15:30,,,,,,,,Weekly,,,;Program,Tuesday,7:30,15:30,,,,,,,,Weekly,,,;Program,Wednesday,7:30,15:30,,,,,,,,Weekly,,,;Program,Thursday,7:30,15:30,,,,,,,,Weekly,,,;Program,Friday,7:30,15:30,,,,,,,,Weekly,,,",Baton Rouge
-P095,Friday 8:00 a.m. - 12:00 p.m.,"Program,Friday,8:00,12:00,,,,,,,,Weekly,,,",Baton Rouge
-P096,1st and 3rd Thursday 9:30 a.m. - 2:00 p.m. ,"Program,Thursday,9:30,14:00,,,,,,,1.0,Day of Month,,,;Program,Thursday,9:30,14:00,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P097,2nd and 3rd Saturday 8:00 a.m. - 12:00 p.m.,"Program,Saturday,8:00,12:00,,,,,,,2.0,Day of Month,,,;Program,Saturday,8:00,12:00,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P098,1st and 3rd Friday 7:00 a.m. - 11:00 a.m.,"Program,Friday,7:00,11:00,,,,,,,1.0,Day of Month,,,;Program,Friday,7:00,11:00,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P099,2nd Friday 10:00 a.m. - 12:00 p.m. ,"Program,Friday,10:00,12:00,,,,,,,2.0,Day of Month,,,",Baton Rouge
-P100,Tuesday 8:00 a.m. - 11:00 a.m.,"Program,Tuesday,8:00,11:00,,,,,,,,Weekly,,,",Baton Rouge
-P101,2nd Friday 8:00-9:30 a.m. ,"Program,Friday,8:00,9:30,,,,,,,2.0,Day of Month,,,",Baton Rouge
-P102,2nd Wednesday 8:00-9:30 a.m. ,"Program,Wednesday,8:00,9:30,,,,,,,2.0,Day of Month,,,",Baton Rouge
-P103,3rd Monday 8:00-9:00 a.m. ,"Program,Monday,8:00,9:30,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P104,3rd Wednesday 8:00-9:30 a.m. ,"Program,Wednesday,8:00,9:30,,,,,,,3.0,Day of Month,,,",Baton Rouge
-P105,4th Wednesday 10:00-11:00 a.m. ,"Program,Wednesday,10:00,11:00,,,,,,,4.0,Day of Month,,,",Baton Rouge
-P106,4th Friday 8:00-9:30 a.m. ,"Program,Friday,8:00,9:30,,,,,,,4.0,Day of Month,,,",Baton Rouge
+P001,3rd Sunday 1:00 p.m. - 2:30 p.m. ,"Sunday,13:00,14:30,,,,,,,3,Day of Month,,,",Baton Rouge
+P002,3rd Wednesday 10:00 a.m. - 11:30 a.m. ,"Wednesday,10:00,11:30,,,,,,,3,Day of Month,,,",Baton Rouge
+P003,Monday - Friday 8:00-4:00 p.m. ,"Monday,8:00,16:00,,,,,,,,Weekly,,,;Tuesday,8:00,16:00,,,,,,,,Weekly,,,;Wednesday,8:00,16:00,,,,,,,,Weekly,,,;Thursday,8:00,16:00,,,,,,,,Weekly,,,;Friday,8:00,16:00,,,,,,,,Weekly,,,",Baton Rouge
+P004,2nd & 4th Wednesday 9:00 a.m. -11:00 a.m.,"Wednesday,9:00,11:00,,,,,,,2,Day of Month,,,;Wednesday,9:00,11:00,,,,,,,4,Day of Month,,,",Baton Rouge
+P005,"Every Tues, Wed, & Thurs. 10:00 a.m. - 12:30 p.m.","Tuesday,10:00,12:30,,,,,,,,Weekly,,,;Wednesday,10:00,12:30,,,,,,,,Weekly,,,;Thursday,10:00,12:30,,,,,,,,Weekly,,,",Baton Rouge
+P006,"2nd Friday/ 2nd Saturday of month, 8:00 a.m. - 11:00 a.m.","Saturday,8:00,11:00,,,,,,,2,Day of Month,,,",Baton Rouge
+P007,3rd Saturday 8:00-10:00 a.m. ,"Saturday,8:00,10:00,,,,,,,3,Day of Month,,,",Baton Rouge
+P008,3rd Saturday 9:00 a.m. - 12:00 p.m. ,"Saturday,9:00,12:00,,,,,,,3,Day of Month,,,",Baton Rouge
+P009,1st and 3rd Monday 7:30 a.m. - 9:00 a.m.,"Monday,7:30,9:00,,,,,,,1,Day of Month,,,;Monday,7:30,9:00,,,,,,,3,Day of Month,,,",Baton Rouge
+P010,3rd Wednesday 9:00 a.m. - 2:00 p.m.,"Wednesday,9:00,14:00,,,,,,,3,Day of Month,,,",Baton Rouge
+P011,1st Saturday 8:00-12:00 p.m. ,"Saturday,8:00,12:00,,,,,,,1,Day of Month,,,",Baton Rouge
+P012,Monday - Friday 8:00 a.m. - 4:00 p.m. Pantry closed 3rd Wed - Fri.,"Monday,8:00,16:00,,,,,,,,Weekly,,,;Tuesday,8:00,16:00,,,,,,,,Weekly,,,;Wednesday,8:00,16:00,,,,,Pantry closed 3rd Wednesday of the month.,,,Weekly,,,;Thursday,8:00,16:00,,,,,Pantry closed 3rd Thursday of the month.,,,Weekly,,,;Friday,8:00,16:00,,,,,Pantry closed 3rd Friday of the month.,,,Weekly,,,",Baton Rouge
+P013,"Tues., Wed., & Thurs. 9:00 a.m. - 4:00 p.m.  ","Tuesday,9:00,16:00,,,,,,,,Weekly,,,;Wednesday,9:00,16:00,,,,,,,,Weekly,,,;Thursday,9:00,16:00,,,,,,,,Weekly,,,",Baton Rouge
+P014,Monday - Thursday 8:00 a.m. - 3:00 p.m. & Friday 8:00 a.m. - 12 p.m. ,"Monday,8:00,15:00,,,,,,,,Weekly,,,;Tuesday,8:00,15:00,,,,,,,,Weekly,,,;Wednesday,8:00,15:00,,,,,,,,Weekly,,,;Thursday,8:00,15:00,,,,,,,,Weekly,,,;Friday,8:00,12:00,,,,,,,,Weekly,,,",Baton Rouge
+P015,7 Days a week ,",,,,,,,24/7 Emergency Assistance,,,Call for Information,,,",Baton Rouge
+P016,2nd Friday 8:00 a.m. - 10:00 a.m.,"Friday,8:00,10:00,,,,,,,2,Day of Month,,,",Baton Rouge
+P017,"Distribution 1st, 2nd, & 3rd Tuesday - Friday of the month 9:30 a.m. -11:30 a.m. & 1:30-3:30pm. Distributes perishable goods to patrons of the Senior Center 60 and older. ","Tuesday,9:30,11:30,13:30,15:30,,,Distributes perishable goods to patrons of the Senior Center 60 and older. ,,1,Day of Month,,,;Tuesday,9:30,11:30,13:30,15:30,,,Distributes perishable goods to patrons of the Senior Center 60 and older. ,,2,Day of Month,,,;Tuesday,9:30,11:30,13:30,15:30,,,Distributes perishable goods to patrons of the Senior Center 60 and older. ,,3,Day of Month,,,;Friday,9:30,11:30,13:30,15:30,,,Distributes perishable goods to patrons of the Senior Center 60 and older. ,,1,Day of Month,,,;Friday,9:30,11:30,13:30,15:30,,,Distributes perishable goods to patrons of the Senior Center 60 and older. ,,2,Day of Month,,,;Friday,9:30,11:30,13:30,15:30,,,Distributes perishable goods to patrons of the Senior Center 60 and older. ,,3,Day of Month,,,",Baton Rouge
+P018,3rd Wednesday 8:00 a.m. - 12:00 p.m.,"Wednesday,8:00,12:00,,,,,,,3,Day of Month,,,",Baton Rouge
+P019,Monday - Thursday 9:00 a.m. -1:30 p.m. / Friday 9:30 a.m. - 11:30 a.m. ,"Monday,9:00,13:30,,,,,,,,Weekly,,,;Tuesday,9:00,13:30,,,,,,,,Weekly,,,;Wednesday,9:00,13:30,,,,,,,,Weekly,,,;Thursday,9:00,13:30,,,,,,,,Weekly,,,;Friday,9:30,11:30,,,,,,,,Weekly,,,",Baton Rouge
+P020,Monday & Wednesday every week 11:00 a.m. - 12:00 p.m. ,"Monday,11:00,12:00,,,,,,,,Weekly,,,;Wednesday,11:00,12:00,,,,,,,,Weekly,,,",Baton Rouge
+P021,Every Thursday 8:00 a.m. - 4:00 p.m.,"Thursday,8:00,16:00,,,,,,,,Weekly,,,",Baton Rouge
+P022,2nd Tuesday 8:00 a.m. - 9:00 a.m.,"Tuesday,8:00,9:00,,,,,,,2,Day of Month,,,",Baton Rouge
+P023,2nd and 4th Monday 11:00 a.m. - 12:00 p.m.,"Monday,11:00,12:00,,,,,,,2,Day of Month,,,;Monday,11:00,12:00,,,,,,,4,Day of Month,,,",Baton Rouge
+P024,2nd and 4th Wednesday 8:00 a.m. - 10:30 a.m.,"Wednesday,8:00,10:30,,,,,,,2,Day of Month,,,;Wednesday,8:00,10:30,,,,,,,4,Day of Month,,,",Baton Rouge
+P025,Monday and Friday 10:00 a.m. -12:00 p.m. ,"Monday,10:00,12:00,,,,,,,,Weekly,,,;Friday,10:00,12:00,,,,,,,,Weekly,,,",Baton Rouge
+P026,1st Wednesday 9:00 a.m. - 12:00 p.m. ,"Wednesday,9:00,12:00,,,,,,,1,Day of Month,,,",Baton Rouge
+P027,Every 1st Saturday of month 7:30 a.m. - 9:30 a.m.,"Saturday,7:30,9:30,,,,,,,1,Day of Month,,,",Baton Rouge
+P028,3rd Saturday 10:00 a.m. - 12:00 p.m.,"Saturday,10:00,12:00,,,,,,,3,Day of Month,,,",Baton Rouge
+P029,2nd Saturday 9:00 a.m. - 10:30 a.m. ,"Saturday,9:00,10:30,,,,,,,2,Day of Month,,,",Baton Rouge
+P030,2nd Tuesday 9:00 a.m. - 11:00 a.m.,"Tuesday,9:00,11:00,,,,,,,2,Day of Month,,,",Baton Rouge
+P031,1st & last Sunday each month,"Sunday,,,,,,,,1,Day of Month,,,;Sunday,,,,,,,,5,Day of Month,,,",Baton Rouge
+P032,Monday - Friday 12:00 p.m. - 1:00 p.m.,"Monday,12:00,13:00,,,,,,,,Weekly,,,;Tuesday,12:00,13:00,,,,,,,,Weekly,,,;Wednesday,12:00,13:00,,,,,,,,Weekly,,,;Thursday,12:00,13:00,,,,,,,,Weekly,,,;Friday,12:00,13:00,,,,,,,,Weekly,,,",Baton Rouge
+P033,Monday - Friday 9:00 a.m. - 11:00 a.m.,"Monday,9:00,11:00,,,,,,,,Weekly,,,;Tuesday,9:00,11:00,,,,,,,,Weekly,,,;Wednesday,9:00,11:00,,,,,,,,Weekly,,,;Thursday,9:00,11:00,,,,,,,,Weekly,,,;Friday,9:00,11:00,,,,,,,,Weekly,,,;Monday,9:00,11:00,,,,,,,,Weekly,,,;Tuesday,9:00,11:00,,,,,,,,Weekly,,,;Wednesday,9:00,11:00,,,,,,,,Weekly,,,;Thursday,9:00,11:00,,,,,,,,Weekly,,,;Friday,9:00,11:00,,,,,,,,Weekly,,,",Baton Rouge
+P034,Monday & Wednesday 8:00 a.m. - 10:30 a.m. (Friday only serve 60 and physically disabled 8:00 a.m. - 10:30 a.m.),"Monday,8:00,10:30,,,,,,,,Weekly,,,;Wednesday,8:00,10:30,,,,,,,,Weekly,,,;Friday,8:00,10:30,,,,,Only serve 60 and physically disabled,,,Weekly,,,",Baton Rouge
+P035,3rd Wednesday 8:30 a.m. - 12:30 p.m.,"Wednesday,8:30,12:30,,,,,,,3,Day of Month,,,",Baton Rouge
+P036,4th Friday 10:00 - 12:00 p.m.,"Friday,10:00,12:00,,,,,,,4,Day of Month,,,;Friday,10:00,12:00,,,,,,,4,Day of Month,,,",Baton Rouge
+P037,1st and 3rd Tuesday 8:00 a.m - 11:00 a.m. ,"Tuesday,8:00,11:00,,,,,,,1,Day of Month,,,;Tuesday,8:00,11:00,,,,,,,3,Day of Month,,,",Baton Rouge
+P038,3rd Saturday 8:00-10:00 a.m. ,"Saturday,8:00,10:00,,,,,,,3,Day of Month,,,",Baton Rouge
+P039,1st and 3rd Tuesday 10:00 a.m. - 12:00 p.m.,"Tuesday,10:00,12:00,,,,,,,1,Day of Month,,,;Tuesday,10:00,12:00,,,,,,,3,Day of Month,,,",Baton Rouge
+P040,2nd Monday and Tuesday 8:00 a.m. - 9:30 a.m. ,"Monday,8:00,9:30,,,,,,,2,Day of Month,,,;Tuesday,8:00,9:30,,,,,,,2,Day of Month,,,",Baton Rouge
+P041,"1st Thursday/Friday A-F, 2nd Thursday/Friday G-M, 3rd Thursday/Friday N-S, & 4th Thursday/Friday T-Z    10:00 a.m. - 1 p.m. ","Thursday,10:00,13:00,,,,,Last names A-F,,1,Day of Month,,,;Friday,10:00,13:00,,,,,Last names A-F,,1,Day of Month,,,;Thursday,10:00,13:00,,,,,Last names G-M,,2,Day of Month,,,;Friday,10:00,13:00,,,,,Last names G-M,,2,Day of Month,,,;Thursday,10:00,13:00,,,,,Last names N-S,,3,Day of Month,,,;Friday,10:00,13:00,,,,,Last names N-S,,3,Day of Month,,,;Thursday,10:00,13:00,,,,,Last names T-Z,,4,Day of Month,,,;Friday,10:00,13:00,,,,,Last names T-Z,,4,Day of Month,,,",Baton Rouge
+P042,3rd Thursday 3:00 p.m. - 5:00 p.m.,"Thursday,15:00,17:00,,,,,,,3,Day of Month,,,",Baton Rouge
+P043,Last Saturday of the month/ 9:00 a.m. - 10:00 a.m.,"Saturday,9:00,10:00,,,,,,,5,Day of Month,,,",Baton Rouge
+P044,2nd Wednesday 8:00 a.m. - 9:30 a.m.,"Wednesday,8:00,9:30,,,,,,,2,Day of Month,,,",Baton Rouge
+P045,Monday - Thursday 7:30 a.m. - 4:30 p.m.  Friday 7:30 a.m. - 2:00 p.m.,"Monday,7:30,16:30,,,,,,,,Weekly,,,;Tuesday,7:30,16:30,,,,,,,,Weekly,,,;Wednesday,7:30,16:30,,,,,,,,Weekly,,,;Thursday,7:30,16:30,,,,,,,,Weekly,,,;Friday,7:30,14:30,,,,,,,,Weekly,,,",Baton Rouge
+P046,2nd Thursday  A-L  3rd Wednesday  M-Z    8:00 a.m. - 4:00 p.m.,"Thursday,8:00,16:00,,,,,Last names A-L,,2,Day of Month,,,;Wednesday,8:00,16:00,,,,,Last names M-Z,,3,Day of Month,,,",Baton Rouge
+P047,Monday - Thursday 11:00 a.m. - 6:00 p.m.&  Friday 11:00 a.m. - 4:30 p.m. (Semester Hours) / M/W/F 11:00 a.m. - 2:00 p.m. & T/Th 11:00 a.m. - 4:30 p.m. (Summer Hours) ,"Monday,11:00,18:00,,,,,Semester Hours,,,Weekly,,,;Tuesday,11:00,18:00,,,,,Semester Hours,,,Weekly,,,;Wednesday,11:00,18:00,,,,,Semester Hours,,,Weekly,,,;Thursday,11:00,18:00,,,,,Semester Hours,,,Weekly,,,;Friday,11:00,16:30,,,,,Semester Hours,,,Weekly,,,;Monday,11:00,14:00,,,,,Summer Hours,,,Weekly,,,;Tuesday,11:00,16:30,,,,,Summer Hours,,,Weekly,,,;Wednesday,11:00,14:00,,,,,Summer Hours,,,Weekly,,,;Thursday,11:00,16:30,,,,,Summer Hours,,,Weekly,,,;Friday,11:00,14:00,,,,,Summer Hours,,,Weekly,,,",Baton Rouge
+P048,2nd Wednesday  9:00 a.m. - 11:00 a.m. ,"Wednesday,9:00,11:00,,,,,,,2,Day of Month,,,",Baton Rouge
+P049,Tuesday and Thursday 10:00 a.m. - 1:00 p.m.,"Tuesday,10:00,13:00,,,,,,,,Weekly,,,;Thursday,10:00,13:00,,,,,,,,Weekly,,,",Baton Rouge
+P050,24 hour residential facility with in house clients,",,,,,,,24/7 residential facility with in house clients,,,Call for Information,,,",Baton Rouge
+P051,4th Friday 9:00 a.m. - 11:00 a.m. / Farm Fresh 2nd Thursday 10:30 - 12:00 pm,"Thursday,9:00,11:00,,,,,,,2,Day of Month,,,;Friday,10:30,12:00,,,,,,,4,Day of Month,,,",Baton Rouge
+P052,Every Thursday 9:00 a.m. - 11:00 a.m.,"Thursday,9:00,11:00,,,,,,,,Weekly,,,",Baton Rouge
+P053,2nd Tuesday 10:00 a.m. - 12:00 p.m.,"Tuesday,10:00,12:00,,,,,,,2,Day of Month,,,",Baton Rouge
+P054,2nd Friday 1:00 p.m. - 4:00 p.m.  ,"Friday,13:00,16:00,,,,,,,2,Day of Month,,,",Baton Rouge
+P055,2nd Monday 10:00 a.m. - 1:00 p.m.,"Monday,10:00,13:00,,,,,,,2,Day of Month,,,",Baton Rouge
+P056,LAST FRIDAY OF THE MONTH (5TH Fri)  4:00 - 7:00 pm ALL IN ALL OUT,"Friday,16:00,19:00,,,,,,,5,Day of Month,,,",Baton Rouge
+P057,8:00am-10:00pm 24hours /7 days a week,"Monday,8:00,10:00,,,,,,,,Weekly,,,;Tuesday,8:00,10:00,,,,,,,,Weekly,,,;Wednesday,8:00,10:00,,,,,,,,Weekly,,,;Thursday,8:00,10:00,,,,,,,,Weekly,,,;Friday,8:00,10:00,,,,,,,,Weekly,,,;Saturday,8:00,10:00,,,,,,,,Weekly,,,;Sunday,8:00,10:00,,,,,,,,Weekly,,,",Baton Rouge
+P058,Tuesdays & Thursdays 8:00 a.m. - 10:00 a.m. ,"Tuesday,8:00,10:00,,,,,,,,Weekly,,,;Thursday,8:00,10:00,,,,,,,,Weekly,,,",Baton Rouge
+P059,3rd Thursday 7:00-12:00 p.m.,"Thursday,19:00,23:59,,,,,,,3,Day of Month,,,",Baton Rouge
+P060,Monday 9:00am-10:30am,"Monday,9:00,10:30,,,,,,,,Weekly,,,",Baton Rouge
+P061,1st and 3rd Saturday 9:00 a.m. - 11:00 a.m.,"Saturday,9:00,11:00,,,,,,,1,Day of Month,,,;Saturday,9:00,11:00,,,,,,,3,Day of Month,,,",Baton Rouge
+P062,2nd and 4th Thursday 9:00 a.m. - 11:00 a.m.,"Thursday,9:00,11:00,,,,,,,2,Day of Month,,,;Thursday,9:00,11:00,,,,,,,4,Day of Month,,,",Baton Rouge
+P063,1st and 3rd Saturday 10:00 a.m. - 1:30 p.m.,"Saturday,10:00,13:30,,,,,,,1,Day of Month,,,;Saturday,10:00,13:30,,,,,,,3,Day of Month,,,",Baton Rouge
+P064,2nd and 4th Tuesdays 8:00 a.m. to 10 a.m.,"Tuesday,8:00,10:00,,,,,,,2,Day of Month,,,;Tuesday,8:00,10:00,,,,,,,4,Day of Month,,,",Baton Rouge
+P065,3rd Saturday 8:00 a.m. - 11:00 a.m.,"Saturday,8:00,11:00,,,,,,,3,Day of Month,,,",Baton Rouge
+P066,Monday - Thursday 10:00 a.m. - 12:00 p.m.,"Monday,10:00,12:00,,,,,,,,Weekly,,,;Tuesday,10:00,12:00,,,,,,,,Weekly,,,;Wednesday,10:00,12:00,,,,,,,,Weekly,,,;Thursday,10:00,12:00,,,,,,,,Weekly,,,",Baton Rouge
+P067,Monday - Thursday 11:00 a.m. - 7:00 p.m.,"Monday,11:00,19:00,,,,,,,,Weekly,,,;Tuesday,11:00,19:00,,,,,,,,Weekly,,,;Wednesday,11:00,19:00,,,,,,,,Weekly,,,;Thursday,11:00,19:00,,,,,,,,Weekly,,,",Baton Rouge
+P068,1st Thursday 10:00 a.m. - 12:00 p.m.,"Thursday,10:00,12:00,,,,,,,1,Day of Month,,,",Baton Rouge
+P069,Wednesdays 9:00 a.m. - 11:00 a.m.,"Wednesday,9:00,11:00,,,,,,,,Weekly,,,",Baton Rouge
+P070,1st and 3rd Saturday from 8:30 a.m. - 10:30 a.m.,"Saturday,8:30,10:30,,,,,,,1,Day of Month,,,;Saturday,8:30,10:30,,,,,,,3,Day of Month,,,",Baton Rouge
+P071,1st Thurs and sometimes 3rd Thursday 9:30 a.m. - 12:00 p.m.,"Thursday,9:30,12:00,,,,,,,1,Day of Month,,,",Baton Rouge
+P072,"3rd Wednesday 7:00. a.m- 9:00 a.m. [Emergency boxes in Livonia at office of St. Frances Catholic Church, 3523 Hwy 78, Tuesday - Thursday 8:30 - 3:00 pm and Friday 8:30 - 12:00 pm.]","Wednesday,7:00,9:00,,,,,,,3,Day of Month,,,;Tuesday,8:30,15:00,,,,,Emergency boxes in Livonia at office of St. Frances Catholic Church, 3523 Hwy 78,,,Weekly,,,;Wednesday,8:30,15:00,,,,,Emergency boxes in Livonia at office of St. Frances Catholic Church, 3523 Hwy 78,,,Weekly,,,;Thursday,8:30,15:00,,,,,Emergency boxes in Livonia at office of St. Frances Catholic Church, 3523 Hwy 78,,,Weekly,,,;Friday,8:30,12:00,,,,,Emergency boxes in Livonia at office of St. Frances Catholic Church, 3523 Hwy 78,,,Weekly,,,",Baton Rouge
+P073,2nd Thursday 8:00-3:00 p.m.,"Thursday,8:00,15:00,,,,,Seniors 65+,,2,Day of Month,,,",Baton Rouge
+P074,2nd Thursday 4:00-6:00 p.m. ,"Thursday,16:00,18:00,,,,,,,2,Day of Month,,,",Baton Rouge
+P075,2nd Thursday 4:00-6:00 p.m. ,"Thursday,16:00,18:00,,,,,,,2,Day of Month,,,",Baton Rouge
+P076,2nd & 3rd Wednesday 8:30 a.m. - 10:30 a.m.,"Wednesday,8:30,10:30,,,,,,,2,Day of Month,,,;Wednesday,8:30,10:30,,,,,,,3,Day of Month,,,",Baton Rouge
+P077,Last Sunday of each month. 8:00 - 9:00 a.m.  Hot prepared breakfast and food box,"Sunday,8:00,9:00,,,,,Hot prepared breakfast and food box,,5,Day of Month,,,",Baton Rouge
+P078,Monday-Thursday 9:00 a.m. - 3:30 p.m. ,"Monday,9:00,15:30,,,,,,,,Weekly,,,;Tuesday,9:00,15:30,,,,,,,,Weekly,,,;Wednesday,9:00,15:30,,,,,,,,Weekly,,,;Thursday,9:00,15:30,,,,,,,,Weekly,,,",Baton Rouge
+P079,Mon-Thurs 9:30 am- 11:30 am,"Monday,9:30,11:30,,,,,,,,Weekly,,,;Tuesday,9:30,11:30,,,,,,,,Weekly,,,;Thursday,9:30,11:30,,,,,,,,Weekly,,,;Friday,9:30,11:30,,,,,,,,Weekly,,,",Baton Rouge
+P080,2nd Monday of each Month 8:30 a.m. -10:30 a.m.,"Monday,8:30,10:30,,,,,,,2,Day of Month,,,",Baton Rouge
+P081,3rd Friday 9:00am-11:00am and on call,"Friday,9:00,11:00,,,,,Available on call aswell,,3,Day of Month,,,",Baton Rouge
+P082,4th Thursday 6:30 - 8:00 a.m. ,"Thursday,6:30,8:00,,,,,,,4,Day of Month,,,",Baton Rouge
+P083,3rd Saturday  10:00 a.m. - 12:00 p.m.,"Saturday,10:00,12:00,,,,,,,3,Day of Month,,,",Baton Rouge
+P084,"1st and 3rd Thursdays, 8:30am-11:00am","Thursday,8:30,11:00,,,,,,,1,Day of Month,,,;Thursday,8:30,11:00,,,,,,,3,Day of Month,,,",Baton Rouge
+P085,Applications Only Monday and Tuesday 1 p.m.-4 p.m. / Distribution Wednesday 1:00 p.m. - 4:00 p.m.,"Monday,13:00,16:00,,,,,Applicants Only,,,Weekly,,,;Tuesday,13:00,16:00,,,,,Applicants Only,,,Weekly,,,;Wednesday,13:00,16:00,,,,,Distribution,,,Weekly,,,",Baton Rouge
+P086,Tuesdays 9:00 a.m.-12:00 p.m.,"Tuesday,9:00,12:00,,,,,,,,Weekly,,,",Baton Rouge
+P087,"Tuesday, Wednesday 10:00-3:00 Friday 10:00-1:00","Tuesday,10:00,15:00,,,,,,,,Weekly,,,;Wednesday,10:00,15:00,,,,,,,,Weekly,,,;Friday,10:00,13:00,,,,,,,,Weekly,,,",Baton Rouge
+P088,1st & 3rd Thursday 1:00-4:00 p.m. ,"Thursday,13:00,16:00,,,,,,,1,Day of Month,,,;Thursday,13:00,16:00,,,,,,,3,Day of Month,,,",Baton Rouge
+P089,Tuesdays & Thursdays 12:00 - 2:00 p.m.,"Tuesday,12:00,14:00,,,,,,,,Weekly,,,;Thursday,12:00,14:00,,,,,,,,Weekly,,,",Baton Rouge
+P090,4th Saturday  9:00 a.m. - 11:00 a.m.,"Saturday,9:00,11:00,,,,,,,4,Day of Month,,,",Baton Rouge
+P091,3rd Thursday  3:00-5:00 p.m.,"Thursday,15:00,17:00,,,,,,,3,Day of Month,,,",Baton Rouge
+P092,4th Saturday 9:00 a.m. - 11:00 a.m.,"Saturday,9:00,11:00,,,,,,,4,Day of Month,,,",Baton Rouge
+P093,2nd Tuesday 8:00 a.m. - 2:00 p.m.,"Tuesday,8:00,14:00,,,,,,,2,Day of Month,,,",Baton Rouge
+P094,Monday - Friday 7:30 a.m. - 3:30 p.m. ,"Monday,7:30,15:30,,,,,,,,Weekly,,,;Tuesday,7:30,15:30,,,,,,,,Weekly,,,;Wednesday,7:30,15:30,,,,,,,,Weekly,,,;Thursday,7:30,15:30,,,,,,,,Weekly,,,;Friday,7:30,15:30,,,,,,,,Weekly,,,",Baton Rouge
+P095,Friday 8:00 a.m. - 12:00 p.m.,"Friday,8:00,12:00,,,,,,,,Weekly,,,",Baton Rouge
+P096,1st and 3rd Thursday 9:30 a.m. - 2:00 p.m. ,"Thursday,9:30,14:00,,,,,,,1,Day of Month,,,;Thursday,9:30,14:00,,,,,,,3,Day of Month,,,",Baton Rouge
+P097,2nd and 3rd Saturday 8:00 a.m. - 12:00 p.m.,"Saturday,8:00,12:00,,,,,,,2,Day of Month,,,;Saturday,8:00,12:00,,,,,,,3,Day of Month,,,",Baton Rouge
+P098,1st and 3rd Friday 7:00 a.m. - 11:00 a.m.,"Friday,7:00,11:00,,,,,,,1,Day of Month,,,;Friday,7:00,11:00,,,,,,,3,Day of Month,,,",Baton Rouge
+P099,2nd Friday 10:00 a.m. - 12:00 p.m. ,"Friday,10:00,12:00,,,,,,,2,Day of Month,,,",Baton Rouge
+P100,Tuesday 8:00 a.m. - 11:00 a.m.,"Tuesday,8:00,11:00,,,,,,,,Weekly,,,",Baton Rouge
+P101,2nd Friday 8:00-9:30 a.m. ,"Friday,8:00,9:30,,,,,,,2,Day of Month,,,",Baton Rouge
+P102,2nd Wednesday 8:00-9:30 a.m. ,"Wednesday,8:00,9:30,,,,,,,2,Day of Month,,,",Baton Rouge
+P103,3rd Monday 8:00-9:00 a.m. ,"Monday,8:00,9:30,,,,,,,3,Day of Month,,,",Baton Rouge
+P104,3rd Wednesday 8:00-9:30 a.m. ,"Wednesday,8:00,9:30,,,,,,,3,Day of Month,,,",Baton Rouge
+P105,4th Wednesday 10:00-11:00 a.m. ,"Wednesday,10:00,11:00,,,,,,,4,Day of Month,,,",Baton Rouge
+P106,4th Friday 8:00-9:30 a.m. ,"Friday,8:00,9:30,,,,,,,4,Day of Month,,,",Baton Rouge

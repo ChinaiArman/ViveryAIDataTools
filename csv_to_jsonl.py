@@ -10,7 +10,7 @@ def create_jsonl_file(df, path, input_column, output_column):
 
     with open(path, 'w') as jsonl_file:
         for i in range(len(input)):
-            jsonl_file.write('{"prompt": "' + str(input[i]) + '", "completion": "' + str(output[i]) + '"}\n') 
+            jsonl_file.write('{"prompt": "' + str(input[i]) + '", "completion": "' + str(output[i]) + '%' + '%"}\n') 
 
 
 if __name__ == "__main__":
