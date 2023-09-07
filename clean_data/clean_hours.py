@@ -75,11 +75,11 @@ if __name__ == "__main__":
     # Create DataFrame
     df = pd.read_csv(args.file)
     
-    # # Create directory within project folder
-    # if not os.path.isdir(directory):
-    #     os.mkdir(directory)
-    # # Move file to directory
-    # if args.file.split("\\")[0] != directory:
-    #     shutil.move(args.file, directory)
+    # Create directory within project folder
+    if not os.path.isdir(directory):
+        os.mkdir(directory)
+    # Move file to directory
+    if args.file.split("\\")[0] != directory:
+        shutil.move(args.file, directory)
 
     print(call_oai("Mon-Fri,10:00:00 AM,4:00:00 PM"))
