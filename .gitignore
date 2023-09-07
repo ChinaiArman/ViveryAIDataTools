@@ -1,3 +1,10 @@
+# API Keys
 keys.py
+
+# Files
 */*.csv
 */*.jsonl
+
+# Folders
+*/clean_hours
+*/shakespeare
