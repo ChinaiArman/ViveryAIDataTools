@@ -2,9 +2,9 @@
 keys.py
 
 # Files
-*/*.csv
-*/*.jsonl
 
 # Folders
+*/clean_address
+*/clean_contacts
 */clean_hours
 */shakespeare
