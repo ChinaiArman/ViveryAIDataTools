@@ -2,6 +2,8 @@
 keys.py
 
 # Files
+*.csv
+__pycache__
 
 # Folders
 */clean_address
