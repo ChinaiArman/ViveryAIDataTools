@@ -20,10 +20,13 @@ from keys import API_KEY
 
 
 # HELPERS
-def create_id_hours_dict(df:pd.DataFrame) -> dict:
+def create_id_hours_dict(df: pd.DataFrame) -> dict:
     """
     """
-    return
+    id_hours_dict = {}
+    for _, row in df.iterrows():
+        id_hours_dict[row["Program External ID"]] = str(row["Hours Note"]).strip()
+    return id_hours_dict
 
 
 def call_oai(prompt: str) -> str:
@@ -50,7 +53,14 @@ def call_oai(prompt: str) -> str:
 def format_hours_iteratively(id_hours_dict: dict) -> dict:
     """
     """
-    return
+    print(id_hours_dict)
+    print("\n\n")
+    for key, value in id_hours_dict.items():
+        new_value = call_oai(value)
+        new_value = new_value.replace("\n", "").replace("Q:", "").replace("A:", "").replace(value, "").strip()
+        new_value = new_value
+        id_hours_dict[key] = new_value
+    return id_hours_dict
 
 
 def convert_id_hours_dict_to_df(id_hours_dict: dict, df: pd.DataFrame) -> pd.DataFrame:
@@ -76,10 +86,13 @@ if __name__ == "__main__":
     df = pd.read_csv(args.file)
     
     # Create directory within project folder
-    if not os.path.isdir(directory):
-        os.mkdir(directory)
-    # Move file to directory
-    if args.file.split("\\")[0] != directory:
-        shutil.move(args.file, directory)
+    # if not os.path.isdir(directory):
+    #     os.mkdir(directory)
+    # # Move file to directory
+    # if args.file.split("\\")[0] != directory:
+    #     shutil.move(args.file, directory)
 
-    print(call_oai("Mon-Fri,10:00:00 AM,4:00:00 PM"))
+    # print(call_oai("Mon-Fri,10:00:00 AM,4:00:00 PM"))
+
+    id_hours_dict = create_id_hours_dict(df)
+    print(format_hours_iteratively(id_hours_dict))
