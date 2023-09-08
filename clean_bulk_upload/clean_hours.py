@@ -25,7 +25,7 @@ def create_id_hours_dict(df: pd.DataFrame) -> dict:
     """
     id_hours_dict = {}
     for _, row in df.iterrows():
-        id_hours_dict[row["Program External ID"]] = str(row["Hours Note"]).strip()
+        id_hours_dict[row["Program External ID"]] = str(row["Hours Uncleaned"]).strip()
     return id_hours_dict
 
 
@@ -53,17 +53,40 @@ def call_oai(prompt: str) -> str:
 def format_hours_iteratively(id_hours_dict: dict) -> dict:
     """
     """
-    print(id_hours_dict)
-    print("\n\n")
+    cleaned_hours_dict = {}
     for key, value in id_hours_dict.items():
         new_value = call_oai(value)
         new_value = new_value.replace("\n", "").replace("Q:", "").replace("A:", "").replace(value, "").strip()
         new_value = new_value
-        id_hours_dict[key] = new_value
-    return id_hours_dict
+        cleaned_hours_dict[key] = new_value
+    return cleaned_hours_dict
 
 
-def convert_id_hours_dict_to_df(id_hours_dict: dict, df: pd.DataFrame) -> pd.DataFrame:
+def test_hours_format(cleaned_hours_dict: dict, is_valid_hours_dict: dict) -> dict:
+    """
+    """
+    return
+
+
+def test_hours_contain_base_string(cleaned_hours_dict: dict, is_valid_hours_dict: dict) -> dict:
+    """
+    """
+    return
+
+
+def filter_invalid_values(id_hours_dict: dict, cleaned_hours_dict: dict, is_valid_hours_dict: dict) -> dict:
+    """
+    """
+    valid_hours_dict = {}
+    for key, _ in cleaned_hours_dict.items():
+        if is_valid_hours_dict[key]:
+            valid_hours_dict[key] = cleaned_hours_dict[key]
+        else:
+            valid_hours_dict[key] = id_hours_dict[key]
+    return valid_hours_dict
+
+
+def convert_id_hours_dict_to_df(cleaned_hours_dict: dict, is_valid_hours_dict: dict, df: pd.DataFrame) -> pd.DataFrame:
     """
     """
     return
@@ -92,7 +115,22 @@ if __name__ == "__main__":
     # if args.file.split("\\")[0] != directory:
     #     shutil.move(args.file, directory)
 
-    # print(call_oai("Mon-Fri,10:00:00 AM,4:00:00 PM"))
-
+    # Create id_hours Dictionary
     id_hours_dict = create_id_hours_dict(df)
-    print(format_hours_iteratively(id_hours_dict))
+
+    # Create is_valid_hours Dictionary
+    is_valid_hours_dict = {key: True for key, _ in id_hours_dict.items()}
+
+    # Parse Hours through OAI
+    cleaned_hours_dict = format_hours_iteratively(id_hours_dict)
+
+    # Test OAI Hours 
+    is_valid_hours_dict = test_hours_format(cleaned_hours_dict, is_valid_hours_dict)
+    is_valid_hours_dict = test_hours_contain_base_string(cleaned_hours_dict, is_valid_hours_dict)
+    #
+
+    # Check Values Still Valid
+    valid_id_hours_dict = filter_invalid_values(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
+
+    # Convert Back to DF
+    cleaned_hours_df = convert_id_hours_dict_to_df(cleaned_hours_dict, is_valid_hours_dict, df)
