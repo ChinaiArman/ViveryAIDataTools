@@ -128,7 +128,7 @@ def test_day_of_month_valid_integer(id_hours_dict: dict, cleaned_hours_dict: dic
             value = value.split(",")
             try:
                 is_valid = (any(day_of_month_value in id_hours_dict[key] for day_of_month_value in INT_TO_DAY_OF_MONTH[value[9]]) or value[9] == "") and is_valid
-            except KeyError:
+            except:
                 is_valid = False
             
         is_valid_dict[key] = is_valid_dict[key] and is_valid
