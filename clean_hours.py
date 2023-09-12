@@ -14,7 +14,7 @@ import pandas as pd
 from keys import API_KEY
 
 # MISC CONSTANTS
-INT_TO_DAY_OF_MONTH = {"1": ["1st", "First"], "2": ["2nd"], "3": ["3rd"], "4": ["4th"], "5": ["5th", "Last"], "": ""}
+INT_TO_DAY_OF_MONTH = {"1": ["1st"], "2": ["2nd"], "3": ["3rd"], "4": ["4th"], "5": ["5th"], "": ""}
 DAYS_OF_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 
@@ -122,7 +122,7 @@ def test_day_of_month_valid_integer(id_hours_dict: dict, cleaned_hours_dict: dic
     """
     for key, value in cleaned_hours_dict.items():
         is_valid = True
-        list_of_entries = cleaned_hours_dict[key].split(";")
+        list_of_entries = value.split(";")
 
         for value in list_of_entries:
             value = value.split(",")
@@ -141,7 +141,7 @@ def test_valid_day_of_week(_: dict, cleaned_hours_dict: dict, is_valid_dict: dic
     """
     for key, value in cleaned_hours_dict.items():
         is_valid = True
-        list_of_entries = cleaned_hours_dict[key].split(";")
+        list_of_entries = value.split(";")
 
         for value in list_of_entries:
             value = value.split(",")
@@ -168,7 +168,7 @@ def test_number_of_days_greater_than_entries(id_hours_dict: dict, cleaned_hours_
     """
     """
     for key, value in cleaned_hours_dict.items():
-        number_of_entries = len(cleaned_hours_dict[key].split(";"))
+        number_of_entries = len(value.split(";"))
         number_of_days = 0
 
         for day in DAYS_OF_WEEK:
