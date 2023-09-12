@@ -126,7 +126,10 @@ def test_day_of_month_valid_integer(id_hours_dict: dict, cleaned_hours_dict: dic
 
         for value in list_of_entries:
             value = value.split(",")
-            is_valid = (any(day_of_month_value in id_hours_dict[key] for day_of_month_value in INT_TO_DAY_OF_MONTH[value[9]]) or value[9] == "") and is_valid
+            try:
+                is_valid = (any(day_of_month_value in id_hours_dict[key] for day_of_month_value in INT_TO_DAY_OF_MONTH[value[9]]) or value[9] == "") and is_valid
+            except KeyError:
+                is_valid = False
             
         is_valid_dict[key] = is_valid_dict[key] and is_valid
 
@@ -160,6 +163,20 @@ def test_valid_entry_format(_: dict, cleaned_hours_dict: dict, is_valid_dict: di
 
     return is_valid_dict
 
+
+def test_number_of_days_greater_than_entries(id_hours_dict: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+    """
+    """
+    for key, value in cleaned_hours_dict.items():
+        number_of_entries = len(cleaned_hours_dict[key].split(";"))
+        number_of_days = 0
+
+        for day in DAYS_OF_WEEK:
+            number_of_days += day in id_hours_dict[key]
+
+        is_valid_dict[key] = is_valid_dict[key] and number_of_entries >= number_of_days
+
+    return is_valid_dict
 
 
 
@@ -201,6 +218,7 @@ if __name__ == "__main__":
     is_valid_hours_dict = test_day_of_month_valid_integer(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     is_valid_hours_dict = test_valid_day_of_week(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     is_valid_hours_dict = test_valid_entry_format(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
+    is_valid_hours_dict = test_number_of_days_greater_than_entries(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     print(is_valid_hours_dict)
 
     # Check Values Still Valid
