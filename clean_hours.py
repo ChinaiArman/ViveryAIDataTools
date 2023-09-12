@@ -14,6 +14,7 @@ import pandas as pd
 from keys import API_KEY
 
 # MISC CONSTANTS
+INT_TO_DAY_OF_MONTH = {1: "1st", 2: "2nd", 3: "3rd", 4: "4th", 5: "5th", 6: "6th"}
 
 
 
@@ -38,7 +39,7 @@ def call_oai(prompt: str) -> str:
     openai.api_key = API_KEY
     response = openai.Completion.create(
         engine="arman_hours_clean_model",
-        prompt=f"Q: {prompt}\nA:",
+        prompt=f"{prompt}",
         temperature=0.2,
         max_tokens=256,
         top_p=1,
@@ -62,16 +63,32 @@ def format_hours_iteratively(id_hours_dict: dict) -> dict:
     return cleaned_hours_dict
 
 
+def test_day_of_month_correct_date(id_hours_dict: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+    """
+    """
+    for key, value in cleaned_hours_dict.items():
+        is_valid = True
+        list_of_entries = cleaned_hours_dict[key].split(";")
+
+        for value in list_of_entries:
+            value = value.split(",")
+            if value[9] not in id_hours_dict[key] and value[9] != None:
+                is_valid = False
+        print(is_valid)
+
+    return is_valid_dict
+
+
 def test_hours_format(cleaned_hours_dict: dict, is_valid_hours_dict: dict) -> dict:
     """
     """
-    return
+    return is_valid_hours_dict
 
 
 def test_hours_contain_base_string(cleaned_hours_dict: dict, is_valid_hours_dict: dict) -> dict:
     """
     """
-    return
+    return is_valid_hours_dict
 
 
 def filter_invalid_values(id_hours_dict: dict, cleaned_hours_dict: dict, is_valid_hours_dict: dict) -> dict:
@@ -89,7 +106,38 @@ def filter_invalid_values(id_hours_dict: dict, cleaned_hours_dict: dict, is_vali
 def convert_id_hours_dict_to_df(cleaned_hours_dict: dict, is_valid_hours_dict: dict, df: pd.DataFrame) -> pd.DataFrame:
     """
     """
-    return
+    # Create new DF
+    cleaned_hours_df = pd.DataFrame(columns=df.columns)
+
+    # Iterate over Program IDs
+    for id in df["Program External ID"].to_list():
+        new_entries = []
+        row = df.loc[df['Program External ID'] == id].values.tolist()[0]
+
+        # Create new row if valid cleaning
+        if is_valid_hours_dict[id]:
+            row = row[0:len(df.columns) - 15]
+            list_of_entries = cleaned_hours_dict[id].split(";")
+            for entry in list_of_entries:
+                entry = entry.split(',')
+                entry = row + entry + [""]
+                new_entries.append(entry)
+
+        # Add row to new DF
+        if is_valid_hours_dict[id]:
+            for entry in new_entries:
+                try:
+                    cleaned_hours_df.loc[len(cleaned_hours_df)] = entry
+                except ValueError:
+                    cleaned_hours_df.loc[len(cleaned_hours_df)] = row + [""] * 15
+        else:
+            cleaned_hours_df.loc[len(cleaned_hours_df)] = row
+    
+    # Return DF
+    cleaned_hours_df.to_csv("test.csv")
+    return cleaned_hours_df
+                
+                
 
 
 
@@ -123,11 +171,12 @@ if __name__ == "__main__":
 
     # Parse Hours through OAI
     cleaned_hours_dict = format_hours_iteratively(id_hours_dict)
+    # print(cleaned_hours_dict)
 
-    # Test OAI Hours 
+    # # Test OAI Hours 
     is_valid_hours_dict = test_hours_format(cleaned_hours_dict, is_valid_hours_dict)
     is_valid_hours_dict = test_hours_contain_base_string(cleaned_hours_dict, is_valid_hours_dict)
-    #
+    is_valid_hours_dict = test_day_of_month_correct_date(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
 
     # Check Values Still Valid
     valid_id_hours_dict = filter_invalid_values(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
