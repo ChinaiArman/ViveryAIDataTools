@@ -7,6 +7,7 @@ import openai
 import argparse, os, shutil
 import pandas as pd
 import re
+from datetime import datetime
 
 # LOCAL FILE IMPORTS
 
@@ -210,17 +211,31 @@ def test_valid_open_closed_hours(_: dict, cleaned_hours_dict: dict, is_valid_dic
 
         for value in list_of_entries:
             value = value.split(",")
-            if value[1] == "" or value[2] == "":
-                is_valid = False
+            is_valid = value[1] != "" and value[2] != ""
             is_open_hour_valid = re.search(time_regex, value[1])
             is_closed_hour_valid = re.search(time_regex, value[2])
-            if is_open_hour_valid == None or is_closed_hour_valid == None:
-                is_valid = False
+            is_valid = is_open_hour_valid != None and is_closed_hour_valid != None
 
         is_valid_dict[key] = is_valid_dict[key] and is_valid
     
     return is_valid_dict
             
+
+def test_open_hour_greater_than_close_hour(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+    """
+    """
+    for key, value in cleaned_hours_dict.items():
+        is_valid = True
+        list_of_entries = value.split(";")
+
+        for value in list_of_entries:
+            value = value.split(",")
+            is_valid = datetime.strptime(value[2], "%H:%M") > datetime.strptime(value[1], "%H:%M") and is_valid
+
+        is_valid_dict[key] = is_valid_dict[key] and is_valid
+
+    return is_valid_dict
+
 
 
 
@@ -264,6 +279,7 @@ if __name__ == "__main__":
     is_valid_hours_dict = test_valid_entry_format(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     is_valid_hours_dict = test_valid_open_closed_hours(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     is_valid_hours_dict = test_week_of_month_valid_integer(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
+    is_valid_hours_dict = test_open_hour_greater_than_close_hour(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     print(is_valid_hours_dict)
 
     # Check Values Still Valid
