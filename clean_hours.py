@@ -6,6 +6,7 @@
 import openai
 import argparse, os, shutil
 import pandas as pd
+import re
 
 # LOCAL FILE IMPORTS
 
@@ -43,7 +44,7 @@ def call_oai(prompt: str) -> str:
     response = openai.Completion.create(
         engine="arman_hours_clean_model",
         prompt=f"{prompt}",
-        temperature=0.6,
+        temperature=0.4,
         max_tokens=256,
         top_p=1,
         frequency_penalty=0,
@@ -164,19 +165,43 @@ def test_valid_entry_format(_: dict, cleaned_hours_dict: dict, is_valid_dict: di
     return is_valid_dict
 
 
-def test_number_of_days_greater_than_entries(id_hours_dict: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+# def test_number_of_days_greater_than_entries(id_hours_dict: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+#     """
+#     """
+#     for key, value in cleaned_hours_dict.items():
+#         number_of_entries = len(value.split(";"))
+#         number_of_days = 0
+
+#         for day in DAYS_OF_WEEK:
+#             number_of_days += day in id_hours_dict[key]
+
+#         is_valid_dict[key] = is_valid_dict[key] and number_of_entries >= number_of_days
+
+#     return is_valid_dict
+
+
+def test_valid_open_closed_hours(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
     """
     """
+    time_regex = re.compile("^([01]?[0-9]|2[0-3]):[0-5][0-9]$")
+
     for key, value in cleaned_hours_dict.items():
-        number_of_entries = len(value.split(";"))
-        number_of_days = 0
+        is_valid = True
+        list_of_entries = value.split(";")
 
-        for day in DAYS_OF_WEEK:
-            number_of_days += day in id_hours_dict[key]
+        for value in list_of_entries:
+            value = value.split(",")
+            if value[1] == "" or value[2] == "":
+                is_valid = False
+            is_open_hour_valid = re.search(time_regex, value[1])
+            is_closed_hour_valid = re.search(time_regex, value[2])
+            if is_open_hour_valid == None or is_closed_hour_valid == None:
+                is_valid = False
 
-        is_valid_dict[key] = is_valid_dict[key] and number_of_entries >= number_of_days
-
+        is_valid_dict[key] = is_valid_dict[key] and is_valid
+    
     return is_valid_dict
+            
 
 
 
@@ -218,7 +243,7 @@ if __name__ == "__main__":
     is_valid_hours_dict = test_day_of_month_valid_integer(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     is_valid_hours_dict = test_valid_day_of_week(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     is_valid_hours_dict = test_valid_entry_format(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
-    is_valid_hours_dict = test_number_of_days_greater_than_entries(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
+    is_valid_hours_dict = test_valid_open_closed_hours(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     print(is_valid_hours_dict)
 
     # Check Values Still Valid
