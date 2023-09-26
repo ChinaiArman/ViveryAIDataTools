@@ -13,7 +13,7 @@ from datetime import datetime
 
 
 # IMPORT CONSTANTS
-from keys import API_KEY
+from keys import SOUTH_CENTRAL_API_KEY
 
 # MISC CONSTANTS
 INT_TO_DAY_OF_MONTH = {"1": ["1st", "First"], "2": ["2nd"], "3": ["3rd"], "4": ["4th"], "5": ["5th"], "": ""}
@@ -41,7 +41,7 @@ def call_oai(prompt: str) -> str:
     openai.api_type = "azure"
     openai.api_base = "https://viveryadvocate.openai.azure.com/"
     openai.api_version = "2022-12-01"
-    openai.api_key = API_KEY
+    openai.api_key = SOUTH_CENTRAL_API_KEY
     response = openai.Completion.create(
         engine="arman_hours_clean_model",
         prompt=f"{prompt}",
@@ -112,7 +112,6 @@ def convert_id_hours_dict_to_df(cleaned_hours_dict: dict, is_valid_hours_dict: d
             cleaned_hours_df.loc[len(cleaned_hours_df)] = row
     
     # Return DF
-    cleaned_hours_df.to_csv("test.csv")
     return cleaned_hours_df
 
 
@@ -192,7 +191,10 @@ def test_close_hour_greater_than_open_hour(_: dict, cleaned_hours_dict: dict, is
 
         for value in list_of_entries:
             value = value.split(",")
-            is_valid = datetime.strptime(value[2], "%H:%M") > datetime.strptime(value[1], "%H:%M") and is_valid
+            try:
+                is_valid = datetime.strptime(value[2], "%H:%M") > datetime.strptime(value[1], "%H:%M") and is_valid
+            except:
+                is_valid = False
 
         is_valid_dict[key] = is_valid_dict[key] and is_valid
 
@@ -208,7 +210,8 @@ def test_day_of_month_formatting(_: dict, cleaned_hours_dict: dict, is_valid_dic
 
         for value in list_of_entries:
             value = value.split(",")
-            is_valid = value[10] == "Day of Month" and value[9].isdigit() and value[8] == "" and is_valid
+            if value[10] == "Day of Month":
+                is_valid = value[9].isdigit() and value[8] == "" and is_valid
             try:
                 is_valid = (any(day_of_month_value in id_hours_dict[key] for day_of_month_value in INT_TO_DAY_OF_MONTH[value[9]]) or value[9] == "") and is_valid
             except:
@@ -228,7 +231,8 @@ def test_week_of_month_formatting(_: dict, cleaned_hours_dict: dict, is_valid_di
 
         for value in list_of_entries:
             value = value.split(",")
-            is_valid = value[10] == "Week of Month" and value[8].isdigit() and value[9] == "" and is_valid
+            if value[10] == "Week of Month":
+                is_valid = value[8].isdigit() and value[9] == "" and is_valid
             try:
                 is_valid = (any(day_of_week_value in id_hours_dict[key] for day_of_week_value in INT_TO_DAY_OF_MONTH[value[8]]) or value[8] == "") and is_valid
             except:
@@ -248,7 +252,8 @@ def test_weekly_formatting(_: dict, cleaned_hours_dict: dict, is_valid_dict: dic
 
         for value in list_of_entries:
             value = value.split(",")
-            is_valid = value[10] == "Weekly" and value[8] == "" and value[9] == "" and is_valid
+            if value[10] == "Weekly":
+                is_valid = value[8] == "" and value[9] == "" and is_valid
 
         is_valid_dict[key] = is_valid_dict[key] and is_valid
 
@@ -288,6 +293,7 @@ def test_valid_hour_types(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict
 
 
 
+
 # MAIN
 if __name__ == "__main__":
     # Define console parser
@@ -322,7 +328,7 @@ if __name__ == "__main__":
     for key, value in cleaned_hours_dict.items():
         print(cleaned_hours_dict[key].split(";"))
 
-    # # Test OAI Hours 
+    # Test OAI Hours 
     is_valid_hours_dict = test_day_of_month_formatting(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     is_valid_hours_dict = test_valid_day_of_week(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     is_valid_hours_dict = test_valid_entry_format(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
@@ -331,6 +337,7 @@ if __name__ == "__main__":
     is_valid_hours_dict = test_close_hour_greater_than_open_hour(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     is_valid_hours_dict = test_weekly_formatting(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     is_valid_hours_dict = test_all_null_values_empty_string(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
+    is_valid_hour_dict = test_valid_hour_types(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     print(is_valid_hours_dict)
 
     # Check Values Still Valid
@@ -338,3 +345,4 @@ if __name__ == "__main__":
 
     # Convert Back to DF
     cleaned_hours_df = convert_id_hours_dict_to_df(cleaned_hours_dict, is_valid_hours_dict, df)
+    cleaned_hours_df.to_csv(args.file.replace(".csv", "") + "HOURS_CLEANED.csv")
