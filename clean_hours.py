@@ -18,7 +18,7 @@ from keys import API_KEY
 # MISC CONSTANTS
 INT_TO_DAY_OF_MONTH = {"1": ["1st", "First"], "2": ["2nd"], "3": ["3rd"], "4": ["4th"], "5": ["5th"], "": ""}
 DAYS_OF_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-
+HOUR_TYPES = ["Weekly", "Day of Month", "Week of Month"]
 
 
 
@@ -264,12 +264,27 @@ def test_all_null_values_empty_string(_: dict, cleaned_hours_dict: dict, is_vali
 
         for value in list_of_entries:
             value = value.split(",")
-            is_valid = value[3] == "" and value[4] == "" and value[5] == "" and value[6] == "" and value[7] == "" and value[11] == "" and value[12] == "" and value[13] == "" and is_valid
+            is_valid = value[3] == "" and value[4] == "" and value[5] == "" and value[6] == "" and value[11] == "" and value[12] == "" and value[13] == "" and is_valid
 
         is_valid_dict[key] = is_valid_dict[key] and is_valid
 
     return is_valid_dict
 
+
+def test_valid_hour_types(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+    """
+    """
+    for key, value in cleaned_hours_dict.items():
+        is_valid = True
+        list_of_entries = value.split(";")
+
+        for value in list_of_entries:
+            value = value.split(",")
+            is_valid = value[10] in HOUR_TYPES and is_valid
+
+        is_valid_dict[key] = is_valid_dict[key] and is_valid
+
+    return is_valid_dict
 
 
 
