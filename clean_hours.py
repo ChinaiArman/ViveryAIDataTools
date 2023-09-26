@@ -146,21 +146,6 @@ def test_valid_entry_format(_: dict, cleaned_hours_dict: dict, is_valid_dict: di
     return is_valid_dict
 
 
-# def test_number_of_days_greater_than_entries(id_hours_dict: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
-#     """
-#     """
-#     for key, value in cleaned_hours_dict.items():
-#         number_of_entries = len(value.split(";"))
-#         number_of_days = 0
-
-#         for day in DAYS_OF_WEEK:
-#             number_of_days += day in id_hours_dict[key]
-
-#         is_valid_dict[key] = is_valid_dict[key] and number_of_entries >= number_of_days
-
-#     return is_valid_dict
-
-
 def test_valid_open_closed_hours(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
     """
     """
@@ -318,15 +303,17 @@ if __name__ == "__main__":
         print(cleaned_hours_dict[key].split(";"))
 
     # Test OAI Hours 
-    is_valid_hours_dict = test_day_of_month_formatting(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
-    is_valid_hours_dict = test_valid_day_of_week(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
-    is_valid_hours_dict = test_valid_entry_format(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
-    is_valid_hours_dict = test_valid_open_closed_hours(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
-    is_valid_hours_dict = test_week_of_month_formatting(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
-    is_valid_hours_dict = test_close_hour_greater_than_open_hour(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
-    is_valid_hours_dict = test_weekly_formatting(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
-    is_valid_hours_dict = test_all_null_values_empty_string(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
-    is_valid_hour_dict = test_valid_hour_types(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
+    validation_tests = [test_day_of_month_formatting,
+             test_week_of_month_formatting,
+             test_weekly_formatting,
+             test_valid_hour_types,
+             test_valid_day_of_week,
+             test_valid_open_closed_hours,
+             test_close_hour_greater_than_open_hour,
+             test_all_null_values_empty_string,
+             test_valid_entry_format
+            ]
+    [test(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict) for test in validation_tests]
     print(is_valid_hours_dict)
 
     # Check Values Still Valid
