@@ -16,7 +16,7 @@ from datetime import datetime
 from keys import API_KEY
 
 # MISC CONSTANTS
-INT_TO_DAY_OF_MONTH = {"1": ["1st"], "2": ["2nd"], "3": ["3rd"], "4": ["4th"], "5": ["5th"], "": ""}
+INT_TO_DAY_OF_MONTH = {"1": ["1st", "First"], "2": ["2nd"], "3": ["3rd"], "4": ["4th"], "5": ["5th"], "": ""}
 DAYS_OF_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 
@@ -119,44 +119,6 @@ def convert_id_hours_dict_to_df(cleaned_hours_dict: dict, is_valid_hours_dict: d
 
 
 # TESTS
-def test_day_of_month_valid_integer(id_hours_dict: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
-    """
-    """
-    for key, value in cleaned_hours_dict.items():
-        is_valid = True
-        list_of_entries = value.split(";")
-
-        for value in list_of_entries:
-            value = value.split(",")
-            try:
-                is_valid = (any(day_of_month_value in id_hours_dict[key] for day_of_month_value in INT_TO_DAY_OF_MONTH[value[9]]) or value[9] == "") and is_valid
-            except:
-                is_valid = False
-            
-        is_valid_dict[key] = is_valid_dict[key] and is_valid
-
-    return is_valid_dict
-
-
-def test_week_of_month_valid_integer(id_hours_dict: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
-    """
-    """
-    for key, value in cleaned_hours_dict.items():
-        is_valid = True
-        list_of_entries = value.split(";")
-
-        for value in list_of_entries:
-            value = value.split(",")
-            try:
-                is_valid = (any(day_of_month_value in id_hours_dict[key] for day_of_month_value in INT_TO_DAY_OF_MONTH[value[8]]) or value[8] == "") and is_valid
-            except:
-                is_valid = False
-            
-        is_valid_dict[key] = is_valid_dict[key] and is_valid
-
-    return is_valid_dict
-
-
 def test_valid_day_of_week(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
     """
     """
@@ -221,7 +183,7 @@ def test_valid_open_closed_hours(_: dict, cleaned_hours_dict: dict, is_valid_dic
     return is_valid_dict
             
 
-def test_open_hour_greater_than_close_hour(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+def test_close_hour_greater_than_open_hour(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
     """
     """
     for key, value in cleaned_hours_dict.items():
@@ -231,6 +193,46 @@ def test_open_hour_greater_than_close_hour(_: dict, cleaned_hours_dict: dict, is
         for value in list_of_entries:
             value = value.split(",")
             is_valid = datetime.strptime(value[2], "%H:%M") > datetime.strptime(value[1], "%H:%M") and is_valid
+
+        is_valid_dict[key] = is_valid_dict[key] and is_valid
+
+    return is_valid_dict
+
+
+def test_day_of_month_formatting(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+    """
+    """
+    for key, value in cleaned_hours_dict.items():
+        is_valid = True
+        list_of_entries = value.split(";")
+
+        for value in list_of_entries:
+            value = value.split(",")
+            is_valid = value[10] == "Day of Month" and value[9].isdigit() and value[8] == "" and is_valid
+            try:
+                is_valid = (any(day_of_month_value in id_hours_dict[key] for day_of_month_value in INT_TO_DAY_OF_MONTH[value[9]]) or value[9] == "") and is_valid
+            except:
+                is_valid = False
+
+        is_valid_dict[key] = is_valid_dict[key] and is_valid
+
+    return is_valid_dict
+
+
+def test_week_of_month_formatting(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+    """
+    """
+    for key, value in cleaned_hours_dict.items():
+        is_valid = True
+        list_of_entries = value.split(";")
+
+        for value in list_of_entries:
+            value = value.split(",")
+            is_valid = value[10] == "Week of Month" and value[8].isdigit() and value[9] == "" and is_valid
+            try:
+                is_valid = (any(day_of_week_value in id_hours_dict[key] for day_of_week_value in INT_TO_DAY_OF_MONTH[value[8]]) or value[8] == "") and is_valid
+            except:
+                is_valid = False
 
         is_valid_dict[key] = is_valid_dict[key] and is_valid
 
@@ -274,12 +276,12 @@ if __name__ == "__main__":
         print(cleaned_hours_dict[key].split(";"))
 
     # # Test OAI Hours 
-    is_valid_hours_dict = test_day_of_month_valid_integer(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
+    is_valid_hours_dict = test_day_of_month_formatting(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     is_valid_hours_dict = test_valid_day_of_week(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     is_valid_hours_dict = test_valid_entry_format(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     is_valid_hours_dict = test_valid_open_closed_hours(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
-    is_valid_hours_dict = test_week_of_month_valid_integer(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
-    is_valid_hours_dict = test_open_hour_greater_than_close_hour(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
+    is_valid_hours_dict = test_week_of_month_formatting(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
+    is_valid_hours_dict = test_close_hour_greater_than_open_hour(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     print(is_valid_hours_dict)
 
     # Check Values Still Valid
