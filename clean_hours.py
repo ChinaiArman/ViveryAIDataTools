@@ -173,10 +173,10 @@ def test_valid_open_closed_hours(_: dict, cleaned_hours_dict: dict, is_valid_dic
 
         for value in list_of_entries:
             value = value.split(",")
-            is_valid = value[1] != "" and value[2] != ""
+            is_valid = value[1] != "" and value[2] != "" and is_valid
             is_open_hour_valid = re.search(time_regex, value[1])
             is_closed_hour_valid = re.search(time_regex, value[2])
-            is_valid = is_open_hour_valid != None and is_closed_hour_valid != None
+            is_valid = is_open_hour_valid != None and is_closed_hour_valid != None and is_valid
 
         is_valid_dict[key] = is_valid_dict[key] and is_valid
     
@@ -239,6 +239,23 @@ def test_week_of_month_formatting(_: dict, cleaned_hours_dict: dict, is_valid_di
     return is_valid_dict
 
 
+def test_weekly_formatting(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+    """
+    """
+    for key, value in cleaned_hours_dict.items():
+        is_valid = True
+        list_of_entries = value.split(";")
+
+        for value in list_of_entries:
+            value = value.split(",")
+            is_valid = value[10] == "Weekly" and value[8] == "" and value[9] == "" and is_valid
+
+        is_valid_dict[key] = is_valid_dict[key] and is_valid
+
+    return is_valid_dict
+
+
+
 
 
 # MAIN
@@ -282,6 +299,7 @@ if __name__ == "__main__":
     is_valid_hours_dict = test_valid_open_closed_hours(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     is_valid_hours_dict = test_week_of_month_formatting(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     is_valid_hours_dict = test_close_hour_greater_than_open_hour(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
+    is_valid_hours_dict = test_weekly_formatting(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     print(is_valid_hours_dict)
 
     # Check Values Still Valid
