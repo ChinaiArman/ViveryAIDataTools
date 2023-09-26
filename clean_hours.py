@@ -4,7 +4,7 @@
 
 # PACKAGE IMPORTS
 import openai
-import argparse, os, shutil
+import argparse
 import pandas as pd
 import re
 from datetime import datetime
@@ -18,7 +18,7 @@ from keys import SOUTH_CENTRAL_API_KEY
 # MISC CONSTANTS
 INT_TO_DAY_OF_MONTH = {"1": ["1st", "First"], "2": ["2nd"], "3": ["3rd"], "4": ["4th"], "5": ["5th"], "": ""}
 DAYS_OF_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-HOUR_TYPES = ["Weekly", "Day of Month", "Week of Month"]
+HOUR_TYPES = ["Weekly", "Every Other Week", "Day of Month", "Week of Month"]
 
 
 
@@ -237,7 +237,7 @@ def test_weekly_formatting(_: dict, cleaned_hours_dict: dict, is_valid_dict: dic
 
         for value in list_of_entries:
             value = value.split(",")
-            if value[10] == "Weekly":
+            if value[10] == "Weekly" or value[10] == "Every Other Week":
                 is_valid = value[8] == "" and value[9] == "" and is_valid
 
         is_valid_dict[key] = is_valid_dict[key] and is_valid
