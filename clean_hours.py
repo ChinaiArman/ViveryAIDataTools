@@ -255,6 +255,21 @@ def test_weekly_formatting(_: dict, cleaned_hours_dict: dict, is_valid_dict: dic
     return is_valid_dict
 
 
+def test_all_null_values_empty_string(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+    """
+    """
+    for key, value in cleaned_hours_dict.items():
+        is_valid = True
+        list_of_entries = value.split(";")
+
+        for value in list_of_entries:
+            value = value.split(",")
+            is_valid = value[3] == "" and value[4] == "" and value[5] == "" and value[6] == "" and value[7] == "" and value[11] == "" and value[12] == "" and value[13] == "" and is_valid
+
+        is_valid_dict[key] = is_valid_dict[key] and is_valid
+
+    return is_valid_dict
+
 
 
 
@@ -300,6 +315,7 @@ if __name__ == "__main__":
     is_valid_hours_dict = test_week_of_month_formatting(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     is_valid_hours_dict = test_close_hour_greater_than_open_hour(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     is_valid_hours_dict = test_weekly_formatting(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
+    is_valid_hours_dict = test_all_null_values_empty_string(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
     print(is_valid_hours_dict)
 
     # Check Values Still Valid
