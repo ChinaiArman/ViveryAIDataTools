@@ -303,28 +303,17 @@ if __name__ == "__main__":
     # Console arguments
     args = parser.parse_args()
 
-    # Create directory name
-    directory = "data_" + args.file.split("\\")[-1].replace(".csv", "")
     # Create DataFrame
     df = pd.read_csv(args.file)
-    
-    # Create directory within project folder
-    # if not os.path.isdir(directory):
-    #     os.mkdir(directory)
-    # # Move file to directory
-    # if args.file.split("\\")[0] != directory:
-    #     shutil.move(args.file, directory)
-
     # Create id_hours Dictionary
     id_hours_dict = create_id_hours_dict(df)
-
     # Create is_valid_hours Dictionary
     is_valid_hours_dict = {key: True for key, _ in id_hours_dict.items()}
 
     # Parse Hours through OAI
     cleaned_hours_dict = format_hours_iteratively(id_hours_dict)
 
-    # REMOVE THIS SECTION AFTER DONE TESTING:
+    # PRINT ALL OAI RETURNED VALUES (OPTIONAL REMOVE):
     for key, value in cleaned_hours_dict.items():
         print(cleaned_hours_dict[key].split(";"))
 
@@ -345,4 +334,4 @@ if __name__ == "__main__":
 
     # Convert Back to DF
     cleaned_hours_df = convert_id_hours_dict_to_df(cleaned_hours_dict, is_valid_hours_dict, df)
-    cleaned_hours_df.to_csv(args.file.replace(".csv", "") + "HOURS_CLEANED.csv")
+    cleaned_hours_df.to_csv(args.file.replace(".csv", "") + "_HOURS_CLEANED.csv")
