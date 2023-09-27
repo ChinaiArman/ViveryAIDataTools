@@ -303,16 +303,17 @@ if __name__ == "__main__":
         print(cleaned_hours_dict[key].split(";"))
 
     # Test OAI Hours 
-    validation_tests = [test_day_of_month_formatting,
-             test_week_of_month_formatting,
-             test_weekly_formatting,
-             test_valid_hour_types,
-             test_valid_day_of_week,
-             test_valid_open_closed_hours,
-             test_close_hour_greater_than_open_hour,
-             test_all_null_values_empty_string,
-             test_valid_entry_format
-            ]
+    validation_tests = [
+        test_day_of_month_formatting,
+        test_week_of_month_formatting,
+        test_weekly_formatting,
+        test_valid_hour_types,
+        test_valid_day_of_week,
+        test_valid_open_closed_hours,
+        test_close_hour_greater_than_open_hour,
+        test_all_null_values_empty_string,
+        test_valid_entry_format
+    ]
     [test(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict) for test in validation_tests]
     print(is_valid_hours_dict)
 
