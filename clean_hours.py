@@ -12,8 +12,8 @@ from datetime import datetime
 # LOCAL FILE IMPORTS
 
 
-# IMPORT CONSTANTS
-from keys import SOUTH_CENTRAL_API_KEY
+# AI CONSTANTS
+from keys import EAST_API_KEY as OAI_API
 
 # MISC CONSTANTS
 INT_TO_DAY_OF_MONTH = {"1": ["1st", "First"], "2": ["2nd"], "3": ["3rd"], "4": ["4th"], "5": ["5th"], "": ""}
@@ -39,11 +39,11 @@ def call_oai(prompt: str) -> str:
     """
     """
     openai.api_type = "azure"
-    openai.api_base = "https://viveryadvocate.openai.azure.com/"
+    openai.api_base = OAI_API["base"]
     openai.api_version = "2022-12-01"
-    openai.api_key = SOUTH_CENTRAL_API_KEY
+    openai.api_key = OAI_API["key"]
     response = openai.Completion.create(
-        engine="arman_hours_clean_model",
+        engine=OAI_API["engine"],
         prompt=f"{prompt}",
         temperature=0.4,
         max_tokens=256,
