@@ -13,7 +13,7 @@ from datetime import datetime
 
 
 # AI CONSTANTS
-from keys import EAST_API_KEY as OAI_API
+from keys import SOUTH_CENTRAL_API_KEY as OAI_API
 
 # MISC CONSTANTS
 INT_TO_DAY_OF_MONTH = {"1": ["1st", "First"], "2": ["2nd"], "3": ["3rd"], "4": ["4th"], "5": ["5th"], "": ""}
