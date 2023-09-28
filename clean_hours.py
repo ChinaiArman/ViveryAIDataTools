@@ -26,6 +26,32 @@ HOUR_TYPES = ["Weekly", "Every Other Week", "Day of Month", "Week of Month"]
 # HELPERS
 def create_id_hours_dict(df: pd.DataFrame) -> dict:
     """
+    Create a dictionary mapping `Program External IDs` to `Hours Uncleaned` from a DataFrame.
+
+    Args:
+        - df (pd.DataFrame): A Pandas DataFrame containing data.
+
+    Preconditions:
+        - The DataFrame df must have columns `Program External ID` and `Hours Uncleaned`.
+        - `Program External ID` column should contain unique identifiers.
+        - `Hours Uncleaned` column should contain the hours data.
+
+    Returns:
+        `dict`: A dictionary mapping `Program External IDs` (str) to `Hours Uncleaned` (str).
+
+    Raises:
+        None
+
+    Example:
+        >>> import pandas as pd
+        >>> data = {
+        ...     'Program External ID': ['ID1', 'ID2', 'ID3'],
+        ...     'Hours Uncleaned': ['x', 'y', 'z']
+        ... }
+        >>> df = pd.DataFrame(data)
+        >>> result = create_id_hours_dict(df)
+        >>> print(result)
+        {'ID1': 'x', 'ID2': 'y', 'ID3': 'z'}
     """
     id_hours_dict = {}
 
