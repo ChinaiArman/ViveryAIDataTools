@@ -37,10 +37,10 @@ def create_id_hours_dict(df: pd.DataFrame) -> dict:
         - `Hours Uncleaned` column should contain the hours data.
 
     Returns:
-        `dict`: A dictionary mapping `Program External IDs` (str) to `Hours Uncleaned` (str).
+        - `dict`: A dictionary mapping `Program External IDs` (str) to `Hours Uncleaned` (str).
 
     Raises:
-        None
+        - None
 
     Example:
         >>> import pandas as pd
@@ -63,6 +63,33 @@ def create_id_hours_dict(df: pd.DataFrame) -> dict:
 
 def call_oai(prompt: str) -> str:
     """
+    Calls the Vivery Clean Hours training model to format uncleaned hours into "bulk-upload-ready" hour entries. 
+
+    Args:
+        - prompt (str): An hour entry to be cleaned using the Vivery Clean Hours training model.
+
+    Preconditions:
+        - The OpenAI API key and other configuration details should be correctly set up in a separate `keys.py` file and imported with the constants at the top of the file.
+            
+            >>> API_KEY = {
+                "key": "..."
+                "base": "..."
+                "engine": "..."
+            }
+
+        - The 'prompt' should be a string.
+        - The Vivery Clean Hours training model and Microsoft Azure OAI services must be online and operational to be called upon.
+
+    Returns:
+        - str: The hours, cleaned and formatted for the bulk upload file template. 
+
+    Raises:
+        - None
+
+    Example:
+        >>> response = call_oai("Every Monday, from 3pm-5pm")
+        >>> print(response)
+        'Monday,15:00,17:00,,,,,,,,Weekly,,,'
     """
     openai.api_type = "azure"
     openai.api_base = OAI_API["base"]
