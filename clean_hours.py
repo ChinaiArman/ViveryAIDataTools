@@ -29,15 +29,15 @@ def create_id_hours_dict(df: pd.DataFrame) -> dict:
     Create a dictionary mapping `Program External IDs` to `Hours Uncleaned` from a DataFrame.
 
     Args:
-        - df (pd.DataFrame): A Pandas DataFrame containing data.
+        - `df` (pd.DataFrame): A Pandas DataFrame containing data.
 
     Preconditions:
-        - The DataFrame df must have columns `Program External ID` and `Hours Uncleaned`.
+        - The DataFrame `df` must have columns `Program External ID` and `Hours Uncleaned`.
         - `Program External ID` column should contain unique identifiers.
         - `Hours Uncleaned` column should contain the hours data.
 
     Returns:
-        - `dict`: A dictionary mapping `Program External IDs` (str) to `Hours Uncleaned` (str).
+        - dict: A dictionary mapping `Program External IDs` (str) to `Hours Uncleaned` (str).
 
     Raises:
         - None
@@ -63,10 +63,10 @@ def create_id_hours_dict(df: pd.DataFrame) -> dict:
 
 def call_oai(prompt: str) -> str:
     """
-    Calls the Vivery Clean Hours training model to format uncleaned hours into "bulk-upload-ready" hour entries. 
+    Calls the `Vivery Clean Hours Training Model` to format uncleaned hours into "bulk-upload-ready" hour entries. 
 
     Args:
-        - prompt (str): An hour entry to be cleaned using the Vivery Clean Hours training model.
+        - `prompt` (str): An hour entry to be cleaned using the `Vivery Clean Hours Training Model`.
 
     Preconditions:
         - The OpenAI API key and other configuration details should be correctly set up in a separate `keys.py` file and imported with the constants at the top of the file.
@@ -77,8 +77,8 @@ def call_oai(prompt: str) -> str:
                 "engine": "..."
             }
 
-        - The 'prompt' should be a string.
-        - The Vivery Clean Hours training model and Microsoft Azure OAI services must be online and operational to be called upon.
+        - The `prompt` should be a string.
+        - The `Vivery Clean Hours Training Model` and `Microsoft Azure OAI` services must be online and operational to be called upon.
 
     Returns:
         - str: The hours, cleaned and formatted for the bulk upload file template. 
@@ -111,6 +111,32 @@ def call_oai(prompt: str) -> str:
 
 def format_hours_iteratively(id_hours_dict: dict) -> dict:
     """
+    Creates a dictionary of `Program External IDs` and their formatted-hour counterparts. 
+
+    Args:
+        - `id_hours_dict` (dict): A dictionary containing `Program External IDs` as keys and unformatted hour values as values.
+
+    Preconditions:
+        - The `id_hours_dict` should be a dictionary with `Program External IDs` as keys and string representations of unformatted hours as values.
+        - All `call_oai` preconditions must be satisfied.
+
+    Returns:
+        - dict: A dictionary containing `Program External IDs` as keys and formatted hour values as values.
+
+    Raises:
+        - None
+
+    Example:
+        >>> id_hours = {
+        ...     "ID1": "Every Monday, from 3pm-5pm",
+        ...     "ID2": "3rd Tuesday and Wednesday, from 9am-10am",
+        ... }
+        >>> formatted_hours = format_hours_iteratively(id_hours)
+        >>> print(formatted_hours)
+        {
+            'ID1': 'Monday,15:00,17:00,,,,,,,,Weekly,,,', 
+            'ID2': 'Tuesday,9:00,10:00,,,,,,,3,Day of Month,,,;Wednesday,9:00,10:00,,,,,,,3,Day of Month,,,'
+        }
     """
     cleaned_hours_dict = {}
 
