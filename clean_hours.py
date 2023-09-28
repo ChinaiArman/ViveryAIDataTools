@@ -657,6 +657,41 @@ def test_weekly_formatting(_: dict, cleaned_hours_dict: dict, is_valid_dict: dic
 
 def test_all_null_values_empty_string(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
     """
+    Test whether all columns that are always suppose to be null in cleaned hours are represented as null for each program.
+
+    Args:
+        - `_` (dict): [UNUSED] `id_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the original unformatted hour values as values.
+        - `cleaned_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the cleaned/formatted hour values as values.
+        - `is_valid_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and Boolean values indicating whether the hour value is valid.
+
+    Preconditions:
+        - `cleaned_hours_dict` should be a dictionary with the `Program External IDs` as keys and cleaned/formatted hour values as values.
+        - `is_valid_hours_dict` should be a dictionary with the `Program External IDs` as keys and Boolean values indicating whether the hour value is valid.
+
+    Returns:
+        - dict: An updated `is_valid_dict` with the validity of all null values in cleaned hours for each program.
+
+    Raises:
+        - None
+
+    Example:
+        >>> cleaned_hours = {
+        ...     "ID1": "Monday,15:00,17:00,,,,,,,,Weekly,,,",
+        ...     "ID2": "Friday,14:00,13:00,3,3,3,3,3,3,3,Weekly,3,3,",
+        ...     "ID3": "Tuesday,9:00,10:00,,,,,,,3,Day of Month,,,;Wednesday,9:00,10:00,,,,,,,2,Day of Month,,,"
+        ... }
+        >>> is_valid = {
+        ...     "ID1": True,
+        ...     "ID2": True,
+        ...     "ID3": False
+        ... }
+        >>> updated_validity = test_all_null_values_empty_string({}, cleaned_hours, is_valid)
+        >>> print(updated_validity)
+        {
+            "ID1": True,
+            "ID2": False,
+            "ID3": False
+        }
     """
     for key, value in cleaned_hours_dict.items():
         is_valid = True
