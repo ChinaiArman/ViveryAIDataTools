@@ -72,8 +72,8 @@ def call_oai(prompt: str) -> str:
         - The OpenAI API key and other configuration details should be correctly set up in a separate `keys.py` file and imported with the constants at the top of the file.
             
             >>> API_KEY = {
-                "key": "..."
-                "base": "..."
+                "key": "...",
+                "base": "...",
                 "engine": "..."
             }
 
@@ -129,13 +129,13 @@ def format_hours_iteratively(id_hours_dict: dict) -> dict:
     Example:
         >>> id_hours = {
         ...     "ID1": "Every Monday, from 3pm-5pm",
-        ...     "ID2": "3rd Tuesday and Wednesday, from 9am-10am",
+        ...     "ID2": "3rd Tuesday and Wednesday, from 9am-10am"
         ... }
         >>> formatted_hours = format_hours_iteratively(id_hours)
         >>> print(formatted_hours)
         {
-            'ID1': 'Monday,15:00,17:00,,,,,,,,Weekly,,,', 
-            'ID2': 'Tuesday,9:00,10:00,,,,,,,3,Day of Month,,,;Wednesday,9:00,10:00,,,,,,,3,Day of Month,,,'
+            "ID1": "Monday,15:00,17:00,,,,,,,,Weekly,,,", 
+            "ID2": "Tuesday,9:00,10:00,,,,,,,3,Day of Month,,,;Wednesday,9:00,10:00,,,,,,,2,Day of Month,,,"
         }
     """
     cleaned_hours_dict = {}
@@ -150,13 +150,52 @@ def format_hours_iteratively(id_hours_dict: dict) -> dict:
 
 def filter_invalid_values(id_hours_dict: dict, cleaned_hours_dict: dict, is_valid_hours_dict: dict) -> dict:
     """
+    Removes cleaned hour entries that failed one or more tests during the testing phase. This process flags them for human review, returning the hours to their original, unformatted state.
+
+    Args:
+        - `id_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the original unformatted hour values as values.
+        - `cleaned_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the cleaned/formatted hour values as values.
+        - `is_valid_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and Boolean values indicating whether the hour value is valid.
+
+    Preconditions:
+        - `id_hours_dict` should be a dictionary with the `Program External IDs` as keys and string representations of hours as values.
+        - `cleaned_hours_dict` should be a dictionary with the `Program External IDs` as keys and cleaned/formatted hour values as values.
+        - `is_valid_hours_dict` should be a dictionary with the `Program External IDs` as keys and Boolean values indicating whether the hour value is valid.
+
+    Returns:
+        dict: A dictionary containing the `Program External IDs` as keys and the hours in their final state (invalid hours returned to original state, valid hours in a formatted state).
+
+    Raises:
+        None
+
+    Example:
+        >>> id_hours = {
+        ...     "ID1": "Every Monday, from 3pm-5pm",
+        ...     "ID2": "3rd Tuesday and Wednesday, from 9am-10am"
+        ... }
+        >>> cleaned_hours = {
+        ...     "ID1": "Monday,15:00,17:00,,,,,,,,Weekly,,,",
+        ...     "ID2": "Tuesday,9:00,10:00,,,,,,,3,Day of Month,,,;Wednesday,9:00,10:00,,,,,,,2,Day of Month,,,"
+        ... }
+        >>> is_valid = {
+        ...     "ID1": True,
+        ...     "ID2": False
+        ... }
+        >>> valid_hours = filter_invalid_values(id_hours, cleaned_hours, is_valid)
+        >>> print(valid_hours)
+        {
+            "ID1": "Monday,15:00,17:00,,,,,,,,Weekly,,,",
+            "ID2": "3rd Tuesday and Wednesday, from 9am-10am"
+        }
     """
     valid_hours_dict = {}
+
     for key, _ in cleaned_hours_dict.items():
         if is_valid_hours_dict[key]:
             valid_hours_dict[key] = cleaned_hours_dict[key]
         else:
             valid_hours_dict[key] = id_hours_dict[key]
+            
     return valid_hours_dict
 
 
