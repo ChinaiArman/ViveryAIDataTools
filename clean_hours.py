@@ -293,7 +293,7 @@ def test_valid_day_of_week(cleaned_hours_dict: dict, is_valid_dict: dict) -> dic
     Example:
         >>> cleaned_hours = {
         ...     "ID1": "Monday,15:00,17:00,,,,,,,,Weekly,,,",
-        ...     "ID2": "Mursday,12:00,13:00,,,,,,3,,Week of Month,,,;",
+        ...     "ID2": "Mursday,12:00,13:00,,,,,,3,,Week of Month,,,",
         ...     "ID3": "Tuesday,9:00,10:00,,,,,,,3,Day of Month,,,;Wednesday,9:00,10:00,,,,,,,2,Day of Month,,,"
         ... }
         >>> is_valid = {
@@ -371,6 +371,40 @@ def test_valid_entry_format(cleaned_hours_dict: dict, is_valid_dict: dict) -> di
 
 def test_valid_open_closed_hours(cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
     """
+    Test the validity of open and closed hours format in the cleaned hours dictionary.
+
+    Args:
+        - `cleaned_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the cleaned/formatted hour values as values.
+        - `is_valid_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and Boolean values indicating whether the hour value is valid.
+
+    Preconditions:
+        - `cleaned_hours_dict` should be a dictionary with the `Program External IDs` as keys and cleaned/formatted hour values as values.
+        - `is_valid_hours_dict` should be a dictionary with the `Program External IDs` as keys and Boolean values indicating whether the hour value is valid.
+
+    Returns:
+        - dict: An updated `is_valid_dict` with the validity of open and closed hours format for each program.
+
+    Raises:
+        - None
+
+    Example:
+        >>> cleaned_hours = {
+        ...     "ID1": "Monday,15:00,17:00,,,,,,,,Weekly,,,",
+        ...     "ID2": "Monday,12pm,1pm,,,,,,3,,Week of Month,,,",
+        ...     "ID3": "Tuesday,9:00,10:00,,,,,,,3,Day of Month,,,;Wednesday,9:00,10:00,,,,,,,2,Day of Month,,,"
+        ... }
+        >>> is_valid = {
+        ...     "ID1": True,
+        ...     "ID2": True,
+        ...     "ID3": False
+        ... }
+        >>> updated_validity = test_valid_open_closed_hours(cleaned_hours, is_valid)
+        >>> print(updated_validity)
+        {
+            "ID1": True,
+            "ID2": False,
+            "ID3": False
+        }
     """
     time_regex = re.compile("^([01]?[0-9]|2[0-3]):[0-5][0-9]$")
 
