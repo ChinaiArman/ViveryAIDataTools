@@ -114,7 +114,7 @@ def format_hours_iteratively(id_hours_dict: dict) -> dict:
     Creates a dictionary of `Program External IDs` and their formatted-hour counterparts. 
 
     Args:
-        - `id_hours_dict` (dict): A dictionary containing `Program External IDs` as keys and unformatted hour values as values.
+        - `id_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the original unformatted hour values as values.
 
     Preconditions:
         - The `id_hours_dict` should be a dictionary with `Program External IDs` as keys and string representations of unformatted hours as values.
@@ -163,10 +163,10 @@ def filter_invalid_values(id_hours_dict: dict, cleaned_hours_dict: dict, is_vali
         - `is_valid_hours_dict` should be a dictionary with the `Program External IDs` as keys and Boolean values indicating whether the hour value is valid.
 
     Returns:
-        dict: A dictionary containing the `Program External IDs` as keys and the hours in their final state (invalid hours returned to original state, valid hours in a formatted state).
+        - dict: A dictionary containing the `Program External IDs` as keys and the hours in their final state (invalid hours returned to original state, valid hours in a formatted state).
 
     Raises:
-        None
+        - None
 
     Example:
         >>> id_hours = {
@@ -201,6 +201,42 @@ def filter_invalid_values(id_hours_dict: dict, cleaned_hours_dict: dict, is_vali
 
 def convert_id_hours_dict_to_df(cleaned_hours_dict: dict, is_valid_hours_dict: dict, df: pd.DataFrame) -> pd.DataFrame:
     """
+    Convert the cleaned hours dictionary into a DataFrame, filling in formatted hour entries when valid and preserving original data for invalid entries 
+
+    Args:
+        - `cleaned_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the cleaned/formatted hour values as values.
+        - `is_valid_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and Boolean values indicating whether the hour value is valid.
+        - `df` (pd.DataFrame): The original DataFrame containing program data.
+
+    Preconditions:
+        - 'cleaned_hours_dict' should be a dictionary with `Program External IDs` as keys and cleaned/formatted hour values as values.
+        - 'is_valid_hours_dict' should be a dictionary with `Program External IDs` as keys and Boolean values indicating whether the hour value is valid.
+        - 'df' should be a pandas DataFrame containing program data with a "Program External ID" column.
+
+    Returns:
+        - pd.DataFrame: A new DataFrame with cleaned/formatted hour values for valid entries and original data for invalid entries. This DataFrame's format matches that of the `Bulk Upload` file
+
+    Raises:
+        - None
+
+    Example:
+        >>> program_data = pd.DataFrame({
+        ...     "Program External ID": ["ID1", "ID2"],
+        ...     # Other program data columns...
+        ... })
+        >>> cleaned_hours = {
+        ...     "ID1": "Monday,15:00,17:00,,,,,,,,Weekly,,,",
+        ...     "ID2": "3rd Tuesday and Wednesday, from 9am-10am"
+        ... }
+        >>> is_valid = {
+        ...     "ID1": True,
+        ...     "ID2": False
+        ... }
+        >>> cleaned_hours_df = convert_id_hours_dict_to_df(cleaned_hours, is_valid, program_data)
+        >>> print(cleaned_hours_df)
+            "Program External ID"   # Unrelated Columns   # Formatted Hours Related Columns (CSV)
+        0              "ID1"          ...     ...           "Monday","15:00","17:00",,,,,,,,"Weekly",,,,      
+        1              "ID2"          ...     ...           ,,,,,,,,,,,,,"3rd Tuesday and Wednesday, from 9am-10am",  
     """
     # Create new DF
     cleaned_hours_df = pd.DataFrame(columns=df.columns)
