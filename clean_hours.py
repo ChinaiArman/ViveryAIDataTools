@@ -272,11 +272,12 @@ def convert_id_hours_dict_to_df(cleaned_hours_dict: dict, is_valid_hours_dict: d
 
 
 # TESTS
-def test_valid_day_of_week(cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+def test_valid_day_of_week(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
     """
     Test the validity of the day of the week entries in the cleaned hours dictionary.
 
     Args:
+        - `_` (dict): [UNUSED] `id_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the original unformatted hour values as values.
         - `cleaned_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the cleaned/formatted hour values as values.
         - `is_valid_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and Boolean values indicating whether the hour value is valid.
 
@@ -322,11 +323,12 @@ def test_valid_day_of_week(cleaned_hours_dict: dict, is_valid_dict: dict) -> dic
     return is_valid_dict
 
 
-def test_valid_entry_format(cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+def test_valid_entry_format(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
     """
     Test the validity of entry format in the cleaned hours dictionary.
 
     Args:
+        - `_` (dict): [UNUSED] `id_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the original unformatted hour values as values.
         - `cleaned_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the cleaned/formatted hour values as values.
         - `is_valid_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and Boolean values indicating whether the hour value is valid.
 
@@ -369,11 +371,12 @@ def test_valid_entry_format(cleaned_hours_dict: dict, is_valid_dict: dict) -> di
     return is_valid_dict
 
 
-def test_valid_open_closed_hours(cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+def test_valid_open_closed_hours(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
     """
     Test the validity of open and closed hours format in the cleaned hours dictionary.
 
     Args:
+        - `_` (dict): [UNUSED] `id_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the original unformatted hour values as values.
         - `cleaned_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the cleaned/formatted hour values as values.
         - `is_valid_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and Boolean values indicating whether the hour value is valid.
 
@@ -424,11 +427,12 @@ def test_valid_open_closed_hours(cleaned_hours_dict: dict, is_valid_dict: dict) 
     return is_valid_dict
             
 
-def test_close_hour_greater_than_open_hour(cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+def test_close_hour_greater_than_open_hour(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
     """
     Test if the closing hour is greater than the opening hour for each program in the cleaned hours dictionary.
 
     Args:
+        - `_` (dict): [UNUSED] `id_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the original unformatted hour values as values.
         - `cleaned_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the cleaned/formatted hour values as values.
         - `is_valid_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and Boolean values indicating whether the hour value is valid.
 
@@ -477,8 +481,43 @@ def test_close_hour_greater_than_open_hour(cleaned_hours_dict: dict, is_valid_di
     return is_valid_dict
 
 
-def test_day_of_month_formatting(cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+def test_day_of_month_formatting(id_hours_dict: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
     """
+    Test the formatting and validity of `Day of Month` entries in cleaned hours for each program.
+
+    Args:
+        - `id_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the original unformatted hour values as values.
+        - `cleaned_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the cleaned/formatted hour values as values.
+        - `is_valid_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and Boolean values indicating whether the hour value is valid.
+
+    Preconditions:
+        - `cleaned_hours_dict` should be a dictionary with the `Program External IDs` as keys and cleaned/formatted hour values as values.
+        - `is_valid_hours_dict` should be a dictionary with the `Program External IDs` as keys and Boolean values indicating whether the hour value is valid.
+
+    Returns:
+        - dict: An updated `is_valid_dict` with the validity of `Day of Month` entries in cleaned hours for each program.
+
+    Raises:
+        - None
+
+    Example:
+        >>> cleaned_hours = {
+        ...     "ID1": "Monday,15:00,17:00,,,,,,,,Weekly,,,",
+        ...     "ID2": "Thursday,14:00,13:00,,,,,,,7,Week of Month,,,",
+        ...     "ID3": "Friday,15:00,17:00,,,,,,,,Year of Week,,,"
+        ... }
+        >>> is_valid = {
+        ...     "ID1": True,
+        ...     "ID2": True,
+        ...     "ID3": False
+        ... }
+        >>> updated_validity = test_close_hour_greater_than_open_hour(cleaned_hours, is_valid)
+        >>> print(updated_validity)
+        {
+            "ID1": True,
+            "ID2": False,
+            "ID3": False
+        }
     """
     for key, value in cleaned_hours_dict.items():
         is_valid = True
@@ -498,7 +537,7 @@ def test_day_of_month_formatting(cleaned_hours_dict: dict, is_valid_dict: dict) 
     return is_valid_dict
 
 
-def test_week_of_month_formatting(cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+def test_week_of_month_formatting(id_hours_dict: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
     """
     """
     for key, value in cleaned_hours_dict.items():
@@ -519,7 +558,7 @@ def test_week_of_month_formatting(cleaned_hours_dict: dict, is_valid_dict: dict)
     return is_valid_dict
 
 
-def test_weekly_formatting(cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+def test_weekly_formatting(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
     """
     """
     for key, value in cleaned_hours_dict.items():
@@ -536,7 +575,7 @@ def test_weekly_formatting(cleaned_hours_dict: dict, is_valid_dict: dict) -> dic
     return is_valid_dict
 
 
-def test_all_null_values_empty_string(cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+def test_all_null_values_empty_string(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
     """
     """
     for key, value in cleaned_hours_dict.items():
@@ -552,7 +591,7 @@ def test_all_null_values_empty_string(cleaned_hours_dict: dict, is_valid_dict: d
     return is_valid_dict
 
 
-def test_valid_hour_types(cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+def test_valid_hour_types(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
     """
     """
     for key, value in cleaned_hours_dict.items():
@@ -605,7 +644,7 @@ if __name__ == "__main__":
         test_all_null_values_empty_string,
         test_valid_entry_format
     ]
-    [test(cleaned_hours_dict, is_valid_hours_dict) for test in validation_tests]
+    [test(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict) for test in validation_tests]
     print(is_valid_hours_dict)
 
     # Check Values Still Valid
