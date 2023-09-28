@@ -778,7 +778,7 @@ if __name__ == "__main__":
     # Parse Hours through OAI
     cleaned_hours_dict = format_hours_iteratively(id_hours_dict)
 
-    # PRINT ALL OAI RETURNED VALUES (OPTIONAL REMOVE):
+    # PRINT ALL OAI RETURNED VALUES (CAN BE REMOVED LATER)
     for key, value in cleaned_hours_dict.items():
         print(cleaned_hours_dict[key].split(";"))
 
@@ -795,6 +795,8 @@ if __name__ == "__main__":
         test_valid_entry_format
     ]
     [test(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict) for test in validation_tests]
+
+    # PRINT TESTING RESULTS (CAN BE REMOVED LATER)
     print(is_valid_hours_dict)
 
     # Check Values Still Valid
