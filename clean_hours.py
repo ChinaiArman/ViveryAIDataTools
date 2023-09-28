@@ -503,7 +503,7 @@ def test_day_of_month_formatting(id_hours_dict: dict, cleaned_hours_dict: dict, 
     Example:
         >>> cleaned_hours = {
         ...     "ID1": "Monday,15:00,17:00,,,,,,,,Weekly,,,",
-        ...     "ID2": "Thursday,14:00,13:00,,,,,,,7,Week of Month,,,",
+        ...     "ID2": "Thursday,14:00,13:00,,,,,,,7,Day of Month,,,",
         ...     "ID3": "Friday,15:00,17:00,,,,,,,,Year of Week,,,"
         ... }
         >>> is_valid = {
@@ -511,7 +511,7 @@ def test_day_of_month_formatting(id_hours_dict: dict, cleaned_hours_dict: dict, 
         ...     "ID2": True,
         ...     "ID3": False
         ... }
-        >>> updated_validity = test_close_hour_greater_than_open_hour(cleaned_hours, is_valid)
+        >>> updated_validity = test_day_of_month_formatting(cleaned_hours, is_valid)
         >>> print(updated_validity)
         {
             "ID1": True,
@@ -539,6 +539,41 @@ def test_day_of_month_formatting(id_hours_dict: dict, cleaned_hours_dict: dict, 
 
 def test_week_of_month_formatting(id_hours_dict: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
     """
+    Test the formatting and validity of 'Day of Month' entries in cleaned hours for each program.
+
+    Args:
+        - `_` (dict): [UNUSED] `id_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the original unformatted hour values as values.
+        - `cleaned_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the cleaned/formatted hour values as values.
+        - `is_valid_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and Boolean values indicating whether the hour value is valid.
+
+    Preconditions:
+        - `cleaned_hours_dict` should be a dictionary with the `Program External IDs` as keys and cleaned/formatted hour values as values.
+        - `is_valid_hours_dict` should be a dictionary with the `Program External IDs` as keys and Boolean values indicating whether the hour value is valid.
+
+    Returns:
+        - dict: An updated `is_valid_dict` with the validity of `Day of Month` entries in cleaned hours for each program.
+
+    Raises:
+        - None
+
+    Example:
+        >>> cleaned_hours = {
+        ...     "ID1": "Monday,15:00,17:00,,,,,,,,Weekly,,,",
+        ...     "ID2": "Thursday,14:00,13:00,,,,,,,7,Week of Month,,,",
+        ...     "ID3": "Friday,15:00,17:00,,,,,,,,Year of Week,,,"
+        ... }
+        >>> is_valid = {
+        ...     "ID1": True,
+        ...     "ID2": True,
+        ...     "ID3": False
+        ... }
+        >>> updated_validity = test_week_of_month_formatting(cleaned_hours, is_valid)
+        >>> print(updated_validity)
+        {
+            "ID1": True,
+            "ID2": False,
+            "ID3": False
+        }
     """
     for key, value in cleaned_hours_dict.items():
         is_valid = True
