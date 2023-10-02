@@ -1,4 +1,45 @@
 """
+Clean Hours Script
+
+@author Arman Chinai
+@version 1.0.1
+
+This script uses Azure OpenAI to clean and format pantry hours within the Bulk Upload File template. 
+The input and output of this program is a Bulk Upload File (CSV).
+The hours are placed into a single column within the Bulk Upload File.
+The hours are then flattened into plaintext, and parsed line-by-line to a fine-tuned, Azure OpenAI model.
+The resulting hours are then tested for AI errors, with failing tests resulting in a flagged hour for manual review.
+Finally, the hours are unflattened and reformatted back into the Bulk Upload File.
+
+---> OPERATIONAL INSTRUCTIONS <---
+
+Package Imports:
+    * OpenAI            * Pandas            * Datetime
+    * Argparse          * Regex
+
+API Keys (stored in keys.py):
+    * Azure OpenAI - South Central US: Contact Arman for API Key.
+
+Instructions:
+    1) Package Imports:
+        a) Create a new terminal.
+        b) Run `pip install -r requirements.txt`.
+    2) API Keys:
+        a) Create a new file `keys.py` within the directory at the same level as `clean_hours.py`.
+        b) Contact Arman (arman@vivery.org) for the API Key.
+        c) Create a new python variable `SOUTH_CENTRAL_API_KEY` with the received API Key.
+    3) Prepare the Bulk Upload File
+        a) Within the Bulk Upload File, add a new column `Hours Uncleaned`.
+        b) Paste all unformatted/uncleaned hours into this column. Ensure these unformatted hours are in the row with the associating Pantry/Location. Save these changes.
+        c) Add the Bulk Upload File to the working directory at the same level as `clean_hours.py`.
+    4) Run the following command within the terminal: `python clean_hours.py "{path to Bulk Upload File from working directory}".
+
+Desired Output:
+    * A new CSV file will be present within the working directory, with the name ending in "_HOURS_CLEANED".
+    * The file will contain the hours for each pantry cleaned and formatted into their respective rows.
+    * Any hours that failed the testing round will remain in the `Hours Uncleaned` column for manual review.
+
+Still have questions? Send an email to `arman@vivery.org` with the subject line `Clean Hours - {question}`.
 """
 
 
@@ -19,6 +60,7 @@ from keys import SOUTH_CENTRAL_API_KEY as OAI_API
 INT_TO_DAY_OF_MONTH = {"1": ["1st", "First"], "2": ["2nd"], "3": ["3rd"], "4": ["4th"], "5": ["5th"], "": ""}
 DAYS_OF_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 HOUR_TYPES = ["Weekly", "Every Other Week", "Day of Month", "Week of Month"]
+UNCLEANED_HOURS_COLUMN = "Hours Uncleaned"
 
 
 
@@ -56,7 +98,7 @@ def create_id_hours_dict(df: pd.DataFrame) -> dict:
     id_hours_dict = {}
 
     for _, row in df.iterrows():
-        id_hours_dict[row["Program External ID"]] = str(row["Hours Uncleaned"]).strip()
+        id_hours_dict[row["Program External ID"]] = str(row[UNCLEANED_HOURS_COLUMN]).strip()
 
     return id_hours_dict
 
