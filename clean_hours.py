@@ -358,7 +358,10 @@ def test_valid_day_of_week(_: dict, cleaned_hours_dict: dict, is_valid_dict: dic
 
         for value in list_of_entries:
             value = value.split(",")
-            is_valid = value[0] in DAYS_OF_WEEK and is_valid
+            try:
+                is_valid = value[0] in DAYS_OF_WEEK and is_valid
+            except:
+                is_valid
 
         is_valid_dict[key] = is_valid_dict[key] and is_valid
 
@@ -459,10 +462,13 @@ def test_valid_open_closed_hours(_: dict, cleaned_hours_dict: dict, is_valid_dic
 
         for value in list_of_entries:
             value = value.split(",")
-            is_valid = value[1] != "" and value[2] != "" and is_valid
-            is_open_hour_valid = re.search(time_regex, value[1])
-            is_closed_hour_valid = re.search(time_regex, value[2])
-            is_valid = is_open_hour_valid != None and is_closed_hour_valid != None and is_valid
+            try:
+                is_valid = value[1] != "" and value[2] != "" and is_valid
+                is_open_hour_valid = re.search(time_regex, value[1])
+                is_closed_hour_valid = re.search(time_regex, value[2])
+                is_valid = is_open_hour_valid != None and is_closed_hour_valid != None and is_valid
+            except:
+                is_valid = False
 
         is_valid_dict[key] = is_valid_dict[key] and is_valid
     
@@ -572,10 +578,10 @@ def test_day_of_month_formatting(id_hours_dict: dict, cleaned_hours_dict: dict, 
 
         for value in list_of_entries:
             value = value.split(",")
-            if value[10] == "Day of Month":
-                is_valid = value[9].isdigit() and value[8] == "" and is_valid
             try:
-                is_valid = (any(day_of_month_value in id_hours_dict[key] for day_of_month_value in INT_TO_DAY_OF_MONTH[value[9]]) or value[9] == "") and is_valid
+                if value[10] == "Day of Month":
+                    is_valid = value[9].isdigit() and value[8] == "" and is_valid
+                    is_valid = (any(day_of_month_value in id_hours_dict[key] for day_of_month_value in INT_TO_DAY_OF_MONTH[value[9]]) or value[9] == "") and is_valid
             except:
                 is_valid = False
 
@@ -633,10 +639,10 @@ def test_week_of_month_formatting(id_hours_dict: dict, cleaned_hours_dict: dict,
 
         for value in list_of_entries:
             value = value.split(",")
-            if value[10] == "Week of Month":
-                is_valid = value[8].isdigit() and value[9] == "" and is_valid
             try:
-                is_valid = (any(day_of_week_value in id_hours_dict[key] for day_of_week_value in INT_TO_DAY_OF_MONTH[value[8]]) or value[8] == "") and is_valid
+                if value[10] == "Week of Month":
+                    is_valid = value[8].isdigit() and value[9] == "" and is_valid
+                    is_valid = (any(day_of_week_value in id_hours_dict[key] for day_of_week_value in INT_TO_DAY_OF_MONTH[value[8]]) or value[8] == "") and is_valid
             except:
                 is_valid = False
 
@@ -689,8 +695,11 @@ def test_weekly_formatting(_: dict, cleaned_hours_dict: dict, is_valid_dict: dic
 
         for value in list_of_entries:
             value = value.split(",")
-            if value[10] == "Weekly" or value[10] == "Every Other Week":
-                is_valid = value[8] == "" and value[9] == "" and is_valid
+            try:
+                if value[10] == "Weekly" or value[10] == "Every Other Week":
+                    is_valid = value[8] == "" and value[9] == "" and is_valid
+            except:
+                is_valid = False
 
         is_valid_dict[key] = is_valid_dict[key] and is_valid
 
@@ -741,7 +750,10 @@ def test_all_null_values_empty_string(_: dict, cleaned_hours_dict: dict, is_vali
 
         for value in list_of_entries:
             value = value.split(",")
-            is_valid = value[3] == "" and value[4] == "" and value[5] == "" and value[6] == "" and value[11] == "" and value[12] == "" and value[13] == "" and is_valid
+            try:
+                is_valid = value[3] == "" and value[4] == "" and value[5] == "" and value[6] == "" and value[11] == "" and value[12] == "" and value[13] == "" and is_valid
+            except:
+                is_valid = False
 
         is_valid_dict[key] = is_valid_dict[key] and is_valid
 
@@ -792,7 +804,10 @@ def test_valid_hour_types(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict
 
         for value in list_of_entries:
             value = value.split(",")
-            is_valid = value[10] in HOUR_TYPES and is_valid
+            try:
+                is_valid = value[10] in HOUR_TYPES and is_valid
+            except:
+                is_valid = False
 
         is_valid_dict[key] = is_valid_dict[key] and is_valid
 
