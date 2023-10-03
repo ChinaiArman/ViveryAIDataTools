@@ -2,7 +2,7 @@
 Clean Hours Script
 
 @author Arman Chinai
-@version 1.0.2
+@version 1.0.3
 
 This script uses Azure OpenAI to clean and format pantry hours within the Bulk Upload File template. 
 The input and output of this program is a Bulk Upload File (CSV).
@@ -854,7 +854,8 @@ if __name__ == "__main__":
     [test(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict) for test in validation_tests]
 
     # PRINT TESTING RESULTS (CAN BE REMOVED LATER)
-    print(is_valid_hours_dict)
+    for key, value in is_valid_hours_dict.items():
+        print(str(value) + "\t-\t" + key)
 
     # Check Values Still Valid
     valid_id_hours_dict = filter_invalid_values(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
