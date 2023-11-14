@@ -49,18 +49,20 @@ import argparse
 import pandas as pd
 import re
 from datetime import datetime
+import time
 
 # LOCAL FILE IMPORTS
 
 
 # AI CONSTANTS
-from keys import SOUTH_CENTRAL_API_KEY as OAI_API
+from keys import NORTH_CENTRAL_API_KEY as OAI_API
 
 # MISC CONSTANTS
-INT_TO_DAY_OF_MONTH = {"1": ["1st", "First"], "2": ["2nd"], "3": ["3rd"], "4": ["4th"], "5": ["5th"], "": ""}
+INT_TO_DAY_OF_MONTH = {"1": ["1st", "First"], "2": ["2nd", "Second"], "3": ["3rd", "Third"], "4": ["4th", "Fourth"], "5": ["5th", "Fifth"], "": ""}
 DAYS_OF_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 HOUR_TYPES = ["Weekly", "Every Other Week", "Day of Month", "Week of Month"]
 UNCLEANED_HOURS_COLUMN = "Hours Uncleaned"
+INVALID_CHARACTERS = "/"
 
 
 
@@ -135,12 +137,12 @@ def call_oai(prompt: str) -> str:
     """
     openai.api_type = "azure"
     openai.api_base = OAI_API["base"]
-    openai.api_version = "2022-12-01"
+    openai.api_version = "2023-09-15-preview"
     openai.api_key = OAI_API["key"]
     response = openai.Completion.create(
         engine=OAI_API["engine"],
         prompt=f"{prompt}",
-        temperature=0.4,
+        temperature=0.2,
         max_tokens=256,
         top_p=1,
         frequency_penalty=0,
@@ -148,6 +150,7 @@ def call_oai(prompt: str) -> str:
         best_of=1,
         stop=["%%"]
     )
+    time.sleep(0.05)
     return response["choices"][0]["text"]
 
 
@@ -314,7 +317,7 @@ def convert_id_hours_dict_to_df(cleaned_hours_dict: dict, is_valid_hours_dict: d
 
 
 # TESTS
-def test_valid_day_of_week(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
+def test_valid_day_of_week(_: any, cleaned_hours_dict: dict, is_valid_dict: dict) -> dict:
     """
     Test the validity of the day of the week entries in the cleaned hours dictionary.
 
@@ -581,7 +584,7 @@ def test_day_of_month_formatting(id_hours_dict: dict, cleaned_hours_dict: dict, 
             try:
                 if value[10] == "Day of Month":
                     is_valid = value[9].isdigit() and value[8] == "" and is_valid
-                    is_valid = (any(day_of_month_value in id_hours_dict[key] for day_of_month_value in INT_TO_DAY_OF_MONTH[value[9]]) or value[9] == "") and is_valid
+                    is_valid = (any(day_of_month_value.lower() in id_hours_dict[key].lower() for day_of_month_value in INT_TO_DAY_OF_MONTH[value[9]]) or value[9] == "") and is_valid
             except:
                 is_valid = False
 
@@ -642,7 +645,7 @@ def test_week_of_month_formatting(id_hours_dict: dict, cleaned_hours_dict: dict,
             try:
                 if value[10] == "Week of Month":
                     is_valid = value[8].isdigit() and value[9] == "" and is_valid
-                    is_valid = (any(day_of_week_value in id_hours_dict[key] for day_of_week_value in INT_TO_DAY_OF_MONTH[value[8]]) or value[8] == "") and is_valid
+                    is_valid = (any(day_of_week_value.lower() in id_hours_dict[key].lower() for day_of_week_value in INT_TO_DAY_OF_MONTH[value[8]]) or value[8] == "") and is_valid
             except:
                 is_valid = False
 
@@ -814,6 +817,25 @@ def test_valid_hour_types(_: dict, cleaned_hours_dict: dict, is_valid_dict: dict
     return is_valid_dict
 
 
+def test_valid_case_length(id_hours_dict: dict, _: dict, is_valid_dict: dict) -> dict:
+    """
+    """
+    for key, value in id_hours_dict.items():
+        is_valid_dict[key] = len(value) < 100 and is_valid_dict[key]
+    return is_valid_dict
+
+
+def test_valid_case_characters(id_hours_dict: dict, _: dict, is_valid_dict: dict) -> dict:
+    """
+    """
+    for key, value in id_hours_dict.items():
+        is_valid = True
+        for character in INVALID_CHARACTERS:
+            is_valid = character not in value and is_valid
+        is_valid_dict[key] = is_valid and is_valid_dict[key]
+    return is_valid_dict
+
+
 
 
 # MAIN
@@ -849,17 +871,19 @@ if __name__ == "__main__":
         test_valid_open_closed_hours,
         test_close_hour_greater_than_open_hour,
         test_all_null_values_empty_string,
-        test_valid_entry_format
+        test_valid_entry_format,
+        test_valid_case_length,
+        test_valid_case_characters
     ]
     [test(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict) for test in validation_tests]
 
     # PRINT TESTING RESULTS (CAN BE REMOVED LATER)
     for key, value in is_valid_hours_dict.items():
-        print(str(value) + "\t-\t" + key)
+        print(str(value) + "\t-\t" + str(key))
 
     # Check Values Still Valid
     valid_id_hours_dict = filter_invalid_values(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
 
     # Convert Back to DF
     cleaned_hours_df = convert_id_hours_dict_to_df(cleaned_hours_dict, is_valid_hours_dict, df)
-    cleaned_hours_df.to_csv(args.file.replace(".csv", "") + "_HOURS_CLEANED.csv")
+    cleaned_hours_df.to_csv("csvs/" + args.file.replace(".csv", "").replace("csvs\\", "") + "_HOURS_CLEANED.csv")
