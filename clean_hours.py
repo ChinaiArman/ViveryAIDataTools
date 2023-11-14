@@ -2,7 +2,7 @@
 Clean Hours Script
 
 @author Arman Chinai
-@version 2.1.1
+@version 2.1.2
 
 This script uses Azure OpenAI to clean and format pantry hours within the Bulk Upload File template. 
 The input and output of this program is a Bulk Upload File (CSV).
@@ -18,7 +18,7 @@ Package Imports:
     * Argparse          * Regex
 
 API Keys (stored in keys.py):
-    * Azure OpenAI - South Central US: Contact Arman for API Key.
+    * Azure OpenAI - North Central US: Contact Arman for API Key.
 
 Instructions:
     1) Package Imports:
@@ -27,7 +27,7 @@ Instructions:
     2) API Keys:
         a) Create a new file `keys.py` within the directory at the same level as `clean_hours.py`.
         b) Contact Arman (arman@vivery.org) for the API Key.
-        c) Create a new python variable `SOUTH_CENTRAL_API_KEY` with the received API Key.
+        c) Create a new python variable `North_CENTRAL_API_KEY` with the received API Key.
     3) Prepare the Bulk Upload File
         a) Within the Bulk Upload File, add a new column `Hours Uncleaned`.
         b) Paste all unformatted/uncleaned hours into this column. Ensure these unformatted hours are in the row with the associating Pantry/Location. Save these changes.
@@ -151,6 +151,7 @@ def call_oai(prompt: str) -> str:
         stop=["%%"]
     )
     time.sleep(0.05)
+    print("\tOAI API Response: " + response["choices"][0]["text"])
     return response["choices"][0]["text"]
 
 
@@ -855,13 +856,11 @@ if __name__ == "__main__":
     is_valid_hours_dict = {key: True for key, _ in id_hours_dict.items()}
 
     # Parse Hours through OAI
+    print("Calling OpenAI Fine-Tuned Model...")
     cleaned_hours_dict = format_hours_iteratively(id_hours_dict)
 
-    # PRINT ALL OAI RETURNED VALUES (CAN BE REMOVED LATER)
-    for key, value in cleaned_hours_dict.items():
-        print(cleaned_hours_dict[key].split(";"))
-
     # Test OAI Hours 
+    print("\nTesting OpenAI Fine-Tuned Model responses...")
     validation_tests = [
         test_day_of_month_formatting,
         test_week_of_month_formatting,
@@ -879,7 +878,7 @@ if __name__ == "__main__":
 
     # PRINT TESTING RESULTS (CAN BE REMOVED LATER)
     for key, value in is_valid_hours_dict.items():
-        print(str(value) + "\t-\t" + str(key))
+        print("\tProgram ID: " + str(key) + "\t\tResult: " + str(value))
 
     # Check Values Still Valid
     valid_id_hours_dict = filter_invalid_values(id_hours_dict, cleaned_hours_dict, is_valid_hours_dict)
