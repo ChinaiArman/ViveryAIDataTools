@@ -2,7 +2,7 @@
 Clean Hours Script
 
 @author Arman Chinai
-@version 1.0.3
+@version 2.1.1
 
 This script uses Azure OpenAI to clean and format pantry hours within the Bulk Upload File template. 
 The input and output of this program is a Bulk Upload File (CSV).
