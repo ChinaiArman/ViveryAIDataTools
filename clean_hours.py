@@ -885,4 +885,5 @@ if __name__ == "__main__":
 
     # Convert Back to DF
     cleaned_hours_df = convert_id_hours_dict_to_df(cleaned_hours_dict, is_valid_hours_dict, df)
-    cleaned_hours_df.to_csv("csvs/" + args.file.replace(".csv", "").replace("csvs\\", "") + "_HOURS_CLEANED.csv")
+    # cleaned_hours_df.to_csv("csvs/" + args.file.replace(".csv", "").replace("csvs\\", "") + "_HOURS_CLEANED.csv")
+    cleaned_hours_df.to_csv(args.file.replace(".csv", "") + "_HOURS_CLEANED.csv")
