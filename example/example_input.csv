@@ -1,0 +1,11 @@
+Program External ID,Day of Week,Hours Open 1,Hours Closed 1,Hours Open 2,Hours Closed 2,Hours Open 3,Hours Closed 3,Hours Note,Week of Month,Day of Month,Frequency,Specific Date,Specific Date Closed Indicator,Specific Date Reason,Hours Uncleaned
+P1,,,,,,,,,,,,,,,Monday - Friday 9am to 5pm
+P2,,,,,,,,,,,,,,,Every Other Tuesday 2pm -4pm
+P3,,,,,,,,,,,,,,,3rd Tuesday of the Month 9am - 11am
+P4,,,,,,,,,,,,,,,3rd week Tuesday 9am - 11am
+P5,,,,,,,,,,,,,,,"Saturday 12pm - 2pm, 4pm-6pm"
+P6,,,,,,,,,,,,,,,"2nd, 4th Friday 10am - 6pm"
+P7,,,,,,,,,,,,,,,THIS IS A TEST CASE THAT SHOULD FAIL
+P8,,,,,,,,,,,,,,,Monday - Thursday
+P9,,,,,,,,,,,,,,,Last Thursday of the month 6pm-7pm
+P10,,,,,,,,,,,,,,,Monday - Friday 5pm - 7pm of every ODD month
