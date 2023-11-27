@@ -45,7 +45,7 @@ Still have questions? Send an email to `arman@vivery.org` with the subject line 
 
 # PACKAGE IMPORTS
 import openai
-import argparse
+import argparse, os, shutil
 import pandas as pd
 import re
 from datetime import datetime
@@ -290,7 +290,7 @@ def convert_id_hours_dict_to_df(cleaned_hours_dict: dict, is_valid_hours_dict: d
     # Iterate over Program IDs
     for id in df["Program External ID"].to_list():
         new_entries = []
-        row = df.loc[df['Program External ID'] == id].values.tolist()[0]
+        row = df.loc[df['Program External ID'] == id].values.tolist()[0]    # if this line produces an error, some programs are missing program IDs within the bulk upload file.
 
         # Create new row if valid cleaning
         if is_valid_hours_dict[id]:
@@ -885,6 +885,8 @@ if __name__ == "__main__":
 
     # Create DataFrame
     df = pd.read_csv(args.file)
+    # Move CSV
+    shutil.move(args.file, "csvs/" + args.file.replace("csvs\\", ""))
     # Create id_hours Dictionary
     id_hours_dict = create_id_hours_dict(df)
     # Create is_valid_hours Dictionary
@@ -920,5 +922,7 @@ if __name__ == "__main__":
 
     # Convert Back to DF
     cleaned_hours_df = convert_id_hours_dict_to_df(cleaned_hours_dict, is_valid_hours_dict, df)
-    # cleaned_hours_df.to_csv("csvs/" + args.file.replace(".csv", "").replace("csvs\\", "") + "_HOURS_CLEANED.csv")
-    cleaned_hours_df.to_csv(args.file.replace(".csv", "") + "_HOURS_CLEANED.csv")
+    if not os.path.isdir('csvs'):
+        os.mkdir('csvs')
+    cleaned_hours_df.to_csv("csvs/" + args.file.replace(".csv", "").replace("csvs\\", "") + "_HOURS_CLEANED.csv")
+    # cleaned_hours_df.to_csv(args.file.replace(".csv", "") + "_HOURS_CLEANED.csv")
