@@ -3,10 +3,5 @@ keys.py
 
 # Files
 *.csv
+!example/*.csv
 __pycache__
-
-# Folders
-*/clean_address
-*/clean_contacts
-*/clean_hours
-*/shakespeare
