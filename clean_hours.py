@@ -32,7 +32,7 @@ Instructions:
         a) Within the Bulk Upload File, add a new column `Hours Uncleaned`.
         b) Paste all unformatted/uncleaned hours into this column. Ensure these unformatted hours are in the row with the associating Pantry/Location. Save these changes.
         c) Add the Bulk Upload File to the working directory at the same level as `clean_hours.py`.
-    4) Run the following command within the terminal: `python clean_hours.py "{path to Bulk Upload File from working directory}".
+    4) Run the following command within the terminal: `python clean_hours.py "{path to Bulk Upload File from working directory}"`.
 
 Desired Output:
     * A new CSV file will be present within the working directory, with the name ending in "_HOURS_CLEANED".
