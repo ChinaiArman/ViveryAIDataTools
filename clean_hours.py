@@ -828,8 +828,8 @@ def test_valid_case_length(id_hours_dict: dict, _: dict, is_valid_dict: dict) ->
         - `is_valid_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and Boolean values indicating whether the hour value is valid.
 
     Preconditions:
-        - 'id_hours_dict' should be a dictionary with program IDs as keys and case descriptions as values.
-        - 'is_valid_dict' should be a dictionary indicating the initial validity state for each case.
+        - `id_hours_dict` should be a dictionary with program IDs as keys and case descriptions as values.
+        - `is_valid_dict` should be a dictionary indicating the initial validity state for each case.
 
     Returns:
         dict: An updated dictionary ('is_valid_dict') with the validity of each case based on the length criterion.
@@ -863,6 +863,42 @@ def test_valid_case_length(id_hours_dict: dict, _: dict, is_valid_dict: dict) ->
 
 def test_valid_case_characters(id_hours_dict: dict, _: dict, is_valid_dict: dict) -> dict:
     """
+    Test if case descriptions in 'id_hours_dict' contain any invalid characters.
+
+    Args:
+        - `id_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and the original unformatted hour values as values.
+        - `_` (dict): [UNUSED] A dictionary containing the `Program External IDs` as keys and the cleaned/formatted hour values as values.
+        - `is_valid_hours_dict` (dict): A dictionary containing the `Program External IDs` as keys and Boolean values indicating whether the hour value is valid.
+
+    Preconditions:
+        - `id_hours_dict` should be a dictionary with program IDs as keys and case descriptions as values.
+        - `is_valid_dict` should be a dictionary indicating the initial validity state for each case.
+
+    Returns:
+        dict: An updated dictionary ('is_valid_dict') with the validity of each case based on the length criterion.
+
+    Raises:
+        None
+
+    Example:
+        >>> INVALID_CHARACTERS = "/"
+        >>> id_hours_dict = {
+        ...     "ID1": "Monday-Friday 3-5pm",
+        ...     "ID2": "Tuesday/Thursday 6-9pm",
+        ...     "ID3": "Thursday 11am-2pm every other week"
+        ... }
+        >>> is_valid_dict = {
+        ...     "ID1": True,
+        ...     "ID2": True,
+        ...     "ID3": False
+        ... }
+        >>> result = test_valid_case_length(id_hours_dict, {}, is_valid_dict)
+        >>> print(result)
+        {
+            "ID1": True,
+            "ID2": False,
+            "ID3": False
+        }
     """
     for key, value in id_hours_dict.items():
         is_valid = True
