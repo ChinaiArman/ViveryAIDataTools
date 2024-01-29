@@ -29,10 +29,13 @@ def list_of_strings(arg: str) -> list:
     return arg.split(',')
 
 
-def create_id_contacts_dict(df: pd.DataFrame) -> dict:
+def create_id_contacts_dict(df: pd.DataFrame, primary_key: str, contact_columns: list) -> dict:
     """
     """
-    pass
+    id_hours_dict = {}
+    for _, row in df.iterrows():
+        id_hours_dict[row[primary_key]] = ", ".join(row[contact_columns].tolist()).strip()
+    return id_hours_dict
 
 
 
@@ -49,7 +52,7 @@ if __name__ == '__main__':
     # Add file argument
     parser.add_argument("file", action="store", help="A bulk upload file")
     # Add primary key argument
-    parser.add_argument("pk", action="store", help="A unique key to identify each row")
+    parser.add_argument("primary_key", action="store", help="A unique key to identify each row")
     # Add column arguments
     parser.add_argument("--columns", type=list_of_strings, action="store", help="The columns that contain contact information")
     # Console arguments
@@ -58,8 +61,8 @@ if __name__ == '__main__':
     # Create DataFrame
     df = pd.read_csv(args.file)
     # Move CSV
-    shutil.move(args.file, "csvs/" + args.file.replace("csvs\\", ""))
+    # shutil.move(args.file, "csvs/" + args.file.replace("csvs\\", ""))
     # Create id_hours Dictionary
-    id_hours_dict = create_id_contacts_dict(df)
+    id_hours_dict = create_id_contacts_dict(df, args.primary_key, args.columns)
     # Create is_valid_hours Dictionary
     is_valid_hours_dict = {key: True for key, _ in id_hours_dict.items()}
