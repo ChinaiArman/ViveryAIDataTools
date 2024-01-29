@@ -76,13 +76,19 @@ def format_contacts_iteratively(id_contacts_dict: dict) -> dict:
 def filter_invalid_values(primary_contacts_dict: dict, is_valid_contact_dict: dict) -> dict:
     """
     """
-    valid_hours_dict = {}
+    valid_contacts_dict = {}
     for key, _ in primary_contacts_dict.items():
         if is_valid_contact_dict[key]:
-            valid_hours_dict[key] = primary_contacts_dict[key]
+            valid_contacts_dict[key] = primary_contacts_dict[key]
         else:
-            valid_hours_dict[key] = [""] * 4           
-    return valid_hours_dict
+            valid_contacts_dict[key] = [""] * 4           
+    return valid_contacts_dict
+
+
+def convert_id_hours_dict_to_df(valid_id_contacts_dict: dict, is_valid_contact_dict: dict) -> pd.DataFrame:
+    """
+    """
+    pass
 
 
 
@@ -130,3 +136,9 @@ if __name__ == '__main__':
 
     # Check Values Still Valid
     valid_id_contacts_dict = filter_invalid_values(primary_contacts_dict, is_valid_contact_dict)
+
+    # Convert Back to DF
+    # IMPLEMENTATION OF [convert_id_hours_dict_to_df] REQUIRED
+    # if not os.path.isdir('csvs'):
+    #     os.mkdir('csvs')
+    # primary_contacts_df.to_csv("csvs/" + args.file.replace(".csv", "").replace("csvs\\", "") + "_PRIMARY_CONTACTS.csv")
