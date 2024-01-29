@@ -73,6 +73,18 @@ def format_contacts_iteratively(id_contacts_dict: dict) -> dict:
     return primary_contacts_dict
 
 
+def filter_invalid_values(primary_contacts_dict: dict, is_valid_contact_dict: dict) -> dict:
+    """
+    """
+    valid_hours_dict = {}
+    for key, _ in primary_contacts_dict.items():
+        if is_valid_contact_dict[key]:
+            valid_hours_dict[key] = primary_contacts_dict[key]
+        else:
+            valid_hours_dict[key] = [""] * 4           
+    return valid_hours_dict
+
+
 
 
 # TESTS
@@ -105,3 +117,16 @@ if __name__ == '__main__':
     # Parse Contacts through OAI
     print("Calling OpenAI Fine-Tuned Model...")
     primary_contacts_dict = format_contacts_iteratively(id_contacts_dict)
+
+    # Test OAI Contacts 
+    print("\nTesting OpenAI Fine-Tuned Model responses...")
+    validation_tests = [
+    ]
+    [test(id_contacts_dict, primary_contacts_dict, is_valid_contact_dict) for test in validation_tests]
+
+    # PRINT TESTING RESULTS (CAN BE REMOVED LATER)
+    for key, value in is_valid_contact_dict.items():
+        print("\tProgram ID: " + str(key) + "\t\tResult: " + str(value))
+
+    # Check Values Still Valid
+    valid_id_contacts_dict = filter_invalid_values(primary_contacts_dict, is_valid_contact_dict)
