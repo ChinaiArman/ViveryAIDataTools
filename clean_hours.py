@@ -55,7 +55,7 @@ import time
 
 
 # AI CONSTANTS
-from keys import NORTH_CENTRAL_API_KEY as OAI_API
+from keys import CLEAN_HOURS_KEY as OAI_API
 
 # MISC CONSTANTS
 INT_TO_DAY_OF_MONTH = {"1": ["1st", "First"], "2": ["2nd", "Second"], "3": ["3rd", "Third"], "4": ["4th", "Fourth"], "5": ["5th", "Fifth"], "": ""}
