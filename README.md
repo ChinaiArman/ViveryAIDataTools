@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ChinaiArman/ViveryAIDataCleanser">
-    <img src="logo.png" alt="Logo" width="200">
+    <img src="resources/logo.png" alt="Logo" width="200">
   </a>
   <h3 align="center">Vivery AI Data Cleanser</h3>
 </div>
