@@ -124,12 +124,46 @@ def convert_id_hours_dict_to_df(valid_id_contacts_dict: dict, is_valid_contact_d
 
 
 
-# WEAK WARNING TESTS
+# TESTS
+def test_name_in_original_string(id_contacts_dict: dict, primary_contacts_dict: dict, is_valid_contact_dict: dict) -> dict:
+    """
+    """
+    for key, value in primary_contacts_dict.items():
+        is_valid = True
+        try:
+            for name in value["Name"].split(" "):
+                is_valid = name.lower().replace(" ", "") in id_contacts_dict[key].lower().replace(" ", "") and is_valid
+        except: 
+            is_valid = True
+        is_valid_contact_dict[key] = is_valid_contact_dict[key] and is_valid
+    return is_valid_contact_dict
 
 
+def test_name_format(_: dict, primary_contacts_dict: dict, is_valid_contact_dict: dict) -> dict:
+    """
+    """
+    for key, value in primary_contacts_dict.items():
+        is_valid = True
+        try:
+            is_valid = value["Name"].replace(" ", "").isalpha() and is_valid
+            for name in value["Name"].split(" "):
+                is_valid = name.replace(" ", "")[0].isupper() and is_valid
+        except: 
+            is_valid = True
+        is_valid_contact_dict[key] = is_valid_contact_dict[key] and is_valid
+    return is_valid_contact_dict
 
 
-# STRONG WARNING TESTS
+def test_is_dictionary(_: dict, primary_contacts_dict: dict, is_valid_contact_dict: dict) -> dict:
+    """
+    """
+    for key, value in primary_contacts_dict.items():
+        try:
+            is_valid = type(value) == dict
+        except: 
+            is_valid = False
+        is_valid_contact_dict[key] = is_valid_contact_dict[key] and is_valid
+    return is_valid_contact_dict
 
 
 
@@ -166,6 +200,9 @@ if __name__ == '__main__':
     # Test OAI Contacts 
     print("\nTesting OpenAI Fine-Tuned Model responses...")
     validation_tests = [
+        test_name_in_original_string,
+        test_name_format,
+        test_is_dictionary
     ]
     [test(id_contacts_dict, primary_contacts_dict, is_valid_contact_dict) for test in validation_tests]
 
