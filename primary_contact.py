@@ -18,7 +18,34 @@ import time
 from keys import PRIMARY_CONTACT_KEY as OAI_API
 
 # MISC CONSTANTS
-PROMPT = """"""
+PROMPT = """
+Given an input string, create the following output dictionary:
+
+"
+{
+    "P#": [phone_number],
+    "P#Ext": [phone_number_extension],
+    "Email": [email],
+    "Name": [name],
+    "Marker": [marker]
+}
+"
+
+Keys:
+P# will contain a phone number if present, else None. Phone numbers must be stored using the following format, with X representing the phone number digits: XXX-XXX-XXXX
+P#Ext will contain a phone number extension if present, else None. 
+Email will contain an email address if present, else None.
+Name will contain a name if present, else None.
+Marker will be a boolean value (True/False). Marker is True if there are multiple values present for any of the above keys, or if the value for all keys is None. Otherwise, marker is False.
+
+Formatting Notes:
+Do not include information that does not fall into one of the above keys.
+Do not use any tokens from outside of the input string.
+Use None for any values that are not present in the input string.
+!!! Do NOT attempt to generation information to fill the keys, if no phone number is present, do not include a phone number, only None for missing values.
+!!! ALL Keys must be present in the dictionary, even if their value is None.
+!!! The value for Name must be formatted in FirstName LastName, else None.
+"""
 
 
 
@@ -42,24 +69,25 @@ def create_id_contacts_dict(df: pd.DataFrame, primary_key: str, contact_columns:
 def call_oai(prompt: str) -> str:
     """
     """
+    print(f"IN: {prompt}")
     openai.api_type = "azure"
     openai.api_base = OAI_API["base"]
     openai.api_version = "2023-09-15-preview"
     openai.api_key = OAI_API["key"]
     response = openai.Completion.create(
         engine=OAI_API["engine"],
-        prompt=f"{prompt}",
-        temperature=1,
-        max_tokens=256,
-        top_p=1,
+        prompt=f"{PROMPT}\Input String: {prompt}\nOutput Dictionary: ",
+        temperature=0.4,
+        max_tokens=50,
+        top_p=0.25,
         frequency_penalty=0,
         presence_penalty=0,
-        best_of=1,
-        stop=["%%"]
+        best_of=2,
+        stop=["}"]
     )
     time.sleep(0.05)
     print("\tOAI API Response: " + response["choices"][0]["text"])
-    return response["choices"][0]["text"]
+    return response["choices"][0]["text"] + "}"
 
 
 def format_contacts_iteratively(id_contacts_dict: dict) -> dict:
@@ -68,7 +96,10 @@ def format_contacts_iteratively(id_contacts_dict: dict) -> dict:
     primary_contacts_dict = {}
     for key, value in id_contacts_dict.items():
         new_value = call_oai(value)
-        new_value = new_value
+        try:
+            new_value = eval(new_value.replace("\n", ""))
+        except:
+            pass
         primary_contacts_dict[key] = new_value
     return primary_contacts_dict
 
@@ -93,7 +124,12 @@ def convert_id_hours_dict_to_df(valid_id_contacts_dict: dict, is_valid_contact_d
 
 
 
-# TESTS
+# WEAK WARNING TESTS
+
+
+
+
+# STRONG WARNING TESTS
 
 
 
@@ -112,7 +148,10 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # Create DataFrame
-    df = pd.read_csv(args.file)
+    if '.xlsx' in args.file:
+        df = pd.read_excel(args.file)
+    else:
+        df = pd.read_csv(args.file)
     # Move CSV
     # shutil.move(args.file, "csvs/" + args.file.replace("csvs\\", ""))
     # Create id_contacts Dictionary
@@ -132,10 +171,10 @@ if __name__ == '__main__':
 
     # PRINT TESTING RESULTS (CAN BE REMOVED LATER)
     for key, value in is_valid_contact_dict.items():
-        print("\tProgram ID: " + str(key) + "\t\tResult: " + str(value))
+        print("\tID: " + str(key) + "\t\tResult: " + str(value))
 
     # Check Values Still Valid
-    valid_id_contacts_dict = filter_invalid_values(primary_contacts_dict, is_valid_contact_dict)
+    # valid_id_contacts_dict = filter_invalid_values(primary_contacts_dict, is_valid_contact_dict)
 
     # Convert Back to DF
     # IMPLEMENTATION OF [convert_id_hours_dict_to_df] REQUIRED
