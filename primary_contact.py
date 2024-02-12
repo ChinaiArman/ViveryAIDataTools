@@ -52,12 +52,16 @@ Output: johncena@us.gov%%
 Please tell me the first and last name of this person from the following string and and append "%%" DIRECTLY after the name.
 
 !!! Do NOT use NUMBERS or SPECIAL CHARACTERS
+!!! If there is NO NAME PRESENT in the following text, return "NA" followed by "%%"
 
 Input: "Johnny Appleseed"
 Output: Johnny Appleseed%%
 
 Input: "John Cena, johncena@vivery.org, 603-654-4524"
 Output: John Cena%%
+
+Input: "735-0043-4014"
+Output: NA%%
 """,
 "Extension": 
 """
@@ -154,7 +158,7 @@ def test_name_in_original_string(id_contacts_dict: dict, primary_contacts_dict: 
         is_valid = True
         try:
             for name in value["Name"].split(" "):
-                is_valid = name.lower() in id_contacts_dict[key].lower() and is_valid
+                is_valid = (name.lower() in id_contacts_dict[key].lower() or name == "NA") and is_valid
         except: 
             pass
         
@@ -174,8 +178,9 @@ def test_name_format(_: dict, primary_contacts_dict: dict, is_valid_contact_dict
             is_valid = value["Name"].replace(" ", "").isalpha() and is_valid
             for name in value["Name"].split(" "):
                 is_valid = name[0].isupper() and is_valid
-        except: 
-            is_valid = False
+        except:
+            if value["Name"] != "NA":
+                is_valid = False
 
         if not is_valid:
             is_valid_contact_dict[key]["Name"] = max(2, is_valid_contact_dict[key]["Name"])
@@ -190,7 +195,7 @@ def test_extension_in_original_string(id_contacts_dict: dict, primary_contacts_d
     for key, value in primary_contacts_dict.items():
         is_valid = True
         try:
-            is_valid = value["Extension"] in id_contacts_dict[key] and is_valid
+            is_valid = (value["Extension"] in id_contacts_dict[key] or value["Extension"] == "NA") and is_valid
         except:
             pass
 
@@ -209,7 +214,8 @@ def test_extension_format(_: dict, primary_contacts_dict: dict, is_valid_contact
         try:
             int(value["Extension"])
         except: 
-            is_valid = False
+            if value["Extension"] != "NA":
+                is_valid = False
 
         if not is_valid:
             is_valid_contact_dict[key]["Extension"] = max(2, is_valid_contact_dict[key]["Extension"])
@@ -224,8 +230,11 @@ def test_extension_keyword_in_original_string(id_contacts_dict: dict, primary_co
     for key, value in id_contacts_dict.items():
         is_valid = False
         try:
-            for extension in EXTENSION_KEYWORDS:
-                is_valid = extension in value.lower() or is_valid
+            if primary_contacts_dict[key]["Extension"] == "NA":
+                is_valid = True
+            else:
+                for extension in EXTENSION_KEYWORDS:
+                    is_valid = extension in value.lower() or is_valid
         except:
             pass
 
@@ -242,14 +251,32 @@ def test_extension_found_within_phone_number(_: dict, primary_contacts_dict: dic
     for key, value in primary_contacts_dict.items():
         is_valid = True
         try:
-            if value["Extension"] in value["Number"].replace("-", ""):
+            if value["Extension"] in value["Number"].replace("-", "") and value["Extension"] != "NA":
                 is_valid = False
         except: 
             is_valid = True
 
         if not is_valid:
-            is_valid_contact_dict[key]["Extension"] = max(2, is_valid_contact_dict[key]["Extension"])
+            is_valid_contact_dict[key]["Extension"] = max(1, is_valid_contact_dict[key]["Extension"])
             primary_contacts_dict[key]["Errors"].append("ERROR: Extension found within phone number.")
+        
+    return is_valid_contact_dict
+
+
+def test_extension_present_without_phone_number(_: dict, primary_contacts_dict: dict, is_valid_contact_dict: dict) -> dict:
+    """
+    """
+    for key, value in primary_contacts_dict.items():
+        is_valid = True
+        try:
+            if value["Number"] == "NA":
+                is_valid = value["Extension"] == "NA" and is_valid
+        except: 
+            is_valid = True
+
+        if not is_valid:
+            is_valid_contact_dict[key]["Extension"] = max(2, is_valid_contact_dict[key]["Extension"])
+            primary_contacts_dict[key]["Errors"].append("ERROR: Extension present without phone number.")
         
     return is_valid_contact_dict
 
@@ -294,6 +321,7 @@ if __name__ == '__main__':
         test_extension_format,
         test_extension_keyword_in_original_string,
         test_extension_found_within_phone_number,
+        test_extension_present_without_phone_number,
     ]
     [test(id_contacts_dict, primary_contacts_dict, is_valid_contact_dict) for test in validation_tests]
 
