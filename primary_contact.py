@@ -155,7 +155,6 @@ def convert_back_to_df(id_contacts_dict: dict, primary_contacts_dict: dict, is_v
     primary_contacts_df = primary_contacts_df.loc[:,~primary_contacts_df.columns.duplicated()].copy()
     primary_contacts_df = primary_contacts_df.rename(columns={"index": "ID"})
     primary_contacts_df = primary_contacts_df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
-
     primary_contacts_df = primary_contacts_df.style.apply(all_highlights, axis=1)
     primary_contacts_df.to_excel("data.xlsx", columns=["ID", "Number", "Email", "Name", "Extension", "Errors", "Data"])
 
@@ -237,7 +236,7 @@ def all_highlights(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
         highlight_extension_warnings: 4,
         highlight_extension_errors: 4,
     }
-    highlights = ['', '', '', '', '', '', '', '', '', '', '']
+    highlights = [''] * primary_contacts_df.size
     for function, index in highlight_functions.items():
         value = function(primary_contacts_df)[index]
         if value != '':
