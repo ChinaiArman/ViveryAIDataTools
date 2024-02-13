@@ -126,7 +126,7 @@ def format_contacts_iteratively(id_contacts_dict: dict) -> dict:
     primary_contacts_dict = {}
     for key, value in id_contacts_dict.items():
         primary_contacts_dict[key] = {prompt_type: call_oai(prompt, value) for prompt_type, prompt in PROMPTS.items()}
-        primary_contacts_dict[key]["Errors"] = []
+        primary_contacts_dict[key]["Errors"] = ""
     return primary_contacts_dict
 
 
@@ -142,10 +142,108 @@ def filter_invalid_values(primary_contacts_dict: dict, is_valid_contact_dict: di
     return valid_contacts_dict
 
 
-def convert_id_hours_dict_to_df(valid_id_contacts_dict: dict, is_valid_contact_dict: dict) -> pd.DataFrame:
+def convert_back_to_df(id_contacts_dict: dict, primary_contacts_dict: dict, is_valid_contact_dict: dict) -> pd.DataFrame:
     """
     """
-    pass
+    # primary_contacts_df = pd.DataFrame(columns=["ID", "Number", "Email", "Name", "Extension", "Original Data", "Notes"])
+
+    primary_contacts_df = pd.concat([
+        pd.DataFrame.from_dict(primary_contacts_dict, orient='index').reset_index(),
+        pd.DataFrame.from_dict(is_valid_contact_dict, orient='index').reset_index().rename(columns={"Number": "NumberGrade", "Email": "EmailGrade", "Extension": "ExtensionGrade", "Name": "NameGrade"}),
+        pd.DataFrame.from_dict(id_contacts_dict, orient='index').reset_index().rename(columns={0: "Data"})
+    ], axis=1)
+    primary_contacts_df = primary_contacts_df.loc[:,~primary_contacts_df.columns.duplicated()].copy()
+    primary_contacts_df = primary_contacts_df.rename(columns={"index": "ID"})
+    primary_contacts_df = primary_contacts_df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+
+    primary_contacts_df = primary_contacts_df.style.apply(all_highlights, axis=1)
+    primary_contacts_df.to_excel("data.xlsx", columns=["ID", "Number", "Email", "Name", "Extension", "Errors", "Data"])
+
+
+def highlight_name_warnings(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    """
+    contacts_series = pd.Series(data=False, index=primary_contacts_df.index)
+    contacts_series["Name"] = primary_contacts_df["NameGrade"] == 1
+    return ['background-color: yellow' if value else '' for value in contacts_series]
+
+
+def highlight_name_errors(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    """
+    contacts_series = pd.Series(data=False, index=primary_contacts_df.index)
+    contacts_series["Name"] = primary_contacts_df["NameGrade"] == 2
+    return ['background-color: red' if value else '' for value in contacts_series]
+
+
+def highlight_extension_warnings(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    """
+    contacts_series = pd.Series(data=False, index=primary_contacts_df.index)
+    contacts_series["Extension"] = primary_contacts_df["ExtensionGrade"] == 1
+    return ['background-color: yellow' if value else '' for value in contacts_series]
+
+
+def highlight_extension_errors(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    """
+    contacts_series = pd.Series(data=False, index=primary_contacts_df.index)
+    contacts_series["Extension"] = primary_contacts_df["ExtensionGrade"] == 2
+    return ['background-color: red' if value else '' for value in contacts_series]
+
+
+def highlight_number_warnings(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    """
+    contacts_series = pd.Series(data=False, index=primary_contacts_df.index)
+    contacts_series["Number"] = primary_contacts_df["NumberGrade"] == 1
+    return ['background-color: yellow' if value else '' for value in contacts_series]
+
+
+def highlight_number_errors(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    """
+    contacts_series = pd.Series(data=False, index=primary_contacts_df.index)
+    contacts_series["Number"] = primary_contacts_df["NumberGrade"] == 2
+    return ['background-color: red' if value else '' for value in contacts_series]
+
+
+def highlight_email_warnings(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    """
+    contacts_series = pd.Series(data=False, index=primary_contacts_df.index)
+    contacts_series["Email"] = primary_contacts_df["EmailGrade"] == 1
+    return ['background-color: yellow' if value else '' for value in contacts_series]
+
+
+def highlight_email_errors(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    """
+    contacts_series = pd.Series(data=False, index=primary_contacts_df.index)
+    contacts_series["Email"] = primary_contacts_df["EmailGrade"] == 2
+    return ['background-color: red' if value else '' for value in contacts_series]
+
+
+def all_highlights(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    """
+    highlight_functions = {
+        highlight_number_warnings: 1,
+        highlight_number_errors: 1,
+        highlight_email_warnings: 2,
+        highlight_email_errors: 2,
+        highlight_name_warnings: 3,
+        highlight_name_errors: 3,
+        highlight_extension_warnings: 4,
+        highlight_extension_errors: 4,
+    }
+    highlights = ['', '', '', '', '', '', '', '', '', '', '']
+    for function, index in highlight_functions.items():
+        value = function(primary_contacts_df)[index]
+        if value != '':
+            highlights[index] = value
+    return highlights
+
 
 
 
@@ -164,7 +262,7 @@ def test_name_in_original_string(id_contacts_dict: dict, primary_contacts_dict: 
         
         if not is_valid:
             is_valid_contact_dict[key]["Name"] = max(1, is_valid_contact_dict[key]["Name"])
-            primary_contacts_dict[key]["Errors"].append("WARNING: Name not found within original contact information.")
+            primary_contacts_dict[key]["Errors"] += "WARNING: Name not found within original contact information.\n"
 
     return is_valid_contact_dict
 
@@ -184,7 +282,7 @@ def test_name_format(_: dict, primary_contacts_dict: dict, is_valid_contact_dict
 
         if not is_valid:
             is_valid_contact_dict[key]["Name"] = max(2, is_valid_contact_dict[key]["Name"])
-            primary_contacts_dict[key]["Errors"].append("ERROR: Name formatting is not valid (FirstName LastName).")
+            primary_contacts_dict[key]["Errors"] += "ERROR: Name formatting is not valid (FirstName LastName).\n"
 
     return is_valid_contact_dict
 
@@ -201,7 +299,7 @@ def test_extension_in_original_string(id_contacts_dict: dict, primary_contacts_d
 
         if not is_valid:
             is_valid_contact_dict[key]["Extension"] = max(1, is_valid_contact_dict[key]["Extension"])
-            primary_contacts_dict[key]["Errors"].append("WARNING: Extension not found within original contact information.")
+            primary_contacts_dict[key]["Errors"] += "WARNING: Extension not found within original contact information.\n"
         
     return is_valid_contact_dict
 
@@ -219,7 +317,7 @@ def test_extension_format(_: dict, primary_contacts_dict: dict, is_valid_contact
 
         if not is_valid:
             is_valid_contact_dict[key]["Extension"] = max(2, is_valid_contact_dict[key]["Extension"])
-            primary_contacts_dict[key]["Errors"].append("ERROR: Extension is not numerical.")
+            primary_contacts_dict[key]["Errors"] += "ERROR: Extension is not numerical.\n"
         
     return is_valid_contact_dict
 
@@ -240,7 +338,7 @@ def test_extension_keyword_in_original_string(id_contacts_dict: dict, primary_co
 
         if not is_valid:
             is_valid_contact_dict[key]["Extension"] = max(1, is_valid_contact_dict[key]["Extension"])
-            primary_contacts_dict[key]["Errors"].append("WARNING: Extension Keyword not found within original contact information.")
+            primary_contacts_dict[key]["Errors"] += "WARNING: Extension Keyword not found within original contact information.\n"
         
     return is_valid_contact_dict
 
@@ -258,7 +356,7 @@ def test_extension_found_within_phone_number(_: dict, primary_contacts_dict: dic
 
         if not is_valid:
             is_valid_contact_dict[key]["Extension"] = max(1, is_valid_contact_dict[key]["Extension"])
-            primary_contacts_dict[key]["Errors"].append("ERROR: Extension found within phone number.")
+            primary_contacts_dict[key]["Errors"] += "WARNING: Extension found within phone number.\n"
         
     return is_valid_contact_dict
 
@@ -276,7 +374,7 @@ def test_extension_present_without_phone_number(_: dict, primary_contacts_dict: 
 
         if not is_valid:
             is_valid_contact_dict[key]["Extension"] = max(2, is_valid_contact_dict[key]["Extension"])
-            primary_contacts_dict[key]["Errors"].append("ERROR: Extension present without phone number.")
+            primary_contacts_dict[key]["Errors"] += "ERROR: Extension present without phone number.\n"
         
     return is_valid_contact_dict
 
@@ -330,7 +428,9 @@ if __name__ == '__main__':
 
     for key, value in is_valid_contact_dict.items():
         print(f"{key}: {value}")
-        [print(f"\t{error}") for error in primary_contacts_dict[key]["Errors"]]
+        print(primary_contacts_dict[key]["Errors"])
+
+    convert_back_to_df(id_contacts_dict, primary_contacts_dict, is_valid_contact_dict)
 
     # PRINT TESTING RESULTS (CAN BE REMOVED LATER)
     # for key, value in is_valid_contact_dict.items():
