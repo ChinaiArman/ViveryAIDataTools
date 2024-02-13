@@ -246,7 +246,6 @@ def all_highlights(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
 
 
 
-
 # TESTS
 def test_name_in_original_string(id_contacts_dict: dict, primary_contacts_dict: dict, is_valid_contact_dict: dict) -> dict:
     """
