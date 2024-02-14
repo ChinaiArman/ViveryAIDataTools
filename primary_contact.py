@@ -10,7 +10,6 @@ import openai
 import argparse, os, shutil
 import pandas as pd
 import time
-import itertools
 
 # LOCAL FILE IMPORTS
 
