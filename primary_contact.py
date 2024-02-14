@@ -52,16 +52,15 @@ Output: johncena@us.gov%%
 Please tell me the first and last name of this person from the following string and and append "%%" DIRECTLY after the name.
 
 !!! Do NOT use NUMBERS or SPECIAL CHARACTERS
-!!! If there is NO NAME PRESENT in the following text, return "NA" followed by "%%"
+!!! First and Last name must start with a capital letter.
+!!! The output must contain two words, and have a space separating them.
+!!! If there is no name present in the following text, return "NA" followed by "%%".
 
 Input: "Johnny Appleseed"
 Output: Johnny Appleseed%%
 
 Input: "John Cena, johncena@vivery.org, 603-654-4524"
 Output: John Cena%%
-
-Input: "735-0043-4014"
-Output: NA%%
 """,
 "Extension": 
 """
@@ -108,7 +107,7 @@ def call_oai(prompt: str, case: str) -> str:
         engine=OAI_API["engine"],
         prompt=f'{prompt}\nInput: "{case}"\nOutput: ',
         temperature=0.4,
-        max_tokens=50,
+        max_tokens=15,
         top_p=0.25,
         frequency_penalty=0,
         presence_penalty=0,
