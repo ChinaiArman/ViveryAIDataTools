@@ -351,8 +351,8 @@ def test_extension_found_within_phone_number(_: dict, primary_contacts_dict: dic
             is_valid = True
 
         if not is_valid:
-            is_valid_contact_dict[key]["Extension"] = max(1, is_valid_contact_dict[key]["Extension"])
-            primary_contacts_dict[key]["Errors"] += "WARNING: Extension found within phone number.\n"
+            is_valid_contact_dict[key]["Extension"] = max(2, is_valid_contact_dict[key]["Extension"])
+            primary_contacts_dict[key]["Errors"] += "ERROR: Extension found within phone number.\n"
         
     return is_valid_contact_dict
 
