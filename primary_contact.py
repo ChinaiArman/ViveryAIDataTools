@@ -36,7 +36,7 @@ Output: 603-654-4524%%
 """,
 "Email": 
 """
-Extract the EMAIL ADDRESS from the following string, and append "%%" DIRECTLY after the email domain. 
+Please find me the EMAIL ADDRESS from the following string, and append "%%" DIRECTLY after the email extension. 
 
 !!! Format the email using the following format: "[prefix]@[domain].[extension]%%".
 !!! If there is NO EMAIL PRESENT in the following text, return "NA" followed by "%%"
@@ -56,7 +56,7 @@ Please tell me the first and last name of this person from the following string 
 !!! The output must contain two words, and have a space separating them.
 !!! If there is no name present in the following text, return "NA" followed by "%%".
 
-Input: "Johnny Appleseed"
+Input: "johnnyappleseed"
 Output: Johnny Appleseed%%
 
 Input: "John Cena, johncena@vivery.org, 603-654-4524"
@@ -158,6 +158,14 @@ def convert_back_to_df(id_contacts_dict: dict, primary_contacts_dict: dict, is_v
     primary_contacts_df.to_excel("data.xlsx", columns=["ID", "Number", "Email", "Name", "Extension", "Errors", "Data"])
 
 
+def highlight_name_repair(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    """
+    contacts_series = pd.Series(data=False, index=primary_contacts_df.index)
+    contacts_series["Name"] = primary_contacts_df["NameGrade"] == -1
+    return ['background-color: green' if value else '' for value in contacts_series]
+
+
 def highlight_name_warnings(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
     """
     """
@@ -172,6 +180,14 @@ def highlight_name_errors(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
     contacts_series = pd.Series(data=False, index=primary_contacts_df.index)
     contacts_series["Name"] = primary_contacts_df["NameGrade"] == 2
     return ['background-color: red' if value else '' for value in contacts_series]
+
+
+def highlight_extension_repair(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    """
+    contacts_series = pd.Series(data=False, index=primary_contacts_df.index)
+    contacts_series["Extension"] = primary_contacts_df["ExtensionGrade"] == -1
+    return ['background-color: green' if value else '' for value in contacts_series]
 
 
 def highlight_extension_warnings(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
@@ -190,6 +206,14 @@ def highlight_extension_errors(primary_contacts_df: pd.DataFrame) -> pd.DataFram
     return ['background-color: red' if value else '' for value in contacts_series]
 
 
+def highlight_number_repair(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    """
+    contacts_series = pd.Series(data=False, index=primary_contacts_df.index)
+    contacts_series["Number"] = primary_contacts_df["NumberGrade"] == -1
+    return ['background-color: green' if value else '' for value in contacts_series]
+
+
 def highlight_number_warnings(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
     """
     """
@@ -204,6 +228,14 @@ def highlight_number_errors(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
     contacts_series = pd.Series(data=False, index=primary_contacts_df.index)
     contacts_series["Number"] = primary_contacts_df["NumberGrade"] == 2
     return ['background-color: red' if value else '' for value in contacts_series]
+
+
+def highlight_email_repair(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    """
+    contacts_series = pd.Series(data=False, index=primary_contacts_df.index)
+    contacts_series["Email"] = primary_contacts_df["EmailGrade"] == -1
+    return ['background-color: green' if value else '' for value in contacts_series]
 
 
 def highlight_email_warnings(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
@@ -226,12 +258,16 @@ def all_highlights(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
     """
     """
     highlight_functions = {
+        highlight_number_repair: 1,
         highlight_number_warnings: 1,
         highlight_number_errors: 1,
+        highlight_email_repair: 2,
         highlight_email_warnings: 2,
         highlight_email_errors: 2,
+        highlight_name_repair: 3,
         highlight_name_warnings: 3,
         highlight_name_errors: 3,
+        highlight_extension_repair: 4,
         highlight_extension_warnings: 4,
         highlight_extension_errors: 4,
     }
@@ -452,6 +488,70 @@ def test_phone_format(_: dict, primary_contacts_dict: dict, is_valid_contact_dic
 
 
 
+# REPAIR
+def repair_extension(_: dict, primary_contacts_dict: dict, is_valid_contact_dict: dict) -> None:
+    """
+    """
+    for key, value in primary_contacts_dict.items():
+        if is_valid_contact_dict[key]["Extension"] > 0:
+            value["Extension"] = "NA"
+            is_valid_contact_dict[key]["Extension"] = -1
+    return
+
+
+def repair_email(id_contacts_dict: dict, primary_contacts_dict: dict, is_valid_contact_dict: dict) -> None:
+    """
+    """
+    regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
+    for key, value in primary_contacts_dict.items():
+        if is_valid_contact_dict[key]["Email"] > 0 or value["Email"] == "NA":
+            email = re.findall(regex, id_contacts_dict[key])
+            if len(email) == 0:
+                email = ["NA"]
+            if email[0] != value["Email"]:
+                value["Email"] = "/".join(email)
+                is_valid_contact_dict[key]["Email"] = -1
+    return
+
+
+def repair_name(id_contacts_dict: dict, primary_contacts_dict: dict, is_valid_contact_dict: dict) -> None:
+    """
+    """
+    for key, value in primary_contacts_dict.items():
+        if is_valid_contact_dict[key]["Name"] > 0 or value["Name"] == "NA":
+            contact = id_contacts_dict[key]
+            contact = contact.replace(value["Email"], "").replace(value["Number"], "").replace(value["Extension"], "").replace(",", "")
+            contact = call_oai(PROMPTS["Name"], contact)
+            if contact == "NA":
+                contact = call_oai(PROMPTS["Name"], value["Email"].split("@")[0])
+            try:
+                int(contact)
+                contact = "NA"
+            except:
+                pass
+            if value["Name"] != contact:
+                value["Name"] = contact
+                is_valid_contact_dict[key]["Name"] = -1
+    return
+
+
+def repair_number(id_contacts_dict: dict, primary_contacts_dict: dict, is_valid_contact_dict: dict) -> None:
+    """
+    """
+    regex = r'^[0-9]{3}[-][0-9]{3}[-][0-9]{4}$'
+    for key, value in primary_contacts_dict.items():
+        if is_valid_contact_dict[key]["Number"] > 0 or value["Number"] == "NA":
+            number = re.findall(regex, id_contacts_dict[key])
+            if len(number) == 0:
+                number = ["NA"]
+            if number[0] != value["Number"]:
+                value["Number"] = "/".join(number)
+                is_valid_contact_dict[key]["Number"] = -1
+    return
+
+
+
+
 # MAIN
 if __name__ == '__main__':
     # Define console parser
@@ -462,6 +562,8 @@ if __name__ == '__main__':
     parser.add_argument("primary_key", action="store", help="A unique key to identify each row")
     # Add column arguments
     parser.add_argument("--columns", type=list_of_strings, action="store", help="The columns that contain contact information")
+    # Add column arguments
+    parser.add_argument("--repair", action="store", help="A flag indicating whether repair mode is on")
     # Console arguments
     args = parser.parse_args()
 
@@ -504,6 +606,16 @@ if __name__ == '__main__':
     for key, value in is_valid_contact_dict.items():
         print(f"{key}: {value}")
         print(primary_contacts_dict[key]["Errors"])
+
+    if bool(args.repair):
+        print("Executing Repair Script...")
+        repair_extension(id_contacts_dict, primary_contacts_dict, is_valid_contact_dict)
+        repair_email(id_contacts_dict, primary_contacts_dict, is_valid_contact_dict)
+        repair_number(id_contacts_dict, primary_contacts_dict, is_valid_contact_dict)
+        repair_name(id_contacts_dict, primary_contacts_dict, is_valid_contact_dict)
+        for key, value in primary_contacts_dict.items():
+            value["Errors"] = ""
+        [test(id_contacts_dict, primary_contacts_dict, is_valid_contact_dict) for test in validation_tests]
 
     convert_back_to_df(id_contacts_dict, primary_contacts_dict, is_valid_contact_dict)
 
