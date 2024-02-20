@@ -10,6 +10,7 @@ import openai
 import argparse, os, shutil
 import pandas as pd
 import time
+import re
 
 # LOCAL FILE IMPORTS
 
@@ -50,7 +51,7 @@ Output: johncena@us.gov%%
 """
 Please tell me the first and last name of this person from the following string and and append "%%" DIRECTLY after the name.
 
-!!! Do NOT use NUMBERS or SPECIAL CHARACTERS
+!!! Do NOT use the phone number for the name, ONLY ALPHABETICAL CHARACTERS
 !!! First and Last name must start with a capital letter.
 !!! The output must contain two words, and have a space separating them.
 !!! If there is no name present in the following text, return "NA" followed by "%%".
@@ -257,8 +258,8 @@ def test_name_in_original_string(id_contacts_dict: dict, primary_contacts_dict: 
             pass
         
         if not is_valid:
-            is_valid_contact_dict[key]["Name"] = max(1, is_valid_contact_dict[key]["Name"])
-            primary_contacts_dict[key]["Errors"] += "WARNING: Name not found within original contact information.\n"
+            is_valid_contact_dict[key]["Name"] = max(2, is_valid_contact_dict[key]["Name"])
+            primary_contacts_dict[key]["Errors"] += "ERROR: Name not found within original contact information.\n"
 
     return is_valid_contact_dict
 
@@ -294,8 +295,8 @@ def test_extension_in_original_string(id_contacts_dict: dict, primary_contacts_d
             pass
 
         if not is_valid:
-            is_valid_contact_dict[key]["Extension"] = max(1, is_valid_contact_dict[key]["Extension"])
-            primary_contacts_dict[key]["Errors"] += "WARNING: Extension not found within original contact information.\n"
+            is_valid_contact_dict[key]["Extension"] = max(2, is_valid_contact_dict[key]["Extension"])
+            primary_contacts_dict[key]["Errors"] += "ERROR: Extension not found within original contact information.\n"
         
     return is_valid_contact_dict
 
@@ -375,6 +376,80 @@ def test_extension_present_without_phone_number(_: dict, primary_contacts_dict: 
     return is_valid_contact_dict
 
 
+def test_email_in_original_string(id_contacts_dict: dict, primary_contacts_dict: dict, is_valid_contact_dict: dict) -> dict:
+    """
+    """
+    for key, value in primary_contacts_dict.items():
+        is_valid = True
+        try:
+            is_valid = (value["Email"] in id_contacts_dict[key] or value["Email"] == "NA") and is_valid
+        except:
+            pass
+
+        if not is_valid:
+            is_valid_contact_dict[key]["Email"] = max(2, is_valid_contact_dict[key]["Email"])
+            primary_contacts_dict[key]["Errors"] += "ERROR: Email not found within original contact information.\n"
+        
+    return is_valid_contact_dict
+
+
+def test_email_format(_: dict, primary_contacts_dict: dict, is_valid_contact_dict: dict) -> dict:
+    """
+    """
+    regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
+    for key, value in primary_contacts_dict.items():
+        is_valid = True
+        try:
+            if not re.fullmatch(regex, value["Email"]) and value["Email"] != "NA":
+                is_valid = False
+        except:
+            if value["Email"] != "NA":
+                is_valid = False
+
+        if not is_valid:
+            is_valid_contact_dict[key]["Email"] = max(2, is_valid_contact_dict[key]["Email"])
+            primary_contacts_dict[key]["Errors"] += "ERROR: Email formatting is not valid ([prefix]@[domain].[extension]).\n"
+
+    return is_valid_contact_dict
+
+
+def test_phone_in_original_string(id_contacts_dict: dict, primary_contacts_dict: dict, is_valid_contact_dict: dict) -> dict:
+    """
+    """
+    for key, value in primary_contacts_dict.items():
+        is_valid = True
+        try:
+            is_valid = (value["Number"].replace("-", "") in id_contacts_dict[key].replace("-", "").replace("(", "").replace(")", "").replace(" ", "") or value["Number"] == "NA") and is_valid
+        except:
+            pass
+
+        if not is_valid:
+            is_valid_contact_dict[key]["Number"] = max(2, is_valid_contact_dict[key]["Number"])
+            primary_contacts_dict[key]["Errors"] += "ERROR: Number not found within original contact information.\n"
+        
+    return is_valid_contact_dict
+
+
+def test_phone_format(_: dict, primary_contacts_dict: dict, is_valid_contact_dict: dict) -> dict:
+    """
+    """
+    regex = r'^[0-9]{3}[-][0-9]{3}[-][0-9]{4}$'
+    for key, value in primary_contacts_dict.items():
+        is_valid = True
+        try:
+            if not re.fullmatch(regex, value["Number"]) and value["Number"] != "NA":
+                is_valid = False
+        except:
+            if value["Number"] != "NA":
+                is_valid = False
+
+        if not is_valid:
+            is_valid_contact_dict[key]["Number"] = max(2, is_valid_contact_dict[key]["Number"])
+            primary_contacts_dict[key]["Errors"] += "ERROR: Number formatting is not valid (###-###-####).\n"
+
+    return is_valid_contact_dict
+
+
 
 
 # MAIN
@@ -416,6 +491,10 @@ if __name__ == '__main__':
         test_extension_keyword_in_original_string,
         test_extension_found_within_phone_number,
         test_extension_present_without_phone_number,
+        test_email_in_original_string,
+        test_email_format,
+        test_phone_in_original_string,
+        test_phone_format,
     ]
     [test(id_contacts_dict, primary_contacts_dict, is_valid_contact_dict) for test in validation_tests]
 
