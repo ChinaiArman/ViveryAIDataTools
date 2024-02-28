@@ -582,7 +582,7 @@ if __name__ == '__main__':
     primary_contacts_dict = format_contacts_iteratively(id_contacts_dict)
 
     # Test OAI Contacts 
-    # print("\nTesting OpenAI Fine-Tuned Model responses...")
+    print("\nTesting OpenAI Fine-Tuned Model responses...")
     validation_tests = [
         test_name_in_original_string,
         test_name_format,
@@ -605,6 +605,7 @@ if __name__ == '__main__':
         print(f"{key}: {value}")
         print(primary_contacts_dict[key]["Errors"])
 
+    # Execute repair script
     if bool(args.repair):
         print("Executing Repair Script...")
         repair_extension(id_contacts_dict, primary_contacts_dict, is_valid_contact_dict)
@@ -615,20 +616,9 @@ if __name__ == '__main__':
             value["Errors"] = ""
         [test(id_contacts_dict, primary_contacts_dict, is_valid_contact_dict) for test in validation_tests]
 
+    # Save File
     final_styled_df = convert_back_to_df(id_contacts_dict, primary_contacts_dict, is_valid_contact_dict)
     if not os.path.isdir('datafiles'):
         os.mkdir('datafiles')
     final_styled_df.to_excel("datafiles/" + args.file.replace(".csv", "").replace(".xlsx", "").replace("datafiles\\", "") + "_PRIMARY_CONTACTS.xlsx")
 
-    # PRINT TESTING RESULTS (CAN BE REMOVED LATER)
-    # for key, value in is_valid_contact_dict.items():
-    #     print("\tID: " + str(key) + "\t\tResult: " + str(value))
-
-    # Check Values Still Valid
-    # valid_id_contacts_dict = filter_invalid_values(primary_contacts_dict, is_valid_contact_dict)
-
-    # Convert Back to DF
-    # IMPLEMENTATION OF [convert_id_hours_dict_to_df] REQUIRED
-    # if not os.path.isdir('csvs'):
-    #     os.mkdir('csvs')
-    # primary_contacts_df.to_csv("csvs/" + args.file.replace(".csv", "").replace("csvs\\", "") + "_PRIMARY_CONTACTS.csv")
