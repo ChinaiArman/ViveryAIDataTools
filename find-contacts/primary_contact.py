@@ -155,7 +155,7 @@ def convert_back_to_df(id_contacts_dict: dict, primary_contacts_dict: dict, is_v
     primary_contacts_df = primary_contacts_df.rename(columns={"index": "ID"})
     primary_contacts_df = primary_contacts_df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
     primary_contacts_df = primary_contacts_df.style.apply(all_highlights, axis=1)
-    primary_contacts_df.to_excel("data.xlsx", columns=["ID", "Number", "Email", "Name", "Extension", "Errors", "Data"])
+    return primary_contacts_df
 
 
 def highlight_name_repair(primary_contacts_df: pd.DataFrame) -> pd.DataFrame:
@@ -571,7 +571,7 @@ if __name__ == '__main__':
     else:
         df = pd.read_csv(args.file)
     # Move CSV
-    # shutil.move(args.file, "csvs/" + args.file.replace("csvs\\", ""))
+    shutil.move(args.file, "datafiles/" + args.file.replace("datafiles\\", ""))
     # Create id_contacts Dictionary
     id_contacts_dict = create_id_contacts_dict(df, args.primary_key, args.columns)
     # Create is_valid_contacts Dictionary
@@ -615,7 +615,10 @@ if __name__ == '__main__':
             value["Errors"] = ""
         [test(id_contacts_dict, primary_contacts_dict, is_valid_contact_dict) for test in validation_tests]
 
-    convert_back_to_df(id_contacts_dict, primary_contacts_dict, is_valid_contact_dict)
+    final_styled_df = convert_back_to_df(id_contacts_dict, primary_contacts_dict, is_valid_contact_dict)
+    if not os.path.isdir('datafiles'):
+        os.mkdir('datafiles')
+    final_styled_df.to_excel("datafiles/" + args.file.replace(".csv", "").replace(".xlsx", "").replace("datafiles\\", "") + "_PRIMARY_CONTACTS.xlsx")
 
     # PRINT TESTING RESULTS (CAN BE REMOVED LATER)
     # for key, value in is_valid_contact_dict.items():
