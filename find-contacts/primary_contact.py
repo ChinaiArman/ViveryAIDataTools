@@ -289,7 +289,7 @@ def test_name_in_original_string(id_contacts_dict: dict, primary_contacts_dict: 
         is_valid = True
         try:
             for name in value["Name"].split(" "):
-                is_valid = (name.lower() in id_contacts_dict[key].lower() or name == "NA") and is_valid
+                is_valid = (name in id_contacts_dict[key] or name == "NA") and is_valid
         except: 
             pass
         
@@ -522,8 +522,6 @@ def repair_name(id_contacts_dict: dict, primary_contacts_dict: dict, is_valid_co
             contact = id_contacts_dict[key]
             contact = contact.replace(value["Email"], "").replace(value["Number"], "").replace(value["Extension"], "").replace(",", "")
             contact = call_oai(PROMPTS["Name"], contact)
-            if contact == "NA":
-                contact = call_oai(PROMPTS["Name"], value["Email"].split("@")[0])
             try:
                 int(contact)
                 contact = "NA"
