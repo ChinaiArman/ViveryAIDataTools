@@ -5,3 +5,4 @@ keys.py
 *.csv
 !example/*.csv
 __pycache__
+*.xlsx
