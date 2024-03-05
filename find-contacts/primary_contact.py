@@ -31,7 +31,8 @@ Instructions:
         c) Create a new python variable `PRIMARY_CONTACT_KEY` with the received API Key.
     3) Add an excel or csv file to the repository:
         a) File must contain IDs for each row.
-    4) Run the following command within the terminal: `python primary_contact.py "{path to excel/csv file from working directory}, {primary key} --columns {columns, delimited by a comma} --repair TRUE"`.
+    4) Run the following command within the terminal: `python primary_contact.py "{path to excel/csv file from working directory}, {primary key} --columns {columns, delimited by a comma} --repair True"`.
+        a) Ex. python primary_contact.py "datafiles\test_file_1.csv", "Agency No.",  --columns "Agency Contact","Agency Phone No.","Agency E-mail" --repair "True"
 
 Desired Output:
     * A new Excel file will be present within the working directory, with the name ending in "_PRIMARY_CONTACTS.xlsx".
