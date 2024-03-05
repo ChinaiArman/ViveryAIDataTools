@@ -3,6 +3,43 @@ Primary Contacts Script
 
 @author Arman Chinai
 @version 1.0.1
+
+This script uses Azure OpenAI to isolate contact information pieces into separate columns. 
+The input of this program is an excel or CSV file containing contact information and IDs.
+The output of this file is an annotated excel file with the contact information separated.
+The contacts are parsed line-by-line to a Davinci Azure OpenAI model.
+The resulting contacts are then tested for AI errors, with failing contacts being flagged for manual review.
+The program has a repair mode which attempts to fix any failed contact information.
+The output is then converted to an excel file, with highlights to indicate which cells need to be manually reviewed.
+
+---> OPERATIONAL INSTRUCTIONS <---
+
+Package Imports:
+    * OpenAI            * Pandas            * Time
+    * Argparse          * Regex             
+
+API Keys (stored in keys.py):
+    * Azure OpenAI - North Central US: Contact Arman for API Key.
+
+Instructions:
+    1) Package Imports:
+        a) Create a new terminal.
+        b) Run `pip install -r requirements.txt`.
+    2) API Keys:
+        a) Create a new file `keys.py` within the directory at the same level as `primary_contact.py`.
+        b) Contact Arman (arman@vivery.org) for the API Key.
+        c) Create a new python variable `PRIMARY_CONTACT_KEY` with the received API Key.
+    3) Add an excel or csv file to the repository:
+        a) File must contain IDs for each row.
+    4) Run the following command within the terminal: `python primary_contact.py "{path to excel/csv file from working directory}, {primary key} --columns {columns, delimited by a comma} --repair TRUE"`.
+
+Desired Output:
+    * A new Excel file will be present within the working directory, with the name ending in "_PRIMARY_CONTACTS.xlsx".
+    * The file will contain the contacts for each id separated into their respective columns.
+    * Any hours that failed the testing round will be highlighted in red or yellow to indicate the severity of the error.
+    * Cells highlighted in green or with no highlight are error free, and can be assumed valid.
+
+Still have questions? Send an email to `arman@abimpacttech.com` with the subject line `Primary Contact - {question}`.
 """
 
 # PACKAGE IMPORTS
