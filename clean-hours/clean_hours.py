@@ -922,6 +922,8 @@ if __name__ == "__main__":
     # Create DataFrame
     df = pd.read_csv(args.file)
     # Move CSV
+    if not os.path.isdir('csvs'):
+        os.mkdir('csvs')
     shutil.move(args.file, "csvs/" + args.file.replace("csvs\\", ""))
     # Create id_hours Dictionary
     id_hours_dict = create_id_hours_dict(df)
