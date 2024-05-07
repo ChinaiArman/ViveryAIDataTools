@@ -12,7 +12,7 @@ import re
 
 
 # AI CONSTANTS
-from keys import PRIMARY_CONTACT_KEY as OAI_API
+from keys import TAGS_KEY as OAI_API
 
 # MISC CONSTANTS
 LOCATION_COLUMNS = ["Location Name", "Location Headline", "Location Overview", "Location Announcements", "Location Action Links", "Location Tags", "Organization Name", "Organization About Us", "Organization Tags"]
@@ -30,6 +30,31 @@ Input:
 "Location Name: 'Refugio', Location Headline: 'Refugio anónimo', Location Overview: 'NA', Location Announcements: 'NA', Location Action Links: 'NA', Location Tags: 'NA', Organization Name: 'Refugios para todos', Organization About Us: 'NA', Organization Tags: 'NA'"
 Output:
 Spanish%%
+""",
+"Location Features":
+"""
+Given the following information, please determine what location features from the list below could be available at this location.
+!!! ONLY USE THE FEATURES LISTED BELOW !!!.
+After the feature, append the stop character '%%' to the end of the response.
+ 
+Feature List:
+    - Air Conditioning
+    - Near Public Transit
+    - Parking Available
+    - Restroom Available
+    - Safe Space
+    - Seating in Waiting Area
+    - Wheelchair Accessible
+    - WiFi Available
+ 
+Input: "Location Name: 'Famous Food Pantry', Location Headline: 'NA', Location Overview: 'Free Wifi and Public Washrooms', Location Announcements: 'NA', Location Action Links: 'NA', Location Tags: 'NA', Organization Name: 'Famous Food Network', Organization About Us: 'We make the best food', Organization Tags: 'NA'"
+Output: WiFi Available/Restroom Available%%
+ 
+Input: "Location Name: 'Refugio', Location Headline: 'Refugio anónimo', Location Overview: 'ramp access', Location Announcements: 'NA', Location Action Links: 'NA', Location Tags: 'NA', Organization Name: 'Refugios para todos', Organization About Us: 'Providing shelter in both english and spanish.', Organization Tags: 'NA'"
+Output: Wheelchair Accessible%%
+ 
+Input: "Location Name: 'Pantry', Location Headline: 'NA', Location Overview: 'We provide food access to impoverished communities.', Location Announcements: 'NA', Location Action Links: 'NA', Location Tags: 'NA', Organization Name: 'Pantry Network', Organization About Us: 'NA', Organization Tags: 'NA'"
+Output: NA%%
 """
 }
 PROGRAM_PROMPTS = {
