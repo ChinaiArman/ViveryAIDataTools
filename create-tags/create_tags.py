@@ -6,6 +6,8 @@ import openai
 import argparse, os, shutil
 import pandas as pd
 import time
+from langcodes import Language
+from langdetect import detect_langs
 import re
 
 # LOCAL FILE IMPORTS
@@ -64,6 +66,7 @@ PROGRAM_PROMPTS = {
 
 
 
+
 # HELPERS
 def create_id_rows_dict(df: pd.DataFrame, primary_key: str, columns: list) -> dict:
     """
@@ -71,10 +74,10 @@ def create_id_rows_dict(df: pd.DataFrame, primary_key: str, columns: list) -> di
     id_row_dict = {}
     for _, row in df.iterrows():
         row = row.fillna("NA")
+        id = row[primary_key]
         row = row.str.replace(",", "")
         row = row.apply(str)
-        row.to_csv("test.csv")
-        id_row_dict[row[primary_key]] = ", ".join(list(row[columns]))
+        id_row_dict[id] = ", ".join(list(row[columns]))
     return id_row_dict
 
 
@@ -111,7 +114,7 @@ def generate_location_tags(id_locations_dict: dict) -> dict:
             case = case.split(", ")
             case = ", ".join([LOCATION_COLUMNS[i] + ": '" + case[i] + "'" for i in range(len(case))])
             response = call_oai(prompt, case)
-            location_tags_dict[locationID][prompt_name] = response
+            location_tags_dict[locationID][prompt_name + ' [A]'] = response
     return location_tags_dict
 
 
@@ -123,11 +126,35 @@ def generate_program_tags(id_programs_dict: dict) -> dict:
         program_tags_dict[programID] = {}
         for prompt_name, prompt in PROGRAM_PROMPTS.items():
             response = call_oai(PROGRAM_PROMPTS[prompt], case)
-            program_tags_dict[programID][prompt_name] = response
+            program_tags_dict[programID][prompt_name + ' [A]'] = response
     return program_tags_dict
 
 
+
+
 # TESTS
+def language_check(id_locations_dict: dict, location_tags_dict) -> dict:
+    """
+    """
+    for location_id, value in id_locations_dict.items():
+        value = value.replace("NA", "")
+        location_languages = detect_langs(value)
+        location_languages = [str(lang).split(":")[0] for lang in location_languages]
+        location_languages = [Language.make(language=language).display_name() for language in location_languages]
+        location_tags_dict[location_id]['Languages Spoken [T]'] = " ,".join(location_languages)
+    return location_tags_dict
+
+
+def feature_check(features: list, id_locations_dict: dict, location_tags_dict: dict) -> dict:
+    """
+    """
+    for location_id, value in id_locations_dict.items():
+        features_detected = []
+        for feature in features:
+            if feature in value:
+                features_detected.append(feature)
+            location_tags_dict[location_id]['Location Features [T]'] = " ,".join(features_detected)
+    return location_tags_dict
 
 
 
@@ -160,5 +187,9 @@ if __name__ == "__main__":
     # Parse Contacts through OAI
     print("Calling OpenAI Fine-Tuned Model...")
     location_tags_dict = generate_location_tags(id_locations_dict)
+    print(location_tags_dict)
+
+    # Check responses
+    language_check(id_locations_dict, location_tags_dict)
     print(location_tags_dict)
     # program_tags_dict = generate_program_tags(id_programs_dict)
