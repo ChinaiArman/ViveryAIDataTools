@@ -924,7 +924,7 @@ if __name__ == "__main__":
     # Move CSV
     if not os.path.isdir('csvs'):
         os.mkdir('csvs')
-    shutil.move(args.file, "csvs/" + args.file.replace("csvs\\", ""))
+    shutil.move(args.file, "csvs/" + args.file.replace("csvs/", ""))
     # Create id_hours Dictionary
     id_hours_dict = create_id_hours_dict(df)
     # Create is_valid_hours Dictionary
@@ -962,5 +962,5 @@ if __name__ == "__main__":
     cleaned_hours_df = convert_id_hours_dict_to_df(cleaned_hours_dict, is_valid_hours_dict, df)
     if not os.path.isdir('csvs'):
         os.mkdir('csvs')
-    cleaned_hours_df.to_csv("csvs/" + args.file.replace(".csv", "").replace("csvs\\", "") + "_HOURS_CLEANED.csv")
+    cleaned_hours_df.to_csv("csvs/" + args.file.replace(".csv", "").replace("csvs/", "") + "_HOURS_CLEANED.csv")
     # cleaned_hours_df.to_csv(args.file.replace(".csv", "") + "_HOURS_CLEANED.csv")
