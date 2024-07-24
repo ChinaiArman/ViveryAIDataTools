@@ -187,8 +187,9 @@ def format_hours_iteratively(id_hours_dict: dict) -> dict:
     cleaned_hours_dict = {}
 
     for key, value in id_hours_dict.items():
-        new_value = call_oai(value)
-        new_value = new_value
+        split_value = value.split(";")
+        new_value = map(call_oai, split_value)
+        new_value = ";".join(new_value)
         cleaned_hours_dict[key] = new_value
     
     return cleaned_hours_dict
